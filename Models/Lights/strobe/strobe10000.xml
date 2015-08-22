@@ -41,6 +41,7 @@
     <and>
       <property>/sim/model/Boeing-737-300/lighting/strobe/state</property>
       <property>/controls/lighting/strobe</property>
+      <property>systems/electrical/on</property>
     </and>
   </condition>
 </animation>	 

@@ -1,4 +1,4 @@
-## 737-300 Start - Shutdown
+# 737-300 Start - Shutdown
 
 
 # Autostart #
@@ -11,6 +11,8 @@ var autostart = func {
 	setprop("/controls/electric/battery-switch",1);
 	setprop("/controls/electric/apugen1",1);
 	setprop("/controls/electric/apugen2",1);
+
+	setprop("/systems/electrical/on",1);
 	
 	setprop("/controls/fuel/tank[0]/pump-aft",1);
 	setprop("/controls/fuel/tank[0]/pump-fwd",1);
@@ -50,6 +52,27 @@ var shutdown = func {
 	  setprop("/controls/fuel/tank[1]/pump-fwd",0);
 	  setprop("/controls/fuel/tank[2]/pump-left",0);
 	  setprop("/controls/fuel/tank[2]/pump-right",0);
+
+  	setprop("/systems/electrical/on",0);
+    setprop("systems/electrical/on", 0);
+    setprop("systems/electrical/outputs/avionics-fan", 0);
+    setprop("systems/electrical/outputs/gps-mfd", 0);
+    setprop("systems/electrical/outputs/gps", 0);
+    setprop("systems/electrical/outputs/hsi", 0);
+    setprop("systems/electrical/outputs/comm", 0);
+    setprop("systems/electrical/outputs/comm[1]", 0);
+    setprop("systems/electrical/outputs/nav", 0);
+    setprop("systems/electrical/outputs/nav[1]", 0);
+    setprop("systems/electrical/outputs/dme", 0);
+    setprop("systems/electrical/outputs/dme[1]", 0);
+    setprop("systems/electrical/outputs/adf", 0);
+    setprop("systems/electrical/outputs/adf[1]", 0);
+    setprop("systems/electrical/outputs/mk-viii", 0);
+    setprop("systems/electrical/outputs/tacan", 0);
+    setprop("systems/electrical/outputs/turn-coordinator", 0);
+    setprop("systems/electrical/outputs/audio-panel", 0);
+    setprop("systems/electrical/outputs/audio-panel[1]", 0);
+    setprop("systems/electrical/outputs/transponder", 0);
 
 
 #	  setprop("/controls/engines/autostart",1);

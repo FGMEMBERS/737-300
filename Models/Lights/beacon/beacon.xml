@@ -13,16 +13,7 @@
         <alpha-factor>0.01</alpha-factor>
     </animation>
 
-<!-- <animation>
- <type>timed</type>
-   <object-name>strobe10000</object-name>
-   <object-name>BLANK</object-name>
-   <use-personality type="bool">true</use-personality>
-   <branch-duration-sec>1.6</branch-duration-sec>
-   <branch-duration-sec>0.4</branch-duration-sec>
- </animation>
---> 
- 
+
 <animation>
   <type>select</type>
   <object-name>strobe10000</object-name>
@@ -31,6 +22,7 @@
 	  <and>
       <property>/sim/model/Boeing-737-300/lighting/beacon/state</property>
       <property>/controls/lighting/beacon</property>
+      <property>systems/electrical/on</property>
     </and>
   </condition>
 </animation>	 

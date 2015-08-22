@@ -11,8 +11,6 @@
   <animation>
     <type>material</type>
     <object-name>face</object-name>
-<!--    <object-name>fond</object-name> -->
-<!--    <object-name>Cylinder</object-name> -->
     <object-name>needle</object-name>
     <object-name>vmo-mark</object-name>
     <object-name>rouek100</object-name>
@@ -24,19 +22,12 @@
     <object-name>bug-auto</object-name>
     
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.5 </red>
       <green> 0.5 </green>
       <blue>  0.5 </blue>
     </emission>
   <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
+    <property>systems/electrical/on</property>
   </condition>
   </animation>
 
@@ -62,23 +53,19 @@
   <animation>
     <type>rotate</type>
     <object-name>vmo-mark</object-name>
-    <property>/b733/instrumentation/ASI/vmo-kts</property>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <interpolation>
-      <entry><ind>   0 </ind><dep>  -9 </dep></entry>
-      <entry><ind>  60 </ind><dep>   0 </dep></entry>
-      <entry><ind> 100 </ind><dep>  61 </dep></entry>
-      <entry><ind> 120 </ind><dep>  91 </dep></entry>
-      <entry><ind> 140 </ind><dep> 120 </dep></entry>
-      <entry><ind> 160 </ind><dep> 149 </dep></entry>
-      <entry><ind> 180 </ind><dep> 166 </dep></entry>
-      <entry><ind> 200 </ind><dep> 183 </dep></entry>
-      <entry><ind> 250 </ind><dep> 229 </dep></entry>
-      <entry><ind> 300 </ind><dep> 256 </dep></entry>
-      <entry><ind> 350 </ind><dep> 283 </dep></entry>
-      <entry><ind> 400 </ind><dep> 309 </dep></entry>
-      <entry><ind> 450 </ind><dep> 335 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 4000 </ind><dep>   10 </dep></entry>
+      <entry><ind> 8000 </ind><dep>  15 </dep></entry>
+      <entry><ind> 12000 </ind><dep> 20 </dep></entry>
+      <entry><ind> 16000 </ind><dep> 25 </dep></entry>
+      <entry><ind> 20000 </ind><dep> 30 </dep></entry>
+      <entry><ind> 24000 </ind><dep> 33 </dep></entry>
+      <entry><ind> 28000 </ind><dep> 36 </dep></entry>
+      <entry><ind> 32000 </ind><dep> 39 </dep></entry>
+      <entry><ind> 36000 </ind><dep> 42 </dep></entry>
     </interpolation>
-    <offset-deg>-90</offset-deg>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -92,7 +79,7 @@
     <object-name>needle</object-name>
     <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
     <interpolation>
-      <entry><ind>  56 </ind><dep>  -5 </dep></entry>
+      <entry><ind>   0 </ind><dep>  -9 </dep></entry>
       <entry><ind>  60 </ind><dep>   0 </dep></entry>
       <entry><ind> 100 </ind><dep>  61 </dep></entry>
       <entry><ind> 120 </ind><dep>  91 </dep></entry>
@@ -118,7 +105,7 @@
     <object-name>bug-auto</object-name>
     <property>/autopilot/settings/target-speed-kt</property>
     <interpolation>
-      <entry><ind>  56 </ind><dep>  -5 </dep></entry>
+      <entry><ind>   0 </ind><dep>  -9 </dep></entry>
       <entry><ind>  60 </ind><dep>   0 </dep></entry>
       <entry><ind> 100 </ind><dep>  61 </dep></entry>
       <entry><ind> 120 </ind><dep>  91 </dep></entry>
@@ -232,7 +219,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>rouek1</object-name>
-    <property>/instrumentation/airspeed-indicator/indicated-speed-numbers-kt</property>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<factor>.1</factor>
     <center>
       <x-m> -0.016 </x-m>
@@ -249,7 +236,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>rouek10</object-name>
-    <property>/instrumentation/airspeed-indicator/indicated-speed-numbers-kt</property>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<factor>.01</factor>
 		<step>10</step>
 		<scroll>2</scroll>
@@ -268,7 +255,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>rouek100</object-name>
-    <property>/instrumentation/airspeed-indicator/indicated-speed-numbers-kt</property>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
 		<factor>.001</factor>
     <step>100</step>
     <scroll>3</scroll>

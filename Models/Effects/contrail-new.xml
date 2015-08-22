@@ -45,7 +45,7 @@
 					</greater-than>
 				</or>-->
 			</and>
-		</condition>-->
+		</condition>
 
 		<attach>world</attach>
 
@@ -78,7 +78,7 @@
 				<property>/velocities/airspeed-kt</property>
 				<factor>0.25</factor>
 				<offset>10</offset>
-				<!--<value>600</value>-->
+				<!-- <value>600</value> -->
 				<spread>50</spread>
 			</particles-per-sec>
 		</counter>

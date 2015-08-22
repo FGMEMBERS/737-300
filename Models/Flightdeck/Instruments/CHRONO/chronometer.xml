@@ -9,19 +9,12 @@
     <type>material</type>
     <object-name>Chronoface.001</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.6 </red>
       <green> 0.6 </green>
       <blue>  0.6 </blue>
     </emission>
   <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
+    <property>systems/electrical/on</property>
   </condition>
   </animation>
 
@@ -38,13 +31,7 @@
     <object-name>colon</object-name>
     <object-name>colon.002</object-name>
   <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
+    <property>systems/electrical/on</property>
   </condition>
   </animation>
 
@@ -61,19 +48,12 @@
     <object-name>colon</object-name>
     <object-name>colon.002</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   1 </red>
       <green> 1 </green>
       <blue>  1 </blue>
     </emission>
   <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
+    <property>systems/electrical/on</property>
   </condition>
   </animation>
 
@@ -81,19 +61,12 @@
     <type>material</type>
     <object-name>Chronoface.001</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   .7 </red>
       <green> .7 </green>
       <blue>  .7 </blue>
     </emission>
   <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
+    <property>systems/electrical/on</property>
   </condition>
   </animation>
  

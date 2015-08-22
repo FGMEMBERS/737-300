@@ -8,21 +8,15 @@
         <object-name>RHLND.spot</object-name>
         <condition>
             <and>
-            	<!--or>
-	            	<equals>
-	                    <property>controls/switches/landing-lights</property>
-	                    <value>true</value>
-	            	</equals-->
 	            	<equals>
 	                    <property>controls/lighting/landing-lights-fixed-right</property>
 	                    <value>true</value>
 	            	</equals>
-            	<!--/or-->
-                
                 <greater-than>
                     <property>/sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
+              <property>systems/electrical/on</property>
             </and>
         </condition>
     </animation>
@@ -51,6 +45,7 @@
                     <property>/sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
+              <property>systems/electrical/on</property>
             </and>
         </condition>
     </animation>
@@ -70,6 +65,7 @@
                     <property>/sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
+              <property>systems/electrical/on</property>
             </and>
         </condition>
     </animation>
