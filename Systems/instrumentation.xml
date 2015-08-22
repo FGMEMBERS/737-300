@@ -8,8 +8,7 @@ This file selects the instrumentation modules that should be available.
 
 <PropertyList>
 
-<!-- Uncomment the below section if you are on fg 3.0 or above -->
-<!--  <comm-radio>
+  <comm-radio>
     <name>comm</name>
     <number>0</number>>
   </comm-radio>
@@ -17,7 +16,7 @@ This file selects the instrumentation modules that should be available.
   <comm-radio>
     <name>comm</name>
     <number>1</number>
-  </comm-radio> -->
+  </comm-radio>
 
   <adf>
     <name>adf</name>
