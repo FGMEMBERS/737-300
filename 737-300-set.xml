@@ -294,14 +294,12 @@
   </ai>-->
 
     <multiplay>
+      <fallback-model-index type="int">202</fallback-model-index>
       <generic>
         <string n="0"/>
-        <int n="0"
-       alias="/gear/gear[0]/tyre-smoke"/>
-        <int n="1"
-       alias="/gear/gear[1]/tyre-smoke"/>
-        <int n="2"
-       alias="/gear/gear[2]/tyre-smoke"/>
+        <int n="0" alias="/gear/gear[0]/tyre-smoke"/>
+        <int n="1" alias="/gear/gear[1]/tyre-smoke"/>
+        <int n="2" alias="/gear/gear[2]/tyre-smoke"/>
       </generic>
     </multiplay>
 
