@@ -48,6 +48,7 @@
 
     <model>
       <path>Aircraft/737-300/Models/737-300.xml</path>
+      <fallback-model-index type="int">202</fallback-model-index>
       <pushback>
         <kp type="double">1000</kp>
         <kd type="double">0</kd>
@@ -294,7 +295,6 @@
   </ai>-->
 
     <multiplay>
-      <fallback-model-index type="int">202</fallback-model-index>
       <generic>
         <string n="0"/>
         <int n="0" alias="/gear/gear[0]/tyre-smoke"/>
