@@ -254,7 +254,7 @@
 		<action>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/altimeter[1]/setting-inhg</property>
+				<property>instrumentation/altimeter[1]/setting-inhg</property>
 				<factor>0.01</factor>
 				<min>25</min>
 				<max>35</max>
@@ -265,7 +265,7 @@
 		<shift-action>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/altimeter[1]/setting-inhg</property>
+				<property>instrumentation/altimeter[1]/setting-inhg</property>
 				<factor>0.005</factor>
 				<min>25</min>
 				<max>35</max>
@@ -278,7 +278,7 @@
 				<command>set-tooltip</command>
 				<tooltip-id>altimeter-pressure-[1]</tooltip-id>
 				<label>Altimeter: %.1f</label>
-				<property>/b733/instrumentation/altimeter[1]/setting-hpa</property>
+				<property>b733/instrumentation/altimeter[1]/setting-hpa</property>
 			</binding>
 		</hovered>
 	</animation>

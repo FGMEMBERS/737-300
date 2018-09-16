@@ -87,7 +87,7 @@
    <animation>
    <type>texrotate</type>
    <object-name>NDhdg</object-name>
-   <property>/orientation/heading-magnetic-deg</property>
+   <property>orientation/heading-magnetic-deg</property>
    <center>
      <x>0.5</x>
      <y>0.5</y>
@@ -114,7 +114,7 @@
 <animation>
    <type>rotate</type>
    <object-name>mfdhdg</object-name>
-   <property>/autopilot/internal/fdm-heading-bug-error-deg</property>
+   <property>autopilot/internal/fdm-heading-bug-error-deg</property>
    <interpolation>
      <entry>
        <ind> -180.0</ind>
@@ -164,7 +164,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>hdgtext</object-name>
-   <property>/orientation/heading-magnetic-deg</property>
+   <property>orientation/heading-magnetic-deg</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -188,7 +188,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>hdgtext.001</object-name>
-   <property>/orientation/heading-magnetic-deg</property>
+   <property>orientation/heading-magnetic-deg</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -212,7 +212,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>hdgtext.002</object-name>
-   <property>/orientation/heading-magnetic-deg</property>
+   <property>orientation/heading-magnetic-deg</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -232,7 +232,7 @@
     <value>0</value>
    </equals>
 <equals>
-<property>/instrumentation/wxradar/switch</property>
+<property>instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
 </and>
@@ -249,7 +249,7 @@
     <value>0</value>
    </equals>
 <equals>
-<property>/instrumentation/wxradar/switch</property>
+<property>instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
 </and>
@@ -266,7 +266,7 @@
     <value>0</value>
    </equals>
 <equals>
-<property>/instrumentation/wxradar/switch</property>
+<property>instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
 </and>
@@ -283,7 +283,7 @@
     <value>0</value>
    </equals>
 <equals>
-<property>/instrumentation/wxradar/switch</property>
+<property>instrumentation/wxradar/switch</property>
 <value>on</value>
 </equals>
 </and>
@@ -293,7 +293,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>rng.001</object-name>
-   <property>/instrumentation/wxradar/range</property>
+   <property>instrumentation/wxradar/range</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -306,7 +306,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>rng.002</object-name>
-   <property>/instrumentation/wxradar/range</property>
+   <property>instrumentation/wxradar/range</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -319,7 +319,7 @@
    <animation>
    <type>textranslate</type>
    <object-name>rng.003</object-name>
-   <property>/instrumentation/wxradar/range</property>
+   <property>instrumentation/wxradar/range</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -3085,10 +3085,10 @@
      <value>0</value>
     </equals>
     <equals>
-      <property>/instrumentation/nav[0]/nav-loc</property>
+      <property>instrumentation/nav[0]/nav-loc</property>
       <value>false</value>
     </equals>
-    <property>/instrumentation/nav[0]/in-range</property>
+    <property>instrumentation/nav[0]/in-range</property>
   </and>
   </condition>
  </animation>
@@ -3103,10 +3103,10 @@
      <value>0</value>
     </equals>
     <equals>
-      <property>/instrumentation/nav[1]/nav-loc</property>
+      <property>instrumentation/nav[1]/nav-loc</property>
       <value>false</value>
     </equals>
-    <property>/instrumentation/nav[1]/in-range</property>
+    <property>instrumentation/nav[1]/in-range</property>
   </and>
   </condition>
  </animation>
@@ -3120,8 +3120,8 @@
      <property>sim/current-view/view-number</property>
      <value>0</value>
     </equals>
-    <property>/instrumentation/nav[0]/nav-loc</property>
-    <property>/instrumentation/nav[0]/in-range</property>
+    <property>instrumentation/nav[0]/nav-loc</property>
+    <property>instrumentation/nav[0]/in-range</property>
   </and>
   </condition>
  </animation>
@@ -3135,8 +3135,8 @@
      <property>sim/current-view/view-number</property>
      <value>0</value>
     </equals>
-    <property>/instrumentation/nav[1]/nav-loc</property>
-    <property>/instrumentation/nav[1]/in-range</property>
+    <property>instrumentation/nav[1]/nav-loc</property>
+    <property>instrumentation/nav[1]/in-range</property>
   </and>
   </condition>
  </animation>
@@ -3155,7 +3155,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidl1</object-name>
-  <property>/instrumentation/nav[0]/nav-id_asc1</property>
+  <property>instrumentation/nav[0]/nav-id_asc1</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3180,7 +3180,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidl2</object-name>
-  <property>/instrumentation/nav[0]/nav-id_asc2</property>
+  <property>instrumentation/nav[0]/nav-id_asc2</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3205,7 +3205,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidl3</object-name>
-  <property>/instrumentation/nav[0]/nav-id_asc3</property>
+  <property>instrumentation/nav[0]/nav-id_asc3</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3230,7 +3230,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidl4</object-name>
-  <property>/instrumentation/nav[0]/nav-id_asc4</property>
+  <property>instrumentation/nav[0]/nav-id_asc4</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3255,7 +3255,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidr1</object-name>
-  <property>/instrumentation/nav[1]/nav-id_asc1</property>
+  <property>instrumentation/nav[1]/nav-id_asc1</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3280,7 +3280,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidr2</object-name>
-  <property>/instrumentation/nav[1]/nav-id_asc2</property>
+  <property>instrumentation/nav[1]/nav-id_asc2</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3305,7 +3305,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidr3</object-name>
-  <property>/instrumentation/nav[1]/nav-id_asc3</property>
+  <property>instrumentation/nav[1]/nav-id_asc3</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>
@@ -3330,7 +3330,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>navidr4</object-name>
-  <property>/instrumentation/nav[1]/nav-id_asc4</property>
+  <property>instrumentation/nav[1]/nav-id_asc4</property>
   <factor>0.03125</factor>
   <step>1</step>
   <offset>-1.0</offset>

@@ -23,9 +23,9 @@
     <type>rotate</type>
 		<object-name>Tiller</object-name>
 		<condition>
-			<property>/controls/gear/gear-down</property>
+			<property>controls/gear/gear-down</property>
 		</condition>
-    <property>/fdm/jsbsim/fcs/steer-pos-deg</property>
+    <property>fdm/jsbsim/fcs/steer-pos-deg</property>
     <factor> -1 </factor>
     <center>
       <x-m>0.0</x-m>

@@ -118,7 +118,7 @@
 <animation>
  <type>rotate</type>
  <object-name>LEFTTHROTTLE</object-name>
- <property>/fdm/jsbsim/fcs/throttle-pos-norm[0]</property>
+ <property>fdm/jsbsim/fcs/throttle-pos-norm[0]</property>
  <factor>53</factor>
  <offset-deg>-22</offset-deg>
  <center>
@@ -136,7 +136,7 @@
 <animation>
  <type>rotate</type>
  <object-name>RIGHTTHROTTLE</object-name>
- <property>/fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
+ <property>fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
  <factor>53</factor>
  <offset-deg>-22</offset-deg>
  <center>
@@ -191,7 +191,7 @@
 <!--  <animation>
 <type>spin</type>
  <object-name>RIGHTTRIM</object-name>
-<property>/controls/special/yoke-switch2</property>
+<property>controls/special/yoke-switch2</property>
 <factor>60</factor>
  <center>
   <x-m>-6.76773</x-m>
@@ -208,7 +208,7 @@
 <animation>
  <type>rotate</type>
  <object-name>RIGHTTRIM</object-name>
- <property>/b733/helpers/trim-wheel-abs-pos</property>
+ <property>b733/helpers/trim-wheel-abs-pos</property>
  <factor>1</factor>
  <offset-deg>0</offset-deg>
  <center>
@@ -226,7 +226,7 @@
 <!--  <animation>
 <type>spin</type>
  <object-name>LEFTTRIM</object-name> 
-<property>/controls/special/yoke-switch2</property>
+<property>controls/special/yoke-switch2</property>
 <factor>60</factor>
  <center>
   <x-m>-6.76773</x-m>
@@ -243,7 +243,7 @@
 <animation>
  <type>rotate</type>
  <object-name>LEFTTRIM</object-name>
- <property>/b733/helpers/trim-wheel-abs-pos</property>
+ <property>b733/helpers/trim-wheel-abs-pos</property>
  <factor>1</factor>
  <offset-deg>0</offset-deg>
  <center>
@@ -268,7 +268,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/fdm/jsbsim/fcs/stabilizer/stab-target</property>
+      <property>fdm/jsbsim/fcs/stabilizer/stab-target</property>
       <step>-0.0035</step>
       <min>0</min>
       <max>17</max>
@@ -285,7 +285,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/fdm/jsbsim/fcs/stabilizer/stab-target</property>
+      <property>fdm/jsbsim/fcs/stabilizer/stab-target</property>
       <step>0.0035</step>
       <min>0</min>
       <max>17</max>
@@ -321,7 +321,7 @@
   <button>0</button>
     <binding>
    <command>property-toggle</command>
-    <property>/controls/gear/brake-parking</property>
+    <property>controls/gear/brake-parking</property>
   </binding>
         <binding>
           <command>nasal</command>
@@ -340,7 +340,7 @@
 <animation>
  <type>rotate</type>
  <object-name>SPEEDBRAKE</object-name>
- <property>/b733/controls/flight/spoilers-lever-pos</property>
+ <property>b733/controls/flight/spoilers-lever-pos</property>
     <interpolation>
 	<entry><ind>	0</ind>	<dep>	-90</dep></entry>
         <entry><ind>	1</ind>	<dep>	-86</dep></entry>
@@ -497,13 +497,13 @@
 
 <!--  <animation>
   <type>translate</type>
-	<property>/xadjust</property>
+	<property>xadjust</property>
 	<axis><x>1</x></axis>
 </animation>
 	
 <animation>
   <type>translate</type>
-	<property>/zadjust</property>
+	<property>zadjust</property>
 	<axis><z>1</z></axis>
 </animation>  -->
 

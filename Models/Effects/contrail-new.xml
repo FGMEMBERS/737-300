@@ -18,11 +18,11 @@
 		<condition>
 			<and>
 				<!--<greater-than>
-					<property>/environment/relative-humidity</property>
+					<property>environment/relative-humidity</property>
 					<value>60</value>
 				</greater-than>
 				<less-than>
-					<property>/environment/temperature-degc</property>
+					<property>environment/temperature-degc</property>
 					<value>0</value>
 				</less-than>-->
 				<property>environment/contrail</property>
@@ -75,7 +75,7 @@
 
 		<counter>
 			<particles-per-sec>
-				<property>/velocities/airspeed-kt</property>
+				<property>velocities/airspeed-kt</property>
 				<factor>0.25</factor>
 				<offset>10</offset>
 				<!--<value>600</value>-->

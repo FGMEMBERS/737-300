@@ -27,7 +27,7 @@
  <animation>
   <type>rotate</type>
   <object-name>Needle</object-name>
-  <property>/controls/flight/elevator-trim</property>
+  <property>controls/flight/elevator-trim</property>
   <factor>-45</factor>
   <offset-deg>0</offset-deg>
   <center>

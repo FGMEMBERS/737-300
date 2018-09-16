@@ -20,7 +20,7 @@
             	<!--/or-->
                 
                 <greater-than>
-                    <property>/sim/time/sun-angle-rad</property>
+                    <property>sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
             </and>
@@ -48,7 +48,7 @@
                     <value>1.0</value>
                 </equals>
                 <greater-than>
-                    <property>/sim/time/sun-angle-rad</property>
+                    <property>sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
             </and>
@@ -67,7 +67,7 @@
 	                    <value>true</value>
 	            	</equals>
             	  <greater-than>
-                    <property>/sim/time/sun-angle-rad</property>
+                    <property>sim/time/sun-angle-rad</property>
                     <value>1.55</value>
                 </greater-than>
             </and>
@@ -79,7 +79,7 @@
 <!--  <animation>
     <type>rotate</type>
         <object-name>CTRLND.spot</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor> -30 </factor>
     <center>
       <x-m> 0 </x-m>

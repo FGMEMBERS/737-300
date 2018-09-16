@@ -19,7 +19,7 @@
     <object-name>rodas_atras</object-name> 
     <condition>
       <greater-than>
-        <property>/sim/time/sun-angle-rad</property>
+        <property>sim/time/sun-angle-rad</property>
         <value>1.57</value>
       </greater-than>
     </condition>
@@ -38,7 +38,7 @@
     <object-name>rodas_atras</object-name> 
     <condition>
       <less-than-equals>
-        <property>/sim/time/sun-angle-rad</property>
+        <property>sim/time/sun-angle-rad</property>
         <value>1.57</value>
       </less-than-equals>
     </condition>

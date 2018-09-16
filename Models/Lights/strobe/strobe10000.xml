@@ -39,8 +39,8 @@
   <object-name>BLANK</object-name>
   <condition>
     <and>
-      <property>/sim/model/Boeing-737-300/lighting/strobe/state</property>
-      <property>/controls/lighting/strobe</property>
+      <property>sim/model/Boeing-737-300/lighting/strobe/state</property>
+      <property>controls/lighting/strobe</property>
     </and>
   </condition>
 </animation>	 

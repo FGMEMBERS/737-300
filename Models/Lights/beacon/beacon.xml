@@ -29,8 +29,8 @@
   <object-name>BLANK</object-name>
   <condition>
 	  <and>
-      <property>/sim/model/Boeing-737-300/lighting/beacon/state</property>
-      <property>/controls/lighting/beacon</property>
+      <property>sim/model/Boeing-737-300/lighting/beacon/state</property>
+      <property>controls/lighting/beacon</property>
     </and>
   </condition>
 </animation>	 

@@ -33,7 +33,7 @@
    <type>rotate</type>
    <object-name>CockpitDoor</object-name>
    <object-name>Doorknob</object-name>
-   <property>/controls/switches/cockpitdoor</property>
+   <property>controls/switches/cockpitdoor</property>
    <factor>90</factor>
 	 <offset-deg>0</offset-deg>
    <center>

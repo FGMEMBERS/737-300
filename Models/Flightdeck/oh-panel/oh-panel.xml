@@ -10,7 +10,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BattSwitchCover</object-name>
-    <property>/controls/electric/battswitchcover</property>
+    <property>controls/electric/battswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -32,7 +32,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/battswitchcover</property>
+		        <property>controls/electric/battswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -42,7 +42,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BattSwitch</object-name>
-    <property>/controls/electric/battery-switch</property>
+    <property>controls/electric/battery-switch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -64,7 +64,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/battery-switch</property>
+		        <property>controls/electric/battery-switch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -73,7 +73,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BusTranSwitchCover</object-name>
-    <property>/controls/electric/bustranswitchcover</property>
+    <property>controls/electric/bustranswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -95,7 +95,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/bustranswitchcover</property>
+		        <property>controls/electric/bustranswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -105,7 +105,7 @@
   <animation>
     <type>rotate</type>
     <object-name>BusTranSwitch</object-name>
-    <property>/controls/electric/bus-tran-switch</property>
+    <property>controls/electric/bus-tran-switch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -127,7 +127,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/bus-tran-switch</property>
+		        <property>controls/electric/bus-tran-switch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -143,7 +143,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/nosmoking-sign</property>
+        <property>controls/switches/nosmoking-sign</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -181,7 +181,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/seatbelt-sign</property>
+        <property>controls/switches/seatbelt-sign</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -220,7 +220,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-fixed-left</property>
+        <property>controls/lighting/landing-lights-fixed-left</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -232,7 +232,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>landinglightfixedleft</object-name>
-    <property>/controls/lighting/landing-lights-fixed-left</property>
+    <property>controls/lighting/landing-lights-fixed-left</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -259,7 +259,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-fixed-right</property>
+        <property>controls/lighting/landing-lights-fixed-right</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -271,7 +271,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>landinglightfixedright</object-name>
-    <property>/controls/lighting/landing-lights-fixed-right</property>
+    <property>controls/lighting/landing-lights-fixed-right</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -298,7 +298,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-retract-right</property>
+        <property>controls/lighting/landing-lights-retract-right</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -310,7 +310,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>landinglightretractright</object-name>
-    <property>/controls/lighting/landing-lights-retract-right</property>
+    <property>controls/lighting/landing-lights-retract-right</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -337,7 +337,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-retract-left</property>
+        <property>controls/lighting/landing-lights-retract-left</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -349,7 +349,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>landinglightretractleft</object-name>
-    <property>/controls/lighting/landing-lights-retract-left</property>
+    <property>controls/lighting/landing-lights-retract-left</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -376,7 +376,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/logo-lights</property>
+        <property>controls/lighting/logo-lights</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -388,7 +388,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>lightslogo</object-name>
-    <property>/controls/lighting/logo-lights</property>
+    <property>controls/lighting/logo-lights</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -415,7 +415,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/strobe</property>
+        <property>controls/lighting/strobe</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -427,7 +427,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>lightsstrobe</object-name>
-    <property>/controls/lighting/strobe</property>
+    <property>controls/lighting/strobe</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -454,7 +454,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/beacon</property>
+        <property>controls/lighting/beacon</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -466,7 +466,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>lightsanticol</object-name>
-    <property>/controls/lighting/beacon</property>
+    <property>controls/lighting/beacon</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -493,7 +493,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/wing-lights</property>
+        <property>controls/lighting/wing-lights</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -505,7 +505,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>lightswing</object-name>
-    <property>/controls/lighting/wing-lights</property>
+    <property>controls/lighting/wing-lights</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -532,7 +532,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/nav-lights</property>
+        <property>controls/lighting/nav-lights</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -544,7 +544,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>lightsnav</object-name>
-    <property>/controls/lighting/nav-lights</property>
+    <property>controls/lighting/nav-lights</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -572,7 +572,7 @@
    <binding>
    <condition>
      <and>
-       <property>/sim/input/selected/engine[0]</property>
+       <property>sim/input/selected/engine[0]</property>
        <or>
          <property>controls/electric/battery</property>
          <property>controls/electric/grdpwr</property>
@@ -622,7 +622,7 @@
    <binding>
    <condition>
      <and>
-       <property>/sim/input/selected/engine[1]</property>
+       <property>sim/input/selected/engine[1]</property>
        <or>
          <property>controls/electric/battery</property>
          <property>controls/electric/grdpwr</property>
@@ -672,12 +672,12 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-assign</command>
-          <property>/sim/input/selected/engine[0]</property>
+          <property>sim/input/selected/engine[0]</property>
           <value type="bool">true</value>
       </binding>
       <binding>
         <command>property-assign</command>
-          <property>/sim/input/selected/engine[1]</property>
+          <property>sim/input/selected/engine[1]</property>
           <value type="bool">false</value>
       </binding>
       </action>
@@ -693,12 +693,12 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-assign</command>
-          <property>/sim/input/selected/engine[0]</property>
+          <property>sim/input/selected/engine[0]</property>
           <value type="bool">false</value>
       </binding>
       <binding>
         <command>property-assign</command>
-          <property>/sim/input/selected/engine[1]</property>
+          <property>sim/input/selected/engine[1]</property>
           <value type="bool">true</value>
       </binding>
       </action>
@@ -714,12 +714,12 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-assign</command>
-          <property>/sim/input/selected/engine[0]</property>
+          <property>sim/input/selected/engine[0]</property>
           <value type="bool">true</value>
       </binding>
       <binding>
         <command>property-assign</command>
-          <property>/sim/input/selected/engine[1]</property>
+          <property>sim/input/selected/engine[1]</property>
           <value type="bool">true</value>
       </binding>
       </action>
@@ -730,8 +730,8 @@
    <object-name>enginestart</object-name>
    <condition>
      <and>
-       <property>/sim/input/selected/engine[0]</property>
-       <property>/sim/input/selected/engine[1]</property>
+       <property>sim/input/selected/engine[0]</property>
+       <property>sim/input/selected/engine[1]</property>
      </and>
    </condition>
   </animation>
@@ -742,11 +742,11 @@
    <condition>
      <and>
        <equals>
-         <property>/sim/input/selected/engine[0]</property>
+         <property>sim/input/selected/engine[0]</property>
          <value type="bool">true</value>
        </equals>
        <equals>
-         <property>/sim/input/selected/engine[1]</property>
+         <property>sim/input/selected/engine[1]</property>
          <value type="bool">false</value>
        </equals>
      </and>
@@ -759,11 +759,11 @@
    <condition>
      <and>
        <equals>
-         <property>/sim/input/selected/engine[0]</property>
+         <property>sim/input/selected/engine[0]</property>
          <value type="bool">false</value>
        </equals>
        <equals>
-         <property>/sim/input/selected/engine[1]</property>
+         <property>sim/input/selected/engine[1]</property>
          <value type="bool">true</value>
        </equals>
      </and>
@@ -783,7 +783,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/electric/apugen1</property>
+        <property>controls/electric/apugen1</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -795,7 +795,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>apu1</object-name>
-    <property>/controls/electric/apugen1</property>
+    <property>controls/electric/apugen1</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -822,7 +822,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/electric/apugen2</property>
+        <property>controls/electric/apugen2</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -834,7 +834,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>apu4</object-name>
-    <property>/controls/electric/apugen2</property>
+    <property>controls/electric/apugen2</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -862,7 +862,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/electric/external-power</property>
+        <property>controls/electric/external-power</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -874,7 +874,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>grdpwr</object-name>
-    <property>/controls/electric/external-power</property>
+    <property>controls/electric/external-power</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -901,7 +901,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[0]/pump-aft</property>
+        <property>controls/fuel/tank[0]/pump-aft</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -913,7 +913,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>fuelpump1aft</object-name>
-    <property>/controls/fuel/tank[0]/pump-aft</property>
+    <property>controls/fuel/tank[0]/pump-aft</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -940,7 +940,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[0]/pump-fwd</property>
+        <property>controls/fuel/tank[0]/pump-fwd</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -952,7 +952,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>fuelpump1fwd</object-name>
-    <property>/controls/fuel/tank[0]/pump-fwd</property>
+    <property>controls/fuel/tank[0]/pump-fwd</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -979,7 +979,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[1]/pump-aft</property>
+        <property>controls/fuel/tank[1]/pump-aft</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -991,7 +991,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>fuelpump2aft</object-name>
-    <property>/controls/fuel/tank[1]/pump-aft</property>
+    <property>controls/fuel/tank[1]/pump-aft</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -1018,7 +1018,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[1]/pump-fwd</property>
+        <property>controls/fuel/tank[1]/pump-fwd</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -1030,7 +1030,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>fuelpump2fwd</object-name>
-    <property>/controls/fuel/tank[1]/pump-fwd</property>
+    <property>controls/fuel/tank[1]/pump-fwd</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -1057,7 +1057,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[2]/pump-left</property>
+        <property>controls/fuel/tank[2]/pump-left</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -1069,7 +1069,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>fuelpumpcleft</object-name>
-    <property>/controls/fuel/tank[2]/pump-left</property>
+    <property>controls/fuel/tank[2]/pump-left</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -1096,7 +1096,7 @@
       <repeatable>false</repeatable> 
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[2]/pump-right</property>
+        <property>controls/fuel/tank[2]/pump-right</property>
 		    <step>1</step>
 		    <min>0></min>
 		    <max>1</max>
@@ -1108,7 +1108,7 @@
 		<animation>
     <type>rotate</type>
     <object-name>fuelpumpcright</object-name>
-    <property>/controls/fuel/tank[2]/pump-right</property>
+    <property>controls/fuel/tank[2]/pump-right</property>
     <factor>30</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -1128,7 +1128,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyRudASwitchCover</object-name>
-    <property>/controls/electric/stbyrudaswitchcover</property>
+    <property>controls/electric/stbyrudaswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1150,7 +1150,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbyrudaswitchcover</property>
+		        <property>controls/electric/stbyrudaswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1160,7 +1160,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyRudASwitch</object-name>
-    <property>/controls/electric/stbyrudaswitch</property>
+    <property>controls/electric/stbyrudaswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1182,7 +1182,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbyrudaswitch</property>
+		        <property>controls/electric/stbyrudaswitch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1192,7 +1192,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyRudBSwitchCover</object-name>
-    <property>/controls/electric/stbyrudbswitchcover</property>
+    <property>controls/electric/stbyrudbswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1214,7 +1214,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbyrudbswitchcover</property>
+		        <property>controls/electric/stbyrudbswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1224,7 +1224,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyRudBSwitch</object-name>
-    <property>/controls/electric/stbyrudbswitch</property>
+    <property>controls/electric/stbyrudbswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1246,7 +1246,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbyrudbswitch</property>
+		        <property>controls/electric/stbyrudbswitch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1255,7 +1255,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AltFlapsSwitchCover</object-name>
-    <property>/controls/electric/altflapsswitchcover</property>
+    <property>controls/electric/altflapsswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1277,7 +1277,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/altflapsswitchcover</property>
+		        <property>controls/electric/altflapsswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1287,7 +1287,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AltFlapsSwitch</object-name>
-    <property>/controls/electric/altflapsswitch</property>
+    <property>controls/electric/altflapsswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1309,7 +1309,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/altflapsswitch</property>
+		        <property>controls/electric/altflapsswitch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1318,7 +1318,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SpoilerASwitchCover</object-name>
-    <property>/controls/electric/spoileraswitchcover</property>
+    <property>controls/electric/spoileraswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1340,7 +1340,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/spoileraswitchcover</property>
+		        <property>controls/electric/spoileraswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1350,7 +1350,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SpoilerASwitch</object-name>
-    <property>/controls/electric/spoileraswitch</property>
+    <property>controls/electric/spoileraswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1372,7 +1372,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/spoileraswitch</property>
+		        <property>controls/electric/spoileraswitch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1382,7 +1382,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SpoilerBSwitchCover</object-name>
-    <property>/controls/electric/spoilerbswitchcover</property>
+    <property>controls/electric/spoilerbswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1404,7 +1404,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/spoilerbswitchcover</property>
+		        <property>controls/electric/spoilerbswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1414,7 +1414,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SpoilerBSwitch</object-name>
-    <property>/controls/electric/spoilerbswitch</property>
+    <property>controls/electric/spoilerbswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1436,7 +1436,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/spoilerbswitch</property>
+		        <property>controls/electric/spoilerbswitch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1445,7 +1445,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyPwrDis1SwitchCover</object-name>
-    <property>/controls/electric/stbypwrdis1switchcover</property>
+    <property>controls/electric/stbypwrdis1switchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1467,7 +1467,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbypwrdis1switchcover</property>
+		        <property>controls/electric/stbypwrdis1switchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1477,7 +1477,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyPwrDis1Switch</object-name>
-    <property>/controls/electric/stbypwrdis1switch</property>
+    <property>controls/electric/stbypwrdis1switch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1499,7 +1499,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbypwrdis1switch</property>
+		        <property>controls/electric/stbypwrdis1switch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1508,7 +1508,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyPwrDis2SwitchCover</object-name>
-    <property>/controls/electric/stbypwrdis2switchcover</property>
+    <property>controls/electric/stbypwrdis2switchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1530,7 +1530,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbypwrdis2switchcover</property>
+		        <property>controls/electric/stbypwrdis2switchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1540,7 +1540,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyPwrDis2Switch</object-name>
-    <property>/controls/electric/stbypwrdis2switch</property>
+    <property>controls/electric/stbypwrdis2switch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1562,7 +1562,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbypwrdis2switch</property>
+		        <property>controls/electric/stbypwrdis2switch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1571,7 +1571,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyPwrSwitchCover</object-name>
-    <property>/controls/electric/stbypwrswitchcover</property>
+    <property>controls/electric/stbypwrswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1593,7 +1593,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbypwrswitchcover</property>
+		        <property>controls/electric/stbypwrswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1603,7 +1603,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StbyPwrSwitch</object-name>
-    <property>/controls/electric/stbypwrswitch</property>
+    <property>controls/electric/stbypwrswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1625,7 +1625,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/stbypwerswitch</property>
+		        <property>controls/electric/stbypwerswitch</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1634,7 +1634,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ExitLightSwitchCover</object-name>
-    <property>/controls/electric/exitlightswitchcover</property>
+    <property>controls/electric/exitlightswitchcover</property>
     <factor>-80</factor>
     <axis>
      <x> 0</x>
@@ -1656,7 +1656,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/exitlightswitchcover</property>
+		        <property>controls/electric/exitlightswitchcover</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -1666,7 +1666,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ExitLightSwitch</object-name>
-    <property>/controls/electric/exitlightswitch</property>
+    <property>controls/electric/exitlightswitch</property>
     <factor>40</factor>
     <axis>
      <x> 0</x>
@@ -1688,7 +1688,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/controls/electric/exitlightswitch</property>
+		        <property>controls/electric/exitlightswitch</property>
 		    </binding>
 		  </action>
 	</animation>

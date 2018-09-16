@@ -58,7 +58,7 @@
       <property>controls/electric/apugen2</property>
       <property>engines/engine[0]/running</property>
     </or>
-       <not><property>/autopilot/internal/GA</property></not>
+       <not><property>autopilot/internal/GA</property></not>
      </and>
    </condition>
  </animation>
@@ -80,7 +80,7 @@
    <object-name>vsdown</object-name>
    
    <condition>
-    <property>/b733/ap-hide-helper</property>
+    <property>b733/ap-hide-helper</property>
    </condition>
  </animation>
 
@@ -172,7 +172,7 @@
    <repeatable>false</repeatable> 
    <binding>
     <command>property-toggle</command>
-    <property>/autopilot/internal/SPD</property>
+    <property>autopilot/internal/SPD</property>
 		<step>1</step>
 		<min>0></min>
 		<max>1</max>
@@ -184,7 +184,7 @@
  <animation>
    <type>rotate</type>
    <object-name>ATArm</object-name>
-   <property>/autopilot/internal/SPD</property>
+   <property>autopilot/internal/SPD</property>
    <factor>-30</factor>
 	 <offset-deg>30</offset-deg>
    <center>
@@ -218,7 +218,7 @@
  <animation>
    <type>rotate</type>
    <object-name>IAS-SEL</object-name>
-   <property>/autopilot/internal/SPD-MACH</property>
+   <property>autopilot/internal/SPD-MACH</property>
    <factor>-30</factor>
 	 <offset-deg>30</offset-deg>
    <center>
@@ -235,7 +235,7 @@
     <animation>
         <type>knob</type>
         <object-name>cylinder</object-name>
-        <property>/autopilot/settings/speed-bug</property>
+        <property>autopilot/settings/speed-bug</property>
         <factor>-5</factor>
       <center>
         <x-m>0.0</x-m>
@@ -251,7 +251,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/autopilot/settings/speed-bug</property>
+        <property>autopilot/settings/speed-bug</property>
         <factor>1</factor>
       </binding>
     </action>
@@ -295,7 +295,7 @@
  <animation>
    <type>rotate</type>
      <object-name>N1</object-name>
-       <property>/autopilot/internal/SPD-N1</property>
+       <property>autopilot/internal/SPD-N1</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -328,7 +328,7 @@
  <animation>
    <type>rotate</type>
      <object-name>SPEED</object-name>
-       <property>/autopilot/internal/SPD-SPEED</property>
+       <property>autopilot/internal/SPD-SPEED</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -361,7 +361,7 @@
  <animation>
    <type>rotate</type>
      <object-name>LVLCHG</object-name>
-       <property>/autopilot/internal/LVLCHG</property>
+       <property>autopilot/internal/LVLCHG</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -384,7 +384,7 @@
   <object-name>speeddecrease</object-name>
   <condition>
 	  <equals>
-     <property>/autopilot/internal/SPD-IAS</property>
+     <property>autopilot/internal/SPD-IAS</property>
 		 <value>true</value>
 		</equals>
    </condition>
@@ -402,7 +402,7 @@
   <object-name>machdecrease</object-name>  
   <condition>
 	  <equals>
-     <property>/autopilot/internal/SPD-MACH</property>
+     <property>autopilot/internal/SPD-MACH</property>
 		 <value>true</value>
 		</equals>
    </condition>
@@ -414,7 +414,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>mach2</object-name>
-  <property>/autopilot/settings/target-speed-mach</property>
+  <property>autopilot/settings/target-speed-mach</property>
   <factor>1.0</factor>
   <step>0.1</step>
   <offset>.001</offset>
@@ -428,7 +428,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>mach1</object-name>
-  <property>/autopilot/settings/target-speed-mach</property>
+  <property>autopilot/settings/target-speed-mach</property>
   <factor>10.0</factor>
   <step>0.01</step>
   <axis>
@@ -443,7 +443,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apspd1</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>autopilot/settings/target-speed-kt</property>
   <factor>0.10</factor>
   <step>1.0</step>
   <axis>
@@ -456,7 +456,7 @@
   <animation>
   <type>textranslate</type>
   <object-name>apspd2</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>autopilot/settings/target-speed-kt</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -469,7 +469,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apspd3</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>autopilot/settings/target-speed-kt</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -504,7 +504,7 @@
  <animation>
    <type>rotate</type>
      <object-name>VNAV</object-name>
-       <property>/autopilot/internal/VNAV</property>
+       <property>autopilot/internal/VNAV</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -538,7 +538,7 @@
  <animation>
    <type>rotate</type>
      <object-name>VS</object-name>
-       <property>/autopilot/internal/VNAV-VS</property>
+       <property>autopilot/internal/VNAV-VS</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -559,7 +559,7 @@
   <action>
     <binding>
       <command>property-adjust</command>
-        <property>/autopilot/settings/vertical-speed-knob</property>
+        <property>autopilot/settings/vertical-speed-knob</property>
         <factor>1</factor>
         <min>-89</min>
         <max>70</max>    
@@ -582,7 +582,7 @@
     <button>0</button>
     <binding>
       <command>property-adjust</command>
-        <property>/autopilot/settings/vertical-speed-fpm</property>
+        <property>autopilot/settings/vertical-speed-fpm</property>
         <step>-100</step>
         <min>-7900</min>
     </binding>
@@ -601,11 +601,11 @@
   <condition>
   <and>
     <equals>
-      <property>/autopilot/internal/VNAV-VS</property>
+      <property>autopilot/internal/VNAV-VS</property>
       <value>true</value>
     </equals>
     <greater-than>
-      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <property>autopilot/settings/vertical-speed-fpm</property>
       <value>-1</value>
     </greater-than>
   </and>
@@ -621,11 +621,11 @@
   <condition>
   <and>
     <equals>
-      <property>/autopilot/internal/VNAV-VS</property>
+      <property>autopilot/internal/VNAV-VS</property>
       <value>true</value>
     </equals>
     <less-than>
-      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <property>autopilot/settings/vertical-speed-fpm</property>
       <value>-1</value>
     </less-than>
   </and>
@@ -766,7 +766,7 @@
  <animation>
    <type>rotate</type>
      <object-name>ALTHLD</object-name>
-       <property>/autopilot/internal/VNAV-ALT-light</property>
+       <property>autopilot/internal/VNAV-ALT-light</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -782,7 +782,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt1</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.10</factor>
   <step>1.0</step>
   <axis>
@@ -795,7 +795,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt2</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -808,7 +808,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt3</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -821,7 +821,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt4</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.0001</factor>
   <step>1000</step>
   <axis>
@@ -834,7 +834,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt5</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.00001</factor>
   <step>10000</step>
   <axis>
@@ -849,7 +849,7 @@
   <animation>
     <type>knob</type>
     <object-name>alt_cylinder</object-name>
-    <property>/autopilot/settings/target-altitude-mcp-ft</property>
+    <property>autopilot/settings/target-altitude-mcp-ft</property>
     <factor>-0.1</factor>
     <center>
       <x-m>0</x-m>
@@ -864,7 +864,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/autopilot/settings/target-altitude-mcp-ft</property>
+        <property>autopilot/settings/target-altitude-mcp-ft</property>
         <factor>100</factor>
         <min>0</min>
         <max>50000</max>                
@@ -895,7 +895,7 @@
  <animation>
    <type>rotate</type>
      <object-name>APP</object-name>
-       <property>/autopilot/internal/VNAV-GS-armed</property>
+       <property>autopilot/internal/VNAV-GS-armed</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -934,7 +934,7 @@
  <animation>
    <type>rotate</type>
      <object-name>LNAV</object-name>
-       <property>/autopilot/internal/LNAV</property>
+       <property>autopilot/internal/LNAV</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -967,7 +967,7 @@
  <animation>
    <type>rotate</type>
      <object-name>HDGSEL</object-name>
-       <property>/autopilot/internal/LNAV-HDG</property>
+       <property>autopilot/internal/LNAV-HDG</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -1001,7 +1001,7 @@
  <animation>
    <type>rotate</type>
      <object-name>VORLOC</object-name>
-       <property>/autopilot/internal/LNAV-NAV-light</property>
+       <property>autopilot/internal/LNAV-NAV-light</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -1018,7 +1018,7 @@
      <animation>
         <type>knob</type>
         <object-name>crz_cylinder</object-name>
-        <property>/instrumentation/nav[0]/radials/selected-deg</property>
+        <property>instrumentation/nav[0]/radials/selected-deg</property>
         <factor>-0.5</factor>
         <center>
             <x-m>0</x-m>
@@ -1033,7 +1033,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/nav/radials/selected-deg</property>
+        <property>instrumentation/nav/radials/selected-deg</property>
         <factor>1</factor>
         <min>0</min>
         <max>360</max>                
@@ -1047,7 +1047,7 @@
      <animation>
         <type>knob</type>
         <object-name>crz_cylinder1</object-name>
-        <property>/instrumentation/nav[1]/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <factor>-0.5</factor>
         <center>
             <x-m>0</x-m>
@@ -1062,7 +1062,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/nav[1]/radials/selected-deg</property>
+        <property>instrumentation/nav[1]/radials/selected-deg</property>
         <factor>1</factor>
         <min>0</min>
         <max>360</max>                
@@ -1076,7 +1076,7 @@
     <animation>
         <type>knob</type>
         <object-name>hdg_cylinder</object-name>
-        <property>/autopilot/settings/heading-bug-deg</property>
+        <property>autopilot/settings/heading-bug-deg</property>
         <factor>-0.5</factor>
         <center>
             <x-m>0</x-m>
@@ -1091,7 +1091,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/autopilot/settings/heading-bug-deg</property>
+        <property>autopilot/settings/heading-bug-deg</property>
         <factor>1</factor>
         <min>0</min>
         <max>360</max>                
@@ -1106,7 +1106,7 @@
   <animation>
   <type>textranslate</type>
   <object-name>apcrz1</object-name>
-   <property>/instrumentation/nav[0]/radials/selected-deg</property>
+   <property>instrumentation/nav[0]/radials/selected-deg</property>
   <factor>0.10</factor>
   <step>1.0</step>
   <axis>
@@ -1119,7 +1119,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apcrz2</object-name>
-   <property>/instrumentation/nav[0]/radials/selected-deg</property>
+   <property>instrumentation/nav[0]/radials/selected-deg</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -1132,7 +1132,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apcrz3</object-name>
-   <property>/instrumentation/nav[0]/radials/selected-deg</property>
+   <property>instrumentation/nav[0]/radials/selected-deg</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -1147,7 +1147,7 @@
    <animation>
   <type>textranslate</type>
   <object-name>apcrz1b</object-name>
-   <property>/instrumentation/nav[1]/radials/selected-deg</property>
+   <property>instrumentation/nav[1]/radials/selected-deg</property>
   <factor>0.10</factor>
   <step>1.0</step>
   <axis>
@@ -1160,7 +1160,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apcrz2b</object-name>
-   <property>/instrumentation/nav[1]/radials/selected-deg</property>
+   <property>instrumentation/nav[1]/radials/selected-deg</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -1173,7 +1173,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apcrz3b</object-name>
-   <property>/instrumentation/nav[1]/radials/selected-deg</property>
+   <property>instrumentation/nav[1]/radials/selected-deg</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -1189,7 +1189,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>aphdg1</object-name>
-   <property>/autopilot/settings/heading-bug-deg</property>
+   <property>autopilot/settings/heading-bug-deg</property>
    <factor>0.10</factor>
    <step>1.0</step>
    <axis>
@@ -1202,7 +1202,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>aphdg2</object-name>
-   <property>/autopilot/settings/heading-bug-deg</property>
+   <property>autopilot/settings/heading-bug-deg</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -1215,7 +1215,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>aphdg3</object-name>
-   <property>/autopilot/settings/heading-bug-deg</property>
+   <property>autopilot/settings/heading-bug-deg</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -1252,7 +1252,7 @@
  <animation>
    <type>rotate</type>
      <object-name>CMDA</object-name>
-       <property>/autopilot/internal/CMDA</property>
+       <property>autopilot/internal/CMDA</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -1286,7 +1286,7 @@
  <animation>
    <type>rotate</type>
      <object-name>CMDB</object-name>
-       <property>/autopilot/internal/CMDB</property>
+       <property>autopilot/internal/CMDB</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -1320,7 +1320,7 @@
  <animation>
    <type>rotate</type>
      <object-name>CWSA</object-name>
-       <property>/autopilot/internal/CWSA</property>
+       <property>autopilot/internal/CWSA</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -1353,7 +1353,7 @@
  <animation>
    <type>rotate</type>
      <object-name>CWSB</object-name>
-       <property>/autopilot/internal/CWSB</property>
+       <property>autopilot/internal/CWSB</property>
        <factor>-90</factor>
        <center>
          <x-m>-0.00281</x-m>
@@ -1396,7 +1396,7 @@
    <repeatable>false</repeatable> 
    <binding>
     <command>property-toggle</command>
-    <property>/instrumentation/flightdirector/fd-left-on</property>
+    <property>instrumentation/flightdirector/fd-left-on</property>
 		<step>1</step>
 		<min>0></min>
 		<max>1</max>
@@ -1408,7 +1408,7 @@
  <animation>
    <type>rotate</type>
    <object-name>cap-fd</object-name>
-   <property>/instrumentation/flightdirector/fd-left-on</property>
+   <property>instrumentation/flightdirector/fd-left-on</property>
    <factor>-30</factor>
 	 <offset-deg>30</offset-deg>
    <center>
@@ -1432,7 +1432,7 @@
    <repeatable>false</repeatable> 
    <binding>
     <command>property-toggle</command>
-    <property>/instrumentation/flightdirector/fd-right-on</property>
+    <property>instrumentation/flightdirector/fd-right-on</property>
 		<step>1</step>
 		<min>0></min>
 		<max>1</max>
@@ -1444,7 +1444,7 @@
  <animation>
    <type>rotate</type>
    <object-name>cop-fd</object-name>
-   <property>/instrumentation/flightdirector/fd-right-on</property>
+   <property>instrumentation/flightdirector/fd-right-on</property>
    <factor>-30</factor>
 	 <offset-deg>30</offset-deg>
    <center>

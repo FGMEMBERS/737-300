@@ -69,18 +69,18 @@
    <object-name>FDbars</object-name>
    <condition>
      <and>
-       <property>/instrumentation/flightdirector/fd-left-on</property>
+       <property>instrumentation/flightdirector/fd-left-on</property>
        <or>
-         <property>/autopilot/internal/TOGA</property>
-         <property>/autopilot/internal/GA</property>
+         <property>autopilot/internal/TOGA</property>
+         <property>autopilot/internal/GA</property>
          <and>
            <greater-than>
-             <property>/position/altitude-agl-ft</property>
+             <property>position/altitude-agl-ft</property>
              <value>56.5</value>
            </greater-than>
            <or>
-             <property>/autopilot/internal/PITCH-ACTIVE</property>
-             <property>/autopilot/internal/THROTTLE-ACTIVE</property>
+             <property>autopilot/internal/PITCH-ACTIVE</property>
+             <property>autopilot/internal/THROTTLE-ACTIVE</property>
            </or>
          </and>
        </or>
@@ -93,8 +93,8 @@
    <object-name>GSscale</object-name>
    <object-name>GSneedle</object-name>
    <condition>
-      <property>/instrumentation/nav/has-gs</property>
-      <property>/instrumentation/nav/in-range</property>
+      <property>instrumentation/nav/has-gs</property>
+      <property>instrumentation/nav/in-range</property>
    </condition>
  </animation>
  
@@ -102,7 +102,7 @@
  <animation>
    <type>translate</type>
    <object-name>GSneedle</object-name>
-   <property>/instrumentation/nav/gs-needle-deflection</property>
+   <property>instrumentation/nav/gs-needle-deflection</property>
 <interpolation>
      <entry>
        <ind> -10.0</ind>
@@ -129,7 +129,7 @@
    <type>select</type>
    <object-name>Omarker</object-name>
    <condition>
-       <property>/instrumentation/marker-beacon/outer</property>
+       <property>instrumentation/marker-beacon/outer</property>
        <value>true</value>
    </condition>
  </animation>
@@ -138,7 +138,7 @@
    <type>select</type>
    <object-name>Mmarker</object-name>
    <condition>
-       <property>/instrumentation/marker-beacon/middle</property>
+       <property>instrumentation/marker-beacon/middle</property>
        <value>true</value>
    </condition>
  </animation>
@@ -147,7 +147,7 @@
    <type>select</type>
    <object-name>Imarker</object-name>
    <condition>
-         <property>/instrumentation/marker-beacon/inner</property>
+         <property>instrumentation/marker-beacon/inner</property>
        <value>true</value>
    </condition>
  </animation>
@@ -156,8 +156,8 @@
    <type>select</type>
    <object-name>LOCscale</object-name>
    <condition>
-         <property>/instrumentation/nav/nav-loc</property>
-         <property>/instrumentation/nav/in-range</property>
+         <property>instrumentation/nav/nav-loc</property>
+         <property>instrumentation/nav/in-range</property>
    </condition>
  </animation>
  
@@ -165,15 +165,15 @@
    <type>select</type>
    <object-name>LOCneedle</object-name>
    <condition>
-   <property>/instrumentation/nav/nav-loc</property>
-   <property>/instrumentation/nav/in-range</property>
+   <property>instrumentation/nav/nav-loc</property>
+   <property>instrumentation/nav/in-range</property>
    </condition>
  </animation>
  
  <animation>
    <type>translate</type>
    <object-name>LOCneedle</object-name>
-   <property>/instrumentation/nav/heading-needle-deflection</property>
+   <property>instrumentation/nav/heading-needle-deflection</property>
 <interpolation>
      <entry>
        <ind> -10.0</ind>
@@ -198,7 +198,7 @@
  <animation>
    <type>rotate</type>
    <object-name>FDbars</object-name>
-   <property>/instrumentation/flightdirector/fd-left-bank</property>
+   <property>instrumentation/flightdirector/fd-left-bank</property>
    <factor>-1</factor>
    <axis>
      <x>1.0</x>
@@ -215,7 +215,7 @@
  <animation>
   <type>rotate</type>
   <object-name>FDbars</object-name>
-  <property>/orientation/roll-deg</property>
+  <property>orientation/roll-deg</property>
    <axis>
      <x>1.0</x>
      <y>0.0</y>
@@ -231,7 +231,7 @@
  <animation>
    <type>translate</type>
    <object-name>FDbars</object-name>
-   <property>/instrumentation/flightdirector/fd-left-pitch</property>
+   <property>instrumentation/flightdirector/fd-left-pitch</property>
 <factor>0.0014</factor>
 <offset-m>0.002</offset-m>
 <axis>
@@ -249,7 +249,7 @@
  <animation>
    <type>translate</type>
    <object-name>FDbars</object-name>
-   <property>/orientation/pitch-deg</property>
+   <property>orientation/pitch-deg</property>
 <factor>-0.0014</factor>
 <axis>
      <x>0.0</x>
@@ -268,7 +268,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rollarrow</object-name>
-  <property>/orientation/roll-deg</property>
+  <property>orientation/roll-deg</property>
   <center>
    <x-m>0.0</x-m>
    <y-m>-0.003</y-m>
@@ -284,7 +284,7 @@
  <animation>
    <type>rotate</type>
    <object-name>rollptr</object-name>
-   <property>/orientation/roll-deg</property>
+   <property>orientation/roll-deg</property>
    <axis>
      <x>1.0</x>
      <y>0.0</y>
@@ -301,7 +301,7 @@
    <type>texmultiple</type>
    <object-name>AI</object-name>
    <transform>
-     <property>/orientation/pitch-deg</property>
+     <property>orientation/pitch-deg</property>
      <subtype>textranslate</subtype>
      <factor>0.00314</factor>
      <axis>
@@ -311,7 +311,7 @@
      </axis>
    </transform>
    <transform>
-     <property>/orientation/roll-deg</property>
+     <property>orientation/roll-deg</property>
      <subtype>texrotate</subtype>
      <center>
        <x>0.25</x>
@@ -328,7 +328,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>asi1</object-name>
-  <property>/velocities/airspeed-kt</property>
+  <property>velocities/airspeed-kt</property>
   <factor>0.10</factor>
   <axis>
    <x>0</x>
@@ -340,7 +340,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>asi2</object-name>
-  <property>/velocities/airspeed-kt</property>
+  <property>velocities/airspeed-kt</property>
   <factor>0.01</factor>
   <step>10</step>
   <scroll>1</scroll>
@@ -354,7 +354,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>asi3</object-name>
-  <property>/velocities/airspeed-kt</property>
+  <property>velocities/airspeed-kt</property>
   <factor>0.001</factor>
   <step>100</step>
   <scroll>1</scroll>
@@ -371,7 +371,7 @@
   <object-name>asitape1</object-name>
   <condition>
    <less-than>
-    <property>/velocities/airspeed-kt</property>
+    <property>velocities/airspeed-kt</property>
     <value>480.01</value>
    </less-than>
   </condition>
@@ -382,7 +382,7 @@
   <object-name>asitape2</object-name>
   <condition>
    <greater-than>
-    <property>/velocities/airspeed-kt</property>
+    <property>velocities/airspeed-kt</property>
     <value>479.99</value>
    </greater-than>
   </condition>
@@ -391,7 +391,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>asitape1</object-name>
-  <property>/velocities/airspeed-kt</property>
+  <property>velocities/airspeed-kt</property>
   <factor>0.001665</factor>
   <min>0.0499</min>
   <axis>
@@ -404,7 +404,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>asitape2</object-name>
-  <property>/velocities/airspeed-kt</property>
+  <property>velocities/airspeed-kt</property>
   <factor>0.001665</factor>
   <min>0.0499</min>
   <axis>
@@ -421,15 +421,15 @@
   <condition>
         <and>
           <equals>
-            <property>/autopilot/internal/CMDA</property>
+            <property>autopilot/internal/CMDA</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/LNAV</property>
+            <property>autopilot/internal/LNAV</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/LNAV-NAV1</property>
+            <property>autopilot/internal/LNAV-NAV1</property>
             <value>true</value>
           </equals>
 			  </and>
@@ -442,15 +442,15 @@
   <condition>
     <and>
       <equals>
-        <property>/autopilot/internal/CMDA</property>
+        <property>autopilot/internal/CMDA</property>
         <value>true</value>
       </equals>
       <equals>
-        <property>/autopilot/internal/LNAV</property>
+        <property>autopilot/internal/LNAV</property>
         <value>true</value>
       </equals>
       <equals>
-        <property>/autopilot/internal/LNAV-FMS</property>
+        <property>autopilot/internal/LNAV-FMS</property>
         <value>true</value>
       </equals>
     </and>
@@ -463,27 +463,27 @@
   <condition>
     <and>
       <equals>
-        <property>/autopilot/internal/CMDA</property>
+        <property>autopilot/internal/CMDA</property>
         <value>true</value>
       </equals>
       <equals>
-        <property>/autopilot/internal/VNAV</property>
+        <property>autopilot/internal/VNAV</property>
         <value>true</value>
       </equals>
       <equals>
-        <property>/autopilot/internal/VNAV-GS</property>
+        <property>autopilot/internal/VNAV-GS</property>
         <value>true</value>
       </equals> 
       <equals>
-        <property>/instrumentation/nav/gs-in-range</property>
+        <property>instrumentation/nav/gs-in-range</property>
         <value>true</value>
       </equals>
       <less-than>
-        <property>/instrumentation/nav/gs-needle-deflection</property>
+        <property>instrumentation/nav/gs-needle-deflection</property>
          <value>0.5</value>
       </less-than>
       <greater-than>
-        <property>/instrumentation/nav/gs-needle-deflection</property>
+        <property>instrumentation/nav/gs-needle-deflection</property>
         <value>-0.5</value>
       </greater-than>
      </and>
@@ -496,29 +496,29 @@
   <condition>
         <and>
           <equals>
-            <property>/autopilot/internal/CMDA</property>
+            <property>autopilot/internal/CMDA</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/SPD</property>
+            <property>autopilot/internal/SPD</property>
             <value>true</value>
           </equals>
           <or>
             <equals>
-              <property>/autopilot/internal/SPD-N1</property>
+              <property>autopilot/internal/SPD-N1</property>
               <value>true</value>
             </equals>
             <equals>
-              <property>/autopilot/internal/SPD-SPEED</property>
+              <property>autopilot/internal/SPD-SPEED</property>
               <value>true</value>
             </equals>
             <equals>
-              <property>/autopilot/internal/SPD-LVLCHG</property>
+              <property>autopilot/internal/SPD-LVLCHG</property>
               <value>true</value>
             </equals>
           </or>
           <equals>
-            <property>/autopilot/internal/SPD-IAS</property>
+            <property>autopilot/internal/SPD-IAS</property>
             <value>true</value>
           </equals>
 			  </and>
@@ -531,15 +531,15 @@
   <condition>
         <and>
           <equals>
-            <property>/autopilot/internal/CMDA</property>
+            <property>autopilot/internal/CMDA</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/LNAV</property>
+            <property>autopilot/internal/LNAV</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/LNAV-HDG/</property>
+            <property>autopilot/internal/LNAV-HDG/</property>
             <value>true</value>
           </equals>
         </and>
@@ -552,15 +552,15 @@
   <condition>
         <and>
           <equals>
-            <property>/autopilot/internal/CMDA</property>
+            <property>autopilot/internal/CMDA</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/VNAV</property>
+            <property>autopilot/internal/VNAV</property>
             <value>true</value>
           </equals>
           <equals>
-            <property>/autopilot/internal/VNAV-ALT</property>
+            <property>autopilot/internal/VNAV-ALT</property>
             <value>true</value>
           </equals>
 			  </and>
@@ -570,7 +570,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apspd1</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>autopilot/settings/target-speed-kt</property>
   <factor>0.10</factor>
   <step>1.0</step>
   <axis>
@@ -583,7 +583,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apspd2</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>autopilot/settings/target-speed-kt</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -596,7 +596,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apspd3</object-name>
-  <property>/autopilot/settings/target-speed-kt</property>
+  <property>autopilot/settings/target-speed-kt</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -609,7 +609,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt1</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.10</factor>
   <step>1.0</step>
   <axis>
@@ -622,7 +622,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt2</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -635,7 +635,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt3</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -648,7 +648,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt4</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.0001</factor>
   <step>1000</step>
   <axis>
@@ -661,7 +661,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>apalt5</object-name>
-  <property>/autopilot/settings/target-altitude-mcp-ft</property>
+  <property>autopilot/settings/target-altitude-mcp-ft</property>
   <factor>0.00001</factor>
   <step>10000</step>
   <axis>
@@ -674,7 +674,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>dmetxt.001</object-name>
-   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <property>instrumentation/dme/indicated-distance-nm</property>
    <factor>0.001</factor>
    <step>100.0</step>
    <axis>
@@ -688,7 +688,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>dmetxt.002</object-name>
-   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <property>instrumentation/dme/indicated-distance-nm</property>
    <factor>0.01</factor>
    <step>10.0</step>
    <axis>
@@ -702,7 +702,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>dmetxt.003</object-name>
-   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <property>instrumentation/dme/indicated-distance-nm</property>
    <factor>0.1</factor>
    <step>1.0</step>
    <axis>
@@ -716,7 +716,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>dmetxt.004</object-name>
-   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <property>instrumentation/dme/indicated-distance-nm</property>
    <factor>1.0</factor>
    <step>0.1</step>
    <axis>
