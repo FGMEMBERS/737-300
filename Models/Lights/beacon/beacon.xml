@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
-    <path>beacon2.ac</path>
+    <path>beacon.ac</path>
 
     <animation>
         <type>noshadow</type>

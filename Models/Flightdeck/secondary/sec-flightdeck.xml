@@ -24,7 +24,7 @@
     <object-name>idle-cutoff-right</object-name>
     
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
+<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.1 </red>
       <green> 0.1 </green>
       <blue>  0.1 </blue>
@@ -40,13 +40,6 @@
   </condition>
   </animation>
 
-	
-	<offsets>
-	  <x-m>.45</x-m>
-		<y-m>-0.01</y-m> 
-		<z-m>0.13</z-m>
-	</offsets>
-	
 	<animation>
 		<name>Hide yokes</name>
 		<type>select</type>
@@ -66,9 +59,9 @@
  <factor>15</factor>
  <offset-deg>5</offset-deg>
  <center>
-  <x-m>-6.58</x-m>
-  <y-m>-0.01</y-m>
-  <z-m>-0.03</z-m>
+  <x-m>-6.12</x-m>
+  <y-m>-0.02</y-m>
+  <z-m>0.1</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -77,44 +70,6 @@
  </axis>
 </animation>
 
-<!-- <animation>
- <type>rotate</type>
- <object-name>LEFTYOKE</object-name>
- <visible>false</visible>
- <property>controls/flight/aileron</property>
- <factor>80</factor>
- <center>
-  <x-m> 1.048</x-m>
-  <y-m>-0.461</y-m>
-  <z-m> 0.824</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation> -->
-
-<!-- FIRST OFFICER -->
- 
-<!--  <animation>
- <type>rotate</type>
- <object-name>RIGHTYOKE</object-name>
- <property>controls/flight/aileron</property>
- <factor>80</factor>
- <center>
-  <x-m> 1.048</x-m>
-  <y-m>0.461</y-m>
-  <z-m> 0.824</z-m>
- </center>
- <axis>
-  <x>-1.0</x>
-  <y>0.0</y>
-  <z>0.0</z>
- </axis>
-</animation> --> 
-
-
 <animation>
  <type>rotate</type>
  <object-name>LEFTTHROTTLE</object-name>
@@ -122,9 +77,9 @@
  <factor>53</factor>
  <offset-deg>-22</offset-deg>
  <center>
-  <x-m>-6.78</x-m>
-  <y-m>-0.01</y-m>
-  <z-m>0.42</z-m>
+  <x-m>-6.32</x-m>
+  <y-m>-0.02</y-m>
+  <z-m>0.55</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -140,9 +95,8 @@
  <factor>53</factor>
  <offset-deg>-22</offset-deg>
  <center>
-  <x-m>-6.78</x-m>
-  <y-m>0.01</y-m>
-  <z-m>0.42</z-m>
+  <x-m>-6.32</x-m>
+  <z-m>0.55</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -158,9 +112,9 @@
  <factor>65</factor>
  <offset-deg>0</offset-deg>
  <center>
-  <x-m>-7.15</x-m>
-  <y-m>-0.0</y-m>
-  <z-m>0.69</z-m>
+  <x-m>-6.69</x-m>
+  <y-m>-0.01</y-m>
+  <z-m>0.82</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -188,22 +142,6 @@
   </action>
  </animation>
 	
-<!--  <animation>
-<type>spin</type>
- <object-name>RIGHTTRIM</object-name>
-<property>controls/special/yoke-switch2</property>
-<factor>60</factor>
- <center>
-  <x-m>-6.76773</x-m>
-  <y-m>0.15517</y-m>
-  <z-m>0.49361</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation> -->
 
 <animation>
  <type>rotate</type>
@@ -212,9 +150,9 @@
  <factor>1</factor>
  <offset-deg>0</offset-deg>
  <center>
-  <x-m>-6.76773</x-m>
-  <y-m>0.15517</y-m>
-  <z-m>0.49361</z-m>
+  <x-m>-6.30773</x-m>
+  <y-m>0.14517</y-m>
+  <z-m>0.62361</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -223,22 +161,6 @@
  </axis>
 </animation>
 
-<!--  <animation>
-<type>spin</type>
- <object-name>LEFTTRIM</object-name> 
-<property>controls/special/yoke-switch2</property>
-<factor>60</factor>
- <center>
-  <x-m>-6.76773</x-m>
-  <y-m>-0.15517</y-m>
-  <z-m>0.49361</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation> -->
 
 <animation>
  <type>rotate</type>
@@ -247,9 +169,9 @@
  <factor>1</factor>
  <offset-deg>0</offset-deg>
  <center>
-  <x-m>-6.76773</x-m>
-  <y-m>-0.15517</y-m>
-  <z-m>0.49361</z-m>
+  <x-m>-6.30773</x-m>
+  <y-m>-0.16517</y-m>
+  <z-m>0.62361</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -300,9 +222,9 @@
  <factor>70</factor>
  <offset-deg>-70</offset-deg>
  <center>
-  <x-m>-6.73774</x-m>
-  <y-m>-0.12218</y-m>
-  <z-m>0.55368</z-m>
+  <x-m>-6.27774</x-m>
+  <y-m>-0.13218</y-m>
+  <z-m>0.68368</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -351,9 +273,9 @@
         <entry><ind>	6</ind>	<dep>	-42</dep></entry>
     </interpolation>
  <center>
-  <x-m>-6.7821</x-m>
-  <y-m>-0.10868</y-m>
-  <z-m>0.4624</z-m>
+  <x-m>-6.3221</x-m>
+  <y-m>-0.11868</y-m>
+  <z-m>0.5924</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -405,9 +327,9 @@
  <factor>60</factor>
  <offset-deg>-20</offset-deg>
  <center>
-  <x-m>-6.76774</x-m>
-  <y-m>-0.09239</y-m>
-  <z-m>0.41084</z-m>
+  <x-m>-6.30774</x-m>
+  <y-m>-0.10239</y-m>
+  <z-m>0.54084</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -444,9 +366,9 @@
  <factor>35</factor>
  <offset-deg>-35</offset-deg>
  <center>
-  <x-m>-6.71438</x-m>
-  <y-m>0.0009</y-m>
-  <z-m>0.49346</z-m>
+  <x-m>-6.25438</x-m>
+  <y-m>-0.0091</y-m>
+  <z-m>0.62346</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -483,9 +405,9 @@
  <factor>35</factor>
  <offset-deg>-35</offset-deg>
  <center>
-  <x-m>-6.71438</x-m>
-  <y-m>0.0009</y-m>
-  <z-m>0.49346</z-m>
+  <x-m>-6.25438</x-m>
+  <y-m>-0.0091</y-m>
+  <z-m>0.62346</z-m>
  </center>
  <axis>
   <x>0</x>
@@ -494,17 +416,5 @@
  </axis>
 </animation>
 
-
-<!--  <animation>
-  <type>translate</type>
-	<property>xadjust</property>
-	<axis><x>1</x></axis>
-</animation>
-	
-<animation>
-  <type>translate</type>
-	<property>zadjust</property>
-	<axis><z>1</z></axis>
-</animation>  -->
 
 </PropertyList>

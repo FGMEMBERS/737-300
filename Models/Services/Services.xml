@@ -131,7 +131,7 @@ George Luiz
     </offsets>
   </model>
 
-<!-- Baggage (Front)-->
+<!-- Baggage (Rear)-->
 
   <model>
     <name>baggage</name>
@@ -266,7 +266,7 @@ George Luiz
 
   <model>
     <name>Engine Protection</name>
-    <path>Aircraft/737-300/Models/Services/EngineProtection/Disc.xml</path>
+    <path>Aircraft/737-300/Models/Services/EngineProtection/EngineProtection.xml</path>
     <condition>
       <equals>
         <property>controls/switches/protection</property>

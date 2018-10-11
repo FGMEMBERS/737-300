@@ -297,9 +297,12 @@
     <multiplay>
       <generic>
         <string n="0"/>
-        <int n="0" alias="/gear/gear[0]/tyre-smoke"/>
-        <int n="1" alias="/gear/gear[1]/tyre-smoke"/>
-        <int n="2" alias="/gear/gear[2]/tyre-smoke"/>
+        <int n="0"
+       alias="/gear/gear[0]/tyre-smoke"/>
+        <int n="1"
+       alias="/gear/gear[1]/tyre-smoke"/>
+        <int n="2"
+       alias="/gear/gear[2]/tyre-smoke"/>
       </generic>
     </multiplay>
 
@@ -1136,10 +1139,10 @@
 
     <lighting>
       <instruments-norm type="double">1</instruments-norm>
-      <beacon type="bool">1</beacon>
-      <strobe type="bool">1</strobe>
+      <beacon type="bool">0</beacon>
+      <strobe type="bool">0</strobe>
       <landing-lights type="bool">0</landing-lights>
-      <nav-lights type="bool">1</nav-lights>
+      <nav-lights type="bool">0</nav-lights>
     </lighting>
 
     <engines>
@@ -1224,6 +1227,32 @@
         <mode-selector type="double">3</mode-selector>
       </ehsi>
     </controls>
+		<instrumentation>
+			<pedestal>
+				<com1>
+					<switch type="bool">false</switch>
+					<selecFreqLeftKhz type="double">300</selecFreqLeftKhz>
+					<selecFreqLeftMhz type="double">118</selecFreqLeftMhz>
+					<selecFreqLeft type="double">118.3</selecFreqLeft>
+					<selecFreqRightKhz type="double">900</selecFreqRightKhz>
+					<selecFreqRightMhz type="double">121</selecFreqRightMhz>
+					<selecFreqRight type="double">121.9</selecFreqRight>
+				</com1>
+				<com2>
+					<switch type="bool">false</switch>
+					<selecFreqLeftKhz type="double">300</selecFreqLeftKhz>
+					<selecFreqLeftMhz type="double">118</selecFreqLeftMhz>
+					<selecFreqLeft type="double">118.3</selecFreqLeft>
+					<selecFreqRightKhz type="double">900</selecFreqRightKhz>
+					<selecFreqRightMhz type="double">121</selecFreqRightMhz>
+					<selecFreqRight type="double">121.9</selecFreqRight>
+				</com2>
+			</pedestal>
+      <transponder>
+        <transponder-mode type="int">0</transponder-mode>
+        <alt-rptg-mode type="int">0</alt-rptg-mode>
+      </transponder>
+		</instrumentation>
     <sensors>
       <air-ground type="string">ground</air-ground>
       <main-gear-spin type="bool">false</main-gear-spin>
@@ -1324,10 +1353,6 @@
         <over-flight-distance-nm type="double">1</over-flight-distance-nm>
       </config>
     </gps>
-
-    <transponder>
-      <id-code>1200</id-code>
-    </transponder>
 
     <airspeed-indicator>
       <speed-bug-pushed type="bool">true</speed-bug-pushed>
@@ -1594,6 +1619,10 @@
     <fmc737>
       <file>Aircraft/737-300/Nasal/fmc.nas</file>
     </fmc737>
+	
+	<com>
+	  <file>Aircraft/737-300/Nasal/com.nas</file>
+    </com>
 
   </nasal>
 

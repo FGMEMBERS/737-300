@@ -18,11 +18,6 @@
   <model>
     <name>flightdeck</name>
     <path>Aircraft/737-300/Models/Flightdeck/flightdeck.xml</path>
-    <offsets>
-      <x-m>0.3</x-m>
-      <z-m>1.957</z-m>
-      <pitch-deg>-15</pitch-deg>
-    </offsets>
   </model>
 
   <offsets>
@@ -34,26 +29,21 @@
   <model>
     <name>Secondary flightdeck model</name>
     <path>Aircraft/737-300/Models/Flightdeck/secondary/sec-flightdeck.xml</path>
-    <offsets>
-      <x-m>0.01</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </offsets>
   </model>	
 
 	<model>
     <name>Passenger Seating</name>
-    <path>Aircraft/737-300/Models/Seating/passenger-seating.xml</path>
+    <path>Aircraft/737-300/Models/Seating/passenger_seating.xml</path>
   </model>	
 
 	<model>
     <name>Cockpit Bulkhead</name>
-    <path>Aircraft/737-300/Models/CockpitBulkhead/cockpit-bulkhead.xml</path>
+    <path>Aircraft/737-300/Models/CockpitBulkhead/cockpit_bulkhead.xml</path>
   </model>	
 
 	<model>
     <name>Overhead Bins</name>
-    <path>Aircraft/737-300/Models/Overhead/overhead.xml</path>
+    <path>Aircraft/737-300/Models/CabinOverhead/cabin_overhead.xml</path>
   </model>	
 
   <model>
@@ -1954,6 +1944,30 @@
 
   </animation>
 
+  <!-- Condition display landing lights -->
+
+    <animation>
+        <type>select</type>
+        <object-name>Llightl</object-name>
+        <condition>
+            	 	<equals>
+	                    <property>controls/lighting/landing-lights-fixed-left</property>
+	                    <value>true</value>
+	            	</equals>
+        </condition>
+    </animation>
+  
+   <animation>
+        <type>select</type>
+        <object-name>Llightr</object-name>
+        <condition>
+            	 	<equals>
+	                    <property>controls/lighting/landing-lights-fixed-right</property>
+	                    <value>true</value>
+	            	</equals>
+        </condition>
+    </animation>
+	
   <!--eyebrow variant animation-->
   <animation>
     <type>select</type>
