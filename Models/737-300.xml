@@ -4,12 +4,13 @@
 
   <path>737-300.ac</path>
   
-
-
   <nasal>
-    <load>
+    <load><![CDATA[
       var livery_update = aircraft.livery_update.new("Aircraft/737-300/Models/Liveries", 10);
-    </load>
+      var r = cmdarg();
+      r.getNode ("gear/gear[0]/steering-norm", 1).alias (r.getNode ("sim/multiplay/generic/float[0]"));
+      r.getNode ("engines/engine/reverser-pos-norm", 1).alias (r.getNode ("sim/multiplay/generic/float[1]"));
+    ]]></load>
     <unload>
       livery_update.stop();
     </unload>
@@ -139,8 +140,8 @@
     <object-name>rhsteercyl</object-name>
     <object-name>lhsteercyl</object-name>
     <object-name>collar</object-name>
-    <property>fdm/jsbsim/fcs/steer-pos-deg</property>
-    <factor>-1</factor>
+    <property>gear/gear[0]/steering-norm</property>
+    <factor>-78</factor>
     <offset-deg>0</offset-deg>
     <axis>
       <x1-m>-4.652</x1-m>
@@ -155,8 +156,8 @@
   <!--<animation>
   <type>rotate</type>
   <path>taxilight.xml</path>
-   <property>controls/flight/rudder</property>
-  <factor>-45</factor>
+   <property>surface-positions/rudder-pos-norm</property>
+  <factor>45</factor>
   <offset-deg>0</offset-deg>   
 		<axis>
 			<x1-m>-4.652</x1-m>
@@ -231,7 +232,7 @@
     <object-name>tyreln</object-name>
     <object-name>Cube</object-name>
     <object-name>tlighthalo</object-name>
-    <property>fdm/jsbsim/gear/gear-nose-pos-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -263,7 +264,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhngdoor</object-name>
-    <property>fdm/jsbsim/gear/gear-nose-pos-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -295,7 +296,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lhngdoor</object-name>
-    <property>fdm/jsbsim/gear/gear-nose-pos-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -338,7 +339,7 @@
     <object-name>mglhtyrelh</object-name>
     <object-name>lhgdmid</object-name>
     <object-name>geardoor</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -373,7 +374,7 @@
     <type>rotate</type>
     <object-name>sidestrutl</object-name>
     <object-name>sidestrutu</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -407,7 +408,7 @@
   <animation>
     <type>rotate</type>
     <object-name>sidestrutu</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -441,7 +442,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lhmgdouter</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <factor>110</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -470,7 +471,7 @@
     <object-name>mgrhtyrelh</object-name>
     <object-name>rhgdmid</object-name>
     <object-name>rhgeardoor</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -505,7 +506,7 @@
     <type>rotate</type>
     <object-name>rhsidestrutl</object-name>
     <object-name>rhsidestrutu</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -539,7 +540,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhsidestrutu</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -573,7 +574,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhmgdouter</object-name>
-    <property>fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <factor>-110</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -592,7 +593,7 @@
     <type>rotate</type>
     <object-name>lhaileron</object-name>
     <object-name>ailerontablh</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor>18</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -610,7 +611,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ailerontablh</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor>-5</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -629,8 +630,8 @@
     <type>rotate</type>
     <object-name>rhaileron</object-name>
     <object-name>ailerontabrh</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>-18</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>18</factor>
     <offset-deg>0</offset-deg>
     <center>
       <x-m>11.547</x-m>
@@ -647,8 +648,8 @@
   <animation>
     <type>rotate</type>
     <object-name>ailerontabrh</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>5</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>-5</factor>
     <offset-deg>0</offset-deg>
     <center>
       <x-m>11.567</x-m>
@@ -746,7 +747,7 @@
     <type>rotate</type>
     <object-name>lhelevator</object-name>
     <object-name>lhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>15</factor>
     <offset-deg>0</offset-deg>
 
@@ -763,7 +764,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>-15</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -802,7 +803,7 @@
     <type>rotate</type>
     <object-name>rhelevator</object-name>
     <object-name>rhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>15</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -818,7 +819,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>-15</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -836,8 +837,8 @@
   <animation>
     <type>rotate</type>
     <object-name>rudder</object-name>
-    <property>fdm/jsbsim/fcs/rudder-pos-norm</property>
-    <factor>-25</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>25</factor>
     <offset-deg>0</offset-deg>
     <center>
       <x-m>21.422</x-m>

@@ -868,7 +868,7 @@
                         <time>5</time>
                     </setting>
                 </traverse>
-                <output>gear/gear-nose-pos-norm</output>
+                <output>gear/unit[0]/pos-norm</output>
             </kinematic>
 
             <kinematic name="Gear Left Control">
@@ -883,7 +883,7 @@
                         <time>7</time>
                     </setting>
                 </traverse>
-                <output>gear/gear-left-pos-norm</output>
+                <output>gear/unit[1]/pos-norm</output>
             </kinematic>
 
             <kinematic name="Gear Right Control">
@@ -898,18 +898,18 @@
                         <time>7</time>
                     </setting>
                 </traverse>
-                <output>gear/gear-right-pos-norm</output>
+                <output>gear/unit[2]/pos-norm</output>
             </kinematic>
 
             <fcs_function name="Gear Control">
                 <function>
                     <avg>
-                        <property>gear/gear-nose-pos-norm</property>
-                        <property>gear/gear-left-pos-norm</property>
-                        <property>gear/gear-right-pos-norm</property>
+                        <property>gear/unit[0]/pos-norm</property>
+                        <property>gear/unit[1]/pos-norm</property>
+                        <property>gear/unit[2]/pos-norm</property>
                     </avg>
                 </function>
-                <output>gear/gear-pos-norm</output>
+                <output>gear/average-pos-norm</output>
             </fcs_function>
 
         </channel>
@@ -1515,7 +1515,7 @@
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
-                    <property>gear/gear-pos-norm</property>
+                    <property>gear/average-pos-norm</property>
                     <value>0.033</value>
                 </product>
             </function>

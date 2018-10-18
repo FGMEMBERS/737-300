@@ -297,12 +297,11 @@
     <multiplay>
       <generic>
         <string n="0"/>
-        <int n="0"
-       alias="/gear/gear[0]/tyre-smoke"/>
-        <int n="1"
-       alias="/gear/gear[1]/tyre-smoke"/>
-        <int n="2"
-       alias="/gear/gear[2]/tyre-smoke"/>
+        <int n="0" alias="/gear/gear[0]/tyre-smoke"/>
+        <int n="1" alias="/gear/gear[1]/tyre-smoke"/>
+        <int n="2" alias="/gear/gear[2]/tyre-smoke"/>
+        <float n="0" alias="/gear/gear[0]/steering-norm"/>
+        <float n="1" alias="/engines/engine/reverser-pos-norm"/> <!-- used for both engines -->
       </generic>
     </multiplay>
 
