@@ -28,10 +28,10 @@
   <animation>
         <type>rotate</type>
         <object-name>needle</object-name>
-        <property>engines/engine[1]/thrust_lb</property>
+        <property>engines/engine[1]/fuel-flow_pph</property>
         <interpolation>
-            <entry><ind>0</ind><dep>45</dep></entry>
-            <entry><ind>13227</ind><dep>315</dep></entry>
+            <entry><ind>0</ind><dep>0</dep></entry>
+            <entry><ind>18200</ind><dep>265</dep></entry>
         </interpolation>
         <center>
             <x-m>0</x-m>

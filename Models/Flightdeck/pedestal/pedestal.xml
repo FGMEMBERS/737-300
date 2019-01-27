@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 
- <PropertyList>
-   
-   <model>
+<PropertyList>
+
+  <model>
     <name>Pedestal</name>
     <path>Aircraft/737-300/Models/Flightdeck/pedestal/pedestal/pedestal.xml</path>
   </model>
 
-   <model>
+  <model>
     <name>COM1</name>
     <path>Aircraft/737-300/Models/Flightdeck/pedestal/COM/com_panel1.xml</path>
     <offsets>
@@ -16,8 +16,8 @@
       <z-m>0.25</z-m>
     </offsets>
   </model>
-  
-    <model>
+
+  <model>
     <name>COM2</name>
     <path>Aircraft/737-300/Models/Flightdeck/pedestal/COM/com_panel2.xml</path>
     <offsets>
@@ -26,8 +26,28 @@
       <z-m>0.25</z-m>
     </offsets>
   </model>
-  
-    <model>
+
+  <model>
+    <name>NAV1</name>
+    <path>Aircraft/737-300/Models/Flightdeck/pedestal/NAV/nav_panel1.xml</path>
+    <offsets>
+      <x-m>-0.1492</x-m>
+      <y-m>0.141365</y-m>
+      <z-m>0.25</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>NAV2</name>
+    <path>Aircraft/737-300/Models/Flightdeck/pedestal/NAV/nav_panel2.xml</path>
+    <offsets>
+      <x-m>0.1492</x-m>
+      <y-m>0.141365</y-m>
+      <z-m>0.25</z-m>
+    </offsets>
+  </model>
+
+  <model>
     <name>Transponder</name>
     <path>Aircraft/737-300/Models/Flightdeck/pedestal/transponder/transponder_panel.xml</path>
     <offsets>
@@ -37,4 +57,15 @@
     </offsets>
   </model>
 
-   </PropertyList>
+
+  <model>
+    <name>Lightning</name>
+    <path>Aircraft/737-300/Models/Flightdeck/pedestal/lightning/lightning.xml</path>
+    <offsets>
+      <x-m>-0.1492</x-m>
+      <y-m>-0.215272</y-m>
+      <z-m>0.25</z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

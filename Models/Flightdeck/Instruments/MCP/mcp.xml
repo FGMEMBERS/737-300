@@ -259,7 +259,7 @@
       <binding>
         <command>nasal</command>
         <script>
-         autopilot737.speed_increase();
+         autopilot737.speed_decrease();
         </script>   
       </binding>
     </increase>
@@ -267,7 +267,7 @@
       <binding>
         <command>nasal</command>
         <script>
-         autopilot737.speed_decrease();
+         autopilot737.speed_increase();
         </script>   
       </binding>
     </decrease>
@@ -560,7 +560,7 @@
     <binding>
       <command>property-adjust</command>
         <property>autopilot/settings/vertical-speed-knob</property>
-        <factor>1</factor>
+        <factor>-1</factor>
         <min>-89</min>
         <max>70</max>    
         <wrap>false</wrap>
@@ -865,7 +865,7 @@
       <binding>
         <command>property-adjust</command>
         <property>autopilot/settings/target-altitude-mcp-ft</property>
-        <factor>100</factor>
+        <factor>-100</factor>
         <min>0</min>
         <max>50000</max>                
         <wrap>false</wrap>
@@ -1034,7 +1034,7 @@
       <binding>
         <command>property-adjust</command>
         <property>instrumentation/nav/radials/selected-deg</property>
-        <factor>1</factor>
+        <factor>-1</factor>
         <min>0</min>
         <max>360</max>                
         <wrap>true</wrap>
@@ -1063,7 +1063,7 @@
       <binding>
         <command>property-adjust</command>
         <property>instrumentation/nav[1]/radials/selected-deg</property>
-        <factor>1</factor>
+        <factor>-1</factor>
         <min>0</min>
         <max>360</max>                
         <wrap>true</wrap>
@@ -1092,7 +1092,7 @@
       <binding>
         <command>property-adjust</command>
         <property>autopilot/settings/heading-bug-deg</property>
-        <factor>1</factor>
+        <factor>-1</factor>
         <min>0</min>
         <max>360</max>                
         <wrap>true</wrap>

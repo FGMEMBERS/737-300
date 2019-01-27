@@ -2,360 +2,378 @@
 
 <PropertyList>
 
-<path>com_panel.ac</path>
+  <path>com_panel.ac</path>
 
 
-<animation>
-  <type>select</type>
+  <animation>
+    <type>select</type>
     <object-name>VHFLeft1</object-name>
     <object-name>VHFLeft2</object-name>
     <object-name>VHFLeft3</object-name>
     <object-name>VHFLeft4</object-name>
     <object-name>VHFLeft5</object-name>
-	<object-name>VHFLeft6</object-name>
-	<object-name>VHFRight1</object-name>
+    <object-name>VHFLeft6</object-name>
+    <object-name>VHFRight1</object-name>
     <object-name>VHFRight2</object-name>
     <object-name>VHFRight3</object-name>
     <object-name>VHFRight4</object-name>
     <object-name>VHFRight5</object-name>
-	<object-name>VHFRight6</object-name>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-</animation>
+    <object-name>VHFRight6</object-name>
+    <condition>
+      <or>
+        <property>controls/electric/battery-switch</property>
+        <property>controls/electric/external-power</property>
+        <property>controls/electric/apugen1</property>
+        <property>controls/electric/apugen2</property>
+        <property>engines/engine[0]/running</property>
+      </or>
+    </condition>
+  </animation>
 
 
 
-<!-- Animation and knobs of left side -->
-<animation>
-  <type>textranslate</type>
-  <object-name>VHFLeft1</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
-	<bias>900</bias>
-  <factor>0.001</factor>
-  <step>100</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>VHFLeft2</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
-  <factor>0.01</factor>
-  <step>10</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>VHFLeft3</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>VHFLeft4</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
-  <bias>0.0001</bias>
-  <factor>1</factor>
-  <step>0.1</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
+  <!-- Animation and knobs of left side -->
   <animation>
-  <type>textranslate</type>
-  <object-name>VHFLeft5</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
-	<bias>0.0001</bias>
-  <factor>10</factor>
-  <step>0.01</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
- 
-   <animation>
-  <type>textranslate</type>
-  <object-name>VHFLeft6</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
-	<bias>0.0001</bias>
-  <factor>100</factor>
-  <step>0.001</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
-<animation>
-        <type>knob</type>
-        <object-name>LeftKnobLower</object-name>
-        <property>/b733/instrumentation/pedestal/com2/selecFreqLeftMhz</property>
-        <center>
-        <x-m>-0.0406144</x-m>
-        <y-m>-0.01226</y-m>
-        <z-m>0.000543875</z-m>
-        </center>
-        <axis><x>0</x><y>0</y><z>1</z></axis>
-        <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
-			<factor>1.0</factor>
-			<min>-1</min>
-			<max>1</max>
-          </binding>
-                  <binding>
-        <command>nasal</command>
-              <script>com.radioControlMhz("l",2);</script>
-        </binding>
-				<binding>
-		<command>nasal</command>
-		<script>com.changeActive(2);</script>
-		</binding>
-        </action>
-    </animation>
-
-	<animation>
-        <type>knob</type>
-        <object-name>LeftKnobUpper</object-name>
-        <property>/b733/instrumentation/pedestal/com2/selecFreqLeftKhz</property>
-        <center>
-        <x-m>-0.0406144</x-m>
-        <y-m>-0.01226</y-m>
-        <z-m>0.000652706</z-m>
-        </center>
-        <axis><x>0</x><y>0</y><z>1</z></axis>
-        <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
-			<factor>1</factor>
-			<min>-1</min>
-			<max>1</max>
-      
-          </binding>
-        <binding>
-        <command>nasal</command>
-              <script>com.radioControlKhz("l",2);</script>
-        </binding>
-				<binding>
-		<command>nasal</command>
-		<script>com.changeActive(2);</script>
-		</binding>
-        </action>
-    </animation>
-
-<!-- Animatons and knobs of right side -->
-	
-	<animation>
-  <type>textranslate</type>
-  <object-name>VHFRight1</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
-	<bias>900</bias>
-  <factor>0.001</factor>
-  <step>100</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>VHFRight2</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
-  <factor>0.01</factor>
-  <step>10</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>VHFRight3</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>VHFRight4</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
-  <bias>0.0001</bias>
-  <factor>1</factor>
-  <step>0.1</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
-  <animation>
-  <type>textranslate</type>
-  <object-name>VHFRight5</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
-	<bias>0.0001</bias>
-  <factor>10</factor>
-  <step>0.01</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
- 
-   <animation>
-  <type>textranslate</type>
-  <object-name>VHFRight6</object-name>
-  <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
-	<bias>0.0001</bias>
-  <factor>100</factor>
-  <step>0.001</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-  </axis>
- </animation>
-
-<animation>
-        <type>knob</type>
-        <object-name>RightKnobLower</object-name>
-        <property>/b733/instrumentation/pedestal/com2/selecFreqRightMhz</property>
-        <center>
-        <x-m>0.0406144</x-m>
-        <y-m>-0.01226</y-m>
-        <z-m>0.000543875</z-m>
-        </center>
-        <axis><x>0</x><y>0</y><z>1</z></axis>
-        <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
-			<factor>1.0</factor>
-			<min>-1</min>
-			<max>1</max>
-          </binding>
-                  <binding>
-        <command>nasal</command>
-              <script>com.radioControlMhz("r",2);</script>
-        </binding>
-		<binding>
-		<command>nasal</command>
-		<script>com.changeActive(2);</script>
-		</binding>
-        </action>
-    </animation>
-
-	<animation>
-        <type>knob</type>
-        <object-name>RightKnobUpper</object-name>
-        <property>/b733/instrumentation/pedestal/com2/selecFreqRightKhz</property>
-        <center>
-        <x-m>0.0406144</x-m>
-        <y-m>-0.01226</y-m>
-        <z-m>0.0652706</z-m>
-        </center>
-        <axis><x>0</x><y>0</y><z>1</z></axis>
-        <action>
-          <binding>
-            <command>property-adjust</command>
-            <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
-			<factor>1</factor>
-			<min>-1</min>
-			<max>1</max>
-      
-          </binding>
-        <binding>
-        <command>nasal</command>
-              <script>com.radioControlKhz("r",2);</script>
-        </binding>
-				<binding>
-		<command>nasal</command>
-		<script>com.changeActive(2);</script>
-		</binding>
-        </action>
-    </animation>
-	
-<!-- Toggle switch with lamps -->
-	<animation>
-	<type>pick</type>
-	<object-name>Switch</object-name>
-	<visible>true</visible>
-	<action>
-	<button>0</button>
-	<repeatable>false</repeatable>
-	<binding>
-	<command>property-toggle</command>
-	<property>/b733/instrumentation/pedestal/com2/switch</property>
-	</binding>
-	<binding>
-        <command>nasal</command>
-              <script>com.changeActive(2);</script>
-        </binding>
-	</action>
-	</animation>
-	
-	<animation>
-	<type>rotate</type>
-	<object-name>Switch</object-name>
-	<property>/b733/instrumentation/pedestal/com2/switch</property>
-	<factor>90</factor>
-	<axis>
-	<x>0</x><y>1</y><z>0</z>
+    <type>textranslate</type>
+    <object-name>VHFLeft1</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
+    <bias>900</bias>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
     </axis>
-	</animation>	
-	
-<animation>
-  <type>select</type>
-    <object-name>LampLeftOn</object-name>
-	<object-name>LampRightOff</object-name>
-  <condition>
-    <equals>
-      <property>b733/instrumentation/pedestal/com2/switch</property>
-	  <value type="double">0</value>
-    </equals>
-  </condition>
-</animation>
+  </animation>
 
-<animation>
-  <type>select</type>
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFLeft2</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFLeft3</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFLeft4</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
+    <bias>0.0001</bias>
+    <factor>1</factor>
+    <step>0.1</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFLeft5</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
+    <bias>0.0001</bias>
+    <factor>10</factor>
+    <step>0.01</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFLeft6</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeft</property>
+    <bias>0.0001</bias>
+    <factor>100</factor>
+    <step>0.001</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>LeftKnobLower</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeftMhz</property>
+    <center>
+      <x-m>-0.0406144</x-m>
+      <y-m>-0.01226</y-m>
+      <z-m>0.000543875</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
+        <factor>1.0</factor>
+        <min>-1</min>
+        <max>1</max>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.radioControlMhz("l",2);</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.changeActive(2);</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>LeftKnobUpper</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqLeftKhz</property>
+    <center>
+      <x-m>-0.0406144</x-m>
+      <y-m>-0.01226</y-m>
+      <z-m>0.000652706</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
+        <factor>1</factor>
+        <min>-1</min>
+        <max>1</max>
+
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.radioControlKhz("l",2);</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.changeActive(2);</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Animatons and knobs of right side -->
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFRight1</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
+    <bias>900</bias>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFRight2</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFRight3</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFRight4</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
+    <bias>0.0001</bias>
+    <factor>1</factor>
+    <step>0.1</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFRight5</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
+    <bias>0.0001</bias>
+    <factor>10</factor>
+    <step>0.01</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>VHFRight6</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRight</property>
+    <bias>0.0001</bias>
+    <factor>100</factor>
+    <step>0.001</step>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>RightKnobLower</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRightMhz</property>
+    <center>
+      <x-m>0.0406144</x-m>
+      <y-m>-0.01226</y-m>
+      <z-m>0.000543875</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
+        <factor>1.0</factor>
+        <min>-1</min>
+        <max>1</max>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.radioControlMhz("r",2);</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.changeActive(2);</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>RightKnobUpper</object-name>
+    <property>/b733/instrumentation/pedestal/com2/selecFreqRightKhz</property>
+    <center>
+      <x-m>0.0406144</x-m>
+      <y-m>-0.01226</y-m>
+      <z-m>0.0652706</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/b733/instrumentation/pedestal/com2/internal_switch</property>
+        <factor>1</factor>
+        <min>-1</min>
+        <max>1</max>
+
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.radioControlKhz("r",2);</script>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.changeActive(2);</script>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Toggle switch with lamps -->
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/pedestal/com2/switch</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>com.changeActive(2);</script>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch</object-name>
+    <property>/b733/instrumentation/pedestal/com2/switch</property>
+    <factor>90</factor>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LampLeftOn</object-name>
+    <object-name>LampRightOff</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/pedestal/com2/switch</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
     <object-name>LampLeftOff</object-name>
-	<object-name>LampRightOn</object-name>
-  <condition>
-    <equals>
-      <property>b733/instrumentation/pedestal/com2/switch</property>
-	  <value type="double">1</value>
-    </equals>
-  </condition>
-</animation>
+    <object-name>LampRightOn</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/pedestal/com2/switch</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
 
 </PropertyList>

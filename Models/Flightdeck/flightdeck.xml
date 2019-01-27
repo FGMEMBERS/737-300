@@ -1,49 +1,21 @@
 <?xml version="1.0"?>
 
- <PropertyList>
-  <path>mainpanel.ac</path>
- 
-    <animation>
-    <type>material</type>
-    <object-name>mainpanel</object-name>
-    <emission>
-      <red>   0.05 </red>
-      <green> 0.05 </green>
-      <blue>  0.05 </blue>
-    </emission>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-  </animation>
- 
-  
-  <!--cockpit-->
- <!--overhead panel -->
- <model>
-    <name>ovhp</name>
-    <path>Aircraft/737-300/Models/Flightdeck/oh-panel/oh-panel.xml</path>
+<PropertyList>
+
+  <!-- Main panel -->
+  <model>
+    <name>Main Panel</name>
+    <path>Aircraft/737-300/Models/Flightdeck/main_panel/main_panel.xml</path>
     <offsets>
-      <x-m>-6.62717</x-m>
-      <y-m>0.32</y-m>
-      <z-m>1.3432</z-m>
-      <pitch-deg>60</pitch-deg>
+      <x-m>-6.67748</x-m>
+      <y-m>0.071939</y-m>
+      <z-m>0.851486</z-m>
+      <pitch-deg>-15</pitch-deg>
     </offsets>
   </model>
 
-<!-- Instruments -->
- <model>
-    <name>instruments</name>
-    <path>Aircraft/737-300/Models/Flightdeck/instruments.xml</path>
-  </model>
-
-   <!--glareshield-->  
-   <model>
+  <!--glareshield-->
+  <model>
     <name>glareshield</name>
     <path>Aircraft/737-300/Models/Flightdeck/glareshield/glareshield.xml</path>
     <offsets>
@@ -55,7 +27,7 @@
   </model>
 
   <!--warnpanel-->
- <model>
+  <model>
     <name>warnpanel</name>
     <path>Aircraft/737-300/Models/Flightdeck/Instruments/WARN/warnpanel.xml</path>
     <offsets>
@@ -64,11 +36,11 @@
       <z-m>1.05866</z-m>
       <pitch-deg>-15</pitch-deg>
     </offsets>
-  </model> 
-  
+  </model>
+
   <!--MCP-->
-  
-	<model>
+
+  <model>
     <name>MCP</name>
     <path>Aircraft/737-300/Models/Flightdeck/Instruments/MCP/mcp.xml</path>
     <offsets>
@@ -78,23 +50,23 @@
       <pitch-deg>-15</pitch-deg>
     </offsets>
   </model>
-  
-	
-	<!-- Captains Yoke -->
-   <model>
+
+
+  <!-- Captains Yoke -->
+  <model>
     <name>Captains Yoke</name>
     <path>Aircraft/737-300/Models/Flightdeck/yokes/yoke.xml</path>
     <offsets>
       <x-m>-6.20635</x-m>
       <y-m>-0.479</y-m>
       <z-m>0.912441</z-m>
-	  <pitch-deg>-15</pitch-deg>
+      <pitch-deg>-15</pitch-deg>
     </offsets>
   </model>
-	
-	
-<!-- Co-Pilots Yoke -->
-   <model>
+
+
+  <!-- Co-Pilots Yoke -->
+  <model>
     <name>Co=Pilots Yoke</name>
     <path>Aircraft/737-300/Models/Flightdeck/yokes/yoke.xml</path>
     <offsets>
@@ -105,8 +77,8 @@
     </offsets>
   </model>
 
-<!-- RUDDER PEDALS -->
-   <model>
+  <!-- RUDDER PEDALS -->
+  <model>
     <name>Captains Rudder Pedals</name>
     <path>Aircraft/737-300/Models/Flightdeck/pedals/pedals.xml</path>
     <offsets>
@@ -117,7 +89,7 @@
     </offsets>
   </model>
 
-   <model>
+  <model>
     <name>Co-Pilots Rudder Pedals</name>
     <path>Aircraft/737-300/Models/Flightdeck/pedals/pedals.xml</path>
     <offsets>
@@ -128,19 +100,42 @@
     </offsets>
   </model>
 
-    <model>
-		<name>pedestal</name>
-		<path>Aircraft/737-300/Models/Flightdeck/pedestal/pedestal.xml</path>
-		<offsets>
-			<x-m>-5.92908</x-m>
-			<z-m>0.37278</z-m>
-			<heading-deg>90</heading-deg>
-		</offsets>
-	</model>
-	
-	
-<!-- Tiller -->
-<!--
+  <!-- Pedestal -->
+  <model>
+    <name>pedestal</name>
+    <path>Aircraft/737-300/Models/Flightdeck/pedestal/pedestal.xml</path>
+    <offsets>
+      <x-m>-5.92908</x-m>
+      <z-m>0.37278</z-m>
+      <heading-deg>90</heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Overhead -->
+  <model>
+    <name>Lower Overhead</name>
+    <path>Aircraft/737-300/Models/Flightdeck/overhead/lower-overhead/lower_overhead.xml</path>
+    <offsets>
+      <x-m>-6.20</x-m>
+      <z-m>1.53313</z-m>
+      <heading-deg>90</heading-deg>
+      <roll-deg>148</roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Upper Overhead</name>
+    <path>Aircraft/737-300/Models/Flightdeck/overhead/upper-overhead/upper_overhead.xml</path>
+    <offsets>
+      <x-m>-5.87859</x-m>
+      <z-m>1.77828</z-m>
+      <heading-deg>90</heading-deg>
+      <roll-deg>159</roll-deg>
+    </offsets>
+  </model>
+
+  <!-- Tiller -->
+  <!--
 	<model>
 		<name>tiller</name>
 		<path>Aircraft/737-300/Models/Flightdeck/tiller/tiller.xml</path>

@@ -1,3 +1,14 @@
+setlistener("/sim/signals/fdm-initialized", func {
+    com.init();
+});
+
+	var init = func() { 
+        setprop("instrumentation/comm/frequencies/selected-mhz",118.3);
+		setprop("instrumentation/comm[1]/frequencies/selected-mhz",128.55);
+        print("COM ready"); 
+    }
+
+
 var radioControlKhz = func(dir, radio){
 	if(radio == 1){
 	if(getprop("/b733/instrumentation/pedestal/com1/internal_switch") == -1){

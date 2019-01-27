@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PropertyList>
+  <path>fuel_panel.ac</path>
+
+  <!-- Left Afterward fuelpump -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SwitchLeftAft</object-name>
+    <property>/b733/instrumentation/fuel/fuelpumps/leftAft</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <center>
+      <x-m>-0.05337</x-m>
+      <y-m>-0.106567</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchLeftAft</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/fuelpumps/leftAft</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/LowPress1A</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[0]/pump-aft</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Left Forward fuelpump -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SwitchLFwd</object-name>
+    <property>/b733/instrumentation/fuel/fuelpumps/leftFwd</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <center>
+      <x-m>-0.025449</x-m>
+      <y-m>-0.106567</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchLFwd</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/fuelpumps/leftFwd</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/LowPress1F</property>
+      </binding>
+            <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[0]/pump-fwd</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Right Forward fuelpump -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SwitchRFwd</object-name>
+    <property>/b733/instrumentation/fuel/fuelpumps/rightFwd</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <center>
+      <x-m>0.025449</x-m>
+      <y-m>-0.106567</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchRFwd</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/fuelpumps/rightFwd</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/LowPress2F</property>
+      </binding>
+            <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[1]/pump-fwd</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Right Forward fuelpump -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SwitchRAft</object-name>
+    <property>/b733/instrumentation/fuel/fuelpumps/rightAft</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <center>
+      <x-m>0.05337</x-m>
+      <y-m>-0.106567</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchRAft</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/fuelpumps/rightAft</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/LowPress2A</property>
+      </binding>
+            <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[1]/pump-aft</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Left CTR fuelpump -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SwitchCLeft</object-name>
+    <property>/b733/instrumentation/fuel/fuelpumps/leftCtr</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <center>
+      <x-m>-0.013938</x-m>
+      <y-m>-0.037268</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchCLeft</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/fuelpumps/leftCtr</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/LowPressCL</property>
+      </binding>
+            <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[2]/pump-left</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Left CTR fuelpump -->
+  <animation>
+    <type>rotate</type>
+    <object-name>SwitchCRight</object-name>
+    <property>/b733/instrumentation/fuel/fuelpumps/rightCtr</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <center>
+      <x-m>0.013938</x-m>
+      <y-m>-0.037268</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>SwitchCRight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/fuelpumps/rightCtr</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/LowPressCR</property>
+      </binding>
+            <binding>
+        <command>property-toggle</command>
+        <property>/controls/fuel/tank[2]/pump-right</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Crossfeed -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Crossfeed</object-name>
+    <property>/b733/instrumentation/fuel/crossfeed</property>
+    <factor>90</factor>
+    <center>
+      <x-m>-0.000355</x-m>
+      <y-m>0.008528</y-m>
+      <z-m>0.001938</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>Crossfeed</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/fuel/crossfeed</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Pressure lights-->
+  <animation>
+    <type>select</type>
+    <object-name>LowPress1A0</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress1A</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress1A1</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress1A</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress1F0</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress1F</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress1F1</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress1F</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress2F0</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress2F</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress2F1</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress2F</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress2A0</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress2A</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPress2A1</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPress2A</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPressCL0</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPressCL</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPressCL1</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPressCL</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPressCR0</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPressCR</property>
+        <value type="double">0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LowPressCR1</object-name>
+    <condition>
+      <equals>
+        <property>b733/instrumentation/fuel/LowPressCR</property>
+        <value type="double">1</value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>

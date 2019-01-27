@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+  <path>forward_lower_panel.ac</path>
+
+  <!-- Outboard Left Landing Light -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>OutbordLLandingLight</object-name>
+    <property>/controls/lighting/landing-lights-fixed-left</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>OutbordLLandingLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-fixed-left</property>
+      </binding>
+    </action>
+  </animation>
+
+
+  <!-- Outbord Right Landing Light -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>OutbordRLandingLight</object-name>
+    <property>/controls/lighting/landing-lights-fixed-right</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>OutbordRLandingLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-fixed-right</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Inboard Left Landing Light -->
+  <animation>
+    <type>rotate</type>
+    <object-name>InboardLLandingLight</object-name>
+    <property>/controls/lighting/landing-lights-retract-left</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>InboardLLandingLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-retract-left</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Inboard Right Landing Light -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>InboardRLandingLight</object-name>
+    <property>/controls/lighting/landing-lights-retract-right</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>InboardRLandingLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/landing-lights-retract-right</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Left Runway Turnoff Light -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LRunwayTurnoff</object-name>
+    <property>/b733/instrumentation/overhead/lights/LRunwayTurnoff</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LRunwayTurnoff</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/overhead/lights/LRunwayTurnoff</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Right Runway Turnoff Light -->
+  <animation>
+    <type>rotate</type>
+    <object-name>RRunwayTurnoff</object-name>
+    <property>/b733/instrumentation/overhead/lights/RRunwayTurnoff</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RRunwayTurnoff</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/overhead/lights/RRunwayTurnoff</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Taxi Light -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TaxiLight</object-name>
+    <property>/controls/lighting/taxi-lights</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>TaxiLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/taxi-lights</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Logo Light -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LogoLight</object-name>
+    <property>/controls/lighting/logo-lights</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LogoLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/logo-lights</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Strobe/NAV Light -->
+  <animation>
+    <type>rotate</type>
+    <object-name>StrobeNavLight</object-name>
+    <property>/b733/instrumentation/overhead/lights/strobe-nav-light</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>StrobeNavLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/overhead/lights/strobe-nav-light</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Beacon Ligh -->
+  <animation>
+    <type>rotate</type>
+    <object-name>BeaconLight</object-name>
+    <property>controls/lighting/beacon</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>BeaconLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/beacon</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Wing Light -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WingLight</object-name>
+    <property>/controls/lighting/wing-lights</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>WingLight</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/lighting/wing-lights</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- WheelWell Light -->
+  <animation>
+    <type>rotate</type>
+    <object-name>WheelWell</object-name>
+    <property>/b733/instrumentation/overhead/lights/WheelWell</property>
+    <offset-deg>-25</offset-deg>
+    <factor>40</factor>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>WheelWell</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/b733/instrumentation/overhead/lights/WheelWell</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Left Engine Starter -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>LEngineStart</object-name>
+    <action>
+      <name>Engine Start 1</name>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <!-- Adding condition -->
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/starter</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LEngineStart</object-name>
+    <property>controls/engines/engine[0]/starter</property>
+    <factor>20</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>0.002871</x-m>
+      <y-m>0.006992</y-m>
+      <z-m>0.002327</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <!-- Right Engine Starter -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>REngineStart</object-name>
+    <action>
+      <name>Engine Start 2</name>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <!-- Adding condition -->
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>REngineStart</object-name>
+    <property>controls/engines/engine[1]/starter</property>
+    <factor>20</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>0.091285</x-m>
+      <y-m>0.006992</y-m>
+      <z-m>0.002327</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+
+</PropertyList>
