@@ -22,7 +22,7 @@
     <object-name>kpa.003</object-name>
     <object-name>kpa.004</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
+<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.7 </red>
       <green> 0.7 </green>
       <blue>  0.7 </blue>

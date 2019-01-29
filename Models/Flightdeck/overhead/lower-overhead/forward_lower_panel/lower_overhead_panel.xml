@@ -9,7 +9,7 @@
   <animation>
     <type>rotate</type>
     <object-name>OutbordLLandingLight</object-name>
-    <property>/controls/lighting/landing-lights-fixed-left</property>
+    <property>controls/lighting/landing-lights-fixed-left</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -28,7 +28,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-fixed-left</property>
+        <property>controls/lighting/landing-lights-fixed-left</property>
       </binding>
     </action>
   </animation>
@@ -39,7 +39,7 @@
   <animation>
     <type>rotate</type>
     <object-name>OutbordRLandingLight</object-name>
-    <property>/controls/lighting/landing-lights-fixed-right</property>
+    <property>controls/lighting/landing-lights-fixed-right</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -58,7 +58,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-fixed-right</property>
+        <property>controls/lighting/landing-lights-fixed-right</property>
       </binding>
     </action>
   </animation>
@@ -67,7 +67,7 @@
   <animation>
     <type>rotate</type>
     <object-name>InboardLLandingLight</object-name>
-    <property>/controls/lighting/landing-lights-retract-left</property>
+    <property>controls/lighting/landing-lights-retract-left</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -86,7 +86,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-retract-left</property>
+        <property>controls/lighting/landing-lights-retract-left</property>
       </binding>
     </action>
   </animation>
@@ -96,7 +96,7 @@
   <animation>
     <type>rotate</type>
     <object-name>InboardRLandingLight</object-name>
-    <property>/controls/lighting/landing-lights-retract-right</property>
+    <property>controls/lighting/landing-lights-retract-right</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -115,7 +115,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-lights-retract-right</property>
+        <property>controls/lighting/landing-lights-retract-right</property>
       </binding>
     </action>
   </animation>
@@ -125,7 +125,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LRunwayTurnoff</object-name>
-    <property>/b733/instrumentation/overhead/lights/LRunwayTurnoff</property>
+    <property>b733/instrumentation/overhead/lights/LRunwayTurnoff</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -144,7 +144,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/overhead/lights/LRunwayTurnoff</property>
+        <property>b733/instrumentation/overhead/lights/LRunwayTurnoff</property>
       </binding>
     </action>
   </animation>
@@ -153,7 +153,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RRunwayTurnoff</object-name>
-    <property>/b733/instrumentation/overhead/lights/RRunwayTurnoff</property>
+    <property>b733/instrumentation/overhead/lights/RRunwayTurnoff</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -172,7 +172,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/overhead/lights/RRunwayTurnoff</property>
+        <property>b733/instrumentation/overhead/lights/RRunwayTurnoff</property>
       </binding>
     </action>
   </animation>
@@ -182,7 +182,7 @@
   <animation>
     <type>rotate</type>
     <object-name>TaxiLight</object-name>
-    <property>/controls/lighting/taxi-lights</property>
+    <property>controls/lighting/taxi-lights</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -201,7 +201,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/taxi-lights</property>
+        <property>controls/lighting/taxi-lights</property>
       </binding>
     </action>
   </animation>
@@ -211,7 +211,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LogoLight</object-name>
-    <property>/controls/lighting/logo-lights</property>
+    <property>controls/lighting/logo-lights</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -230,7 +230,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/logo-lights</property>
+        <property>controls/lighting/logo-lights</property>
       </binding>
     </action>
   </animation>
@@ -239,7 +239,7 @@
   <animation>
     <type>rotate</type>
     <object-name>StrobeNavLight</object-name>
-    <property>/b733/instrumentation/overhead/lights/strobe-nav-light</property>
+    <property>b733/instrumentation/overhead/lights/strobe-nav-light</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -258,7 +258,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/overhead/lights/strobe-nav-light</property>
+        <property>b733/instrumentation/overhead/lights/strobe-nav-light</property>
       </binding>
     </action>
   </animation>
@@ -295,7 +295,7 @@
   <animation>
     <type>rotate</type>
     <object-name>WingLight</object-name>
-    <property>/controls/lighting/wing-lights</property>
+    <property>controls/lighting/wing-lights</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -314,7 +314,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/wing-lights</property>
+        <property>controls/lighting/wing-lights</property>
       </binding>
     </action>
   </animation>
@@ -323,7 +323,7 @@
   <animation>
     <type>rotate</type>
     <object-name>WheelWell</object-name>
-    <property>/b733/instrumentation/overhead/lights/WheelWell</property>
+    <property>b733/instrumentation/overhead/lights/WheelWell</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <axis>
@@ -342,7 +342,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/overhead/lights/WheelWell</property>
+        <property>b733/instrumentation/overhead/lights/WheelWell</property>
       </binding>
     </action>
   </animation>

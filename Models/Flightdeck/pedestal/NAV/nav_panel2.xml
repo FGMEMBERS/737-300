@@ -36,7 +36,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFLeft1</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
     <bias>900</bias>
     <factor>0.001</factor>
     <step>100</step>
@@ -49,7 +49,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFLeft2</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -61,7 +61,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFLeft3</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -73,7 +73,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFLeft4</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
     <bias>0.0001</bias>
     <factor>1</factor>
     <step>0.1</step>
@@ -86,7 +86,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFLeft5</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
     <bias>0.0001</bias>
     <factor>10</factor>
     <step>0.01</step>
@@ -99,7 +99,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFLeft6</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqLeft</property>
     <bias>0.0001</bias>
     <factor>100</factor>
     <step>0.001</step>
@@ -114,7 +114,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFRight1</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <bias>900</bias>
     <factor>0.001</factor>
     <step>100</step>
@@ -127,7 +127,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFRight2</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <factor>0.01</factor>
     <step>10</step>
     <axis>
@@ -139,7 +139,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFRight3</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -151,7 +151,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFRight4</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <bias>0.0001</bias>
     <factor>1</factor>
     <step>0.1</step>
@@ -164,7 +164,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFRight5</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <bias>0.0001</bias>
     <factor>10</factor>
     <step>0.01</step>
@@ -177,7 +177,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>VHFRight6</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <bias>0.0001</bias>
     <factor>100</factor>
     <step>0.001</step>
@@ -191,7 +191,7 @@
   <animation>
     <type>knob</type>
     <object-name>KnobLower</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <center>
       <x-m>0.0406144</x-m>
       <y-m>-0.01226</y-m>
@@ -205,7 +205,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+        <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
         <factor>-1.0</factor>
         <min>108</min>
         <max>117.95</max>
@@ -216,7 +216,7 @@
   <animation>
     <type>knob</type>
     <object-name>KnobUpper</object-name>
-    <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+    <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
     <center>
       <x-m>0.0406144</x-m>
       <y-m>-0.01226</y-m>
@@ -230,7 +230,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/b733/instrumentation/pedestal/nav2/selecFreqRight</property>
+        <property>b733/instrumentation/pedestal/nav2/selecFreqRight</property>
         <factor>-0.05</factor>
         <min>108</min>
         <max>117.95</max>
@@ -248,7 +248,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/pedestal/nav2/transferButton</property>
+        <property>b733/instrumentation/pedestal/nav2/transferButton</property>
       </binding>
       <binding>
         <command>nasal</command>

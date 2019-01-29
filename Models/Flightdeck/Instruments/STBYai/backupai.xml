@@ -11,7 +11,7 @@
     <object-name>rollindex</object-name>
     <object-name>wings</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
+<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.7 </red>
       <green> 0.7 </green>
       <blue>  0.7 </blue>

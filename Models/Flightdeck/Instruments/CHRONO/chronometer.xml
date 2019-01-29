@@ -9,7 +9,7 @@
     <type>material</type>
     <object-name>Chronoface.001</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
+<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.6 </red>
       <green> 0.6 </green>
       <blue>  0.6 </blue>
@@ -61,7 +61,7 @@
     <object-name>colon</object-name>
     <object-name>colon.002</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
+<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   1 </red>
       <green> 1 </green>
       <blue>  1 </blue>
@@ -81,7 +81,7 @@
     <type>material</type>
     <object-name>Chronoface.001</object-name>
     <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
+<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   .7 </red>
       <green> .7 </green>
       <blue>  .7 </blue>

@@ -26,7 +26,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>Letter1</object-name>
-  <property>/instrumentation/transponder/inputs/digit[3]</property>
+  <property>instrumentation/transponder/inputs/digit[3]</property>
   <bias>-1</bias>
   <factor>0.1</factor>
   <step>1</step>
@@ -38,7 +38,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>Letter2</object-name>
-  <property>/instrumentation/transponder/inputs/digit[2]</property>
+  <property>instrumentation/transponder/inputs/digit[2]</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -49,7 +49,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>Letter3</object-name>
-  <property>/instrumentation/transponder/inputs/digit[1]</property>
+  <property>instrumentation/transponder/inputs/digit[1]</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -60,7 +60,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>Letter4</object-name>
-  <property>/instrumentation/transponder/inputs/digit</property>
+  <property>instrumentation/transponder/inputs/digit</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -73,7 +73,7 @@
 <animation>
   <object-name>IdentKnob</object-name>
   <type>translate</type>
-  <property>/instrumentation/transponder/inputs/ident-btn</property>
+  <property>instrumentation/transponder/inputs/ident-btn</property>
   <interpolation>
 	<entry><ind>0</ind><dep> 0</dep></entry>
 	<entry><ind>1</ind><dep>-0.0005</dep></entry>
@@ -91,7 +91,7 @@
   <repeatable>false</repeatable>
     <binding>
     <command>property-toggle</command>
-    <property>/instrumentation/transponder/inputs/ident-btn</property>
+    <property>instrumentation/transponder/inputs/ident-btn</property>
    </binding>
   </action>
 </animation>
@@ -102,7 +102,7 @@
   <type>select</type>
   <condition>
    <equals>
-    <property>/instrumentation/transponder/serviceable</property>
+    <property>instrumentation/transponder/serviceable</property>
     <value>1</value>
    </equals>
   </condition>
@@ -113,7 +113,7 @@
   <type>select</type>
   <condition>
    <equals>
-    <property>/instrumentation/transponder/serviceable</property>
+    <property>instrumentation/transponder/serviceable</property>
     <value>0</value>
    </equals>
   </condition>
@@ -126,7 +126,7 @@
   <action>
   <binding>
     <command>property-adjust</command>
-    <property>/instrumentation/transponder/inputs/digit[3]</property>
+    <property>instrumentation/transponder/inputs/digit[3]</property>
     <factor>-1</factor>
     <min>0</min>
     <max>8</max>
@@ -141,7 +141,7 @@
   <action>
   <binding>
     <command>property-adjust</command>
-    <property>/instrumentation/transponder/inputs/digit[2]</property>
+    <property>instrumentation/transponder/inputs/digit[2]</property>
     <factor>-1</factor>
     <min>0</min>
     <max>8</max>
@@ -156,7 +156,7 @@
   <action>
   <binding>
     <command>property-adjust</command>
-    <property>/instrumentation/transponder/inputs/digit[1]</property>
+    <property>instrumentation/transponder/inputs/digit[1]</property>
     <factor>-1</factor>
     <min>0</min>
     <max>8</max>
@@ -171,7 +171,7 @@
   <action>
   <binding>
     <command>property-adjust</command>
-    <property>/instrumentation/transponder/inputs/digit</property>
+    <property>instrumentation/transponder/inputs/digit</property>
     <factor>-1</factor>
     <min>0</min>
     <max>8</max>
@@ -212,7 +212,7 @@
   <repeatable>false</repeatable>
   <binding>
      <command>property-adjust</command>
-     <property>/b733/instrumentation/transponder/transponder-mode</property>
+     <property>b733/instrumentation/transponder/transponder-mode</property>
     <step>-1</step>
     <min>-2</min>
     <max>3</max>
@@ -251,7 +251,7 @@
   <repeatable>false</repeatable>
   <binding>
      <command>property-adjust</command>
-     <property>/b733/instrumentation/transponder/alt-rptg-mode</property>
+     <property>b733/instrumentation/transponder/alt-rptg-mode</property>
     <step>1</step>
     <min>0</min>
     <max>3</max>

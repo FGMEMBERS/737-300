@@ -6,7 +6,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Switch</object-name>
-        <property>/b733/flightdeck/main_panel/marker_beacon_switch/intensity</property>
+        <property>b733/flightdeck/main_panel/marker_beacon_switch/intensity</property>
         <offset-deg>-25</offset-deg>
         <factor>40</factor>
         <center>
@@ -30,7 +30,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>property-toggle</command>
-                <property>/b733/flightdeck/main_panel/marker_beacon_switch/intensity</property>
+                <property>b733/flightdeck/main_panel/marker_beacon_switch/intensity</property>
             </binding>
         </action>
     </animation>

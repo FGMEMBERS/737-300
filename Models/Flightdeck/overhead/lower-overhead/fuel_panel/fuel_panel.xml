@@ -6,7 +6,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwitchLeftAft</object-name>
-    <property>/b733/instrumentation/fuel/fuelpumps/leftAft</property>
+    <property>b733/instrumentation/fuel/fuelpumps/leftAft</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <center>
@@ -30,15 +30,15 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/fuelpumps/leftAft</property>
+        <property>b733/instrumentation/fuel/fuelpumps/leftAft</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/LowPress1A</property>
+        <property>b733/instrumentation/fuel/LowPress1A</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[0]/pump-aft</property>
+        <property>controls/fuel/tank[0]/pump-aft</property>
       </binding>
     </action>
   </animation>
@@ -47,7 +47,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwitchLFwd</object-name>
-    <property>/b733/instrumentation/fuel/fuelpumps/leftFwd</property>
+    <property>b733/instrumentation/fuel/fuelpumps/leftFwd</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <center>
@@ -71,15 +71,15 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/fuelpumps/leftFwd</property>
+        <property>b733/instrumentation/fuel/fuelpumps/leftFwd</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/LowPress1F</property>
+        <property>b733/instrumentation/fuel/LowPress1F</property>
       </binding>
             <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[0]/pump-fwd</property>
+        <property>controls/fuel/tank[0]/pump-fwd</property>
       </binding>
     </action>
   </animation>
@@ -88,7 +88,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwitchRFwd</object-name>
-    <property>/b733/instrumentation/fuel/fuelpumps/rightFwd</property>
+    <property>b733/instrumentation/fuel/fuelpumps/rightFwd</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <center>
@@ -112,15 +112,15 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/fuelpumps/rightFwd</property>
+        <property>b733/instrumentation/fuel/fuelpumps/rightFwd</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/LowPress2F</property>
+        <property>b733/instrumentation/fuel/LowPress2F</property>
       </binding>
             <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[1]/pump-fwd</property>
+        <property>controls/fuel/tank[1]/pump-fwd</property>
       </binding>
     </action>
   </animation>
@@ -129,7 +129,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwitchRAft</object-name>
-    <property>/b733/instrumentation/fuel/fuelpumps/rightAft</property>
+    <property>b733/instrumentation/fuel/fuelpumps/rightAft</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <center>
@@ -153,15 +153,15 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/fuelpumps/rightAft</property>
+        <property>b733/instrumentation/fuel/fuelpumps/rightAft</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/LowPress2A</property>
+        <property>b733/instrumentation/fuel/LowPress2A</property>
       </binding>
             <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[1]/pump-aft</property>
+        <property>controls/fuel/tank[1]/pump-aft</property>
       </binding>
     </action>
   </animation>
@@ -170,7 +170,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwitchCLeft</object-name>
-    <property>/b733/instrumentation/fuel/fuelpumps/leftCtr</property>
+    <property>b733/instrumentation/fuel/fuelpumps/leftCtr</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <center>
@@ -194,15 +194,15 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/fuelpumps/leftCtr</property>
+        <property>b733/instrumentation/fuel/fuelpumps/leftCtr</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/LowPressCL</property>
+        <property>b733/instrumentation/fuel/LowPressCL</property>
       </binding>
             <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[2]/pump-left</property>
+        <property>controls/fuel/tank[2]/pump-left</property>
       </binding>
     </action>
   </animation>
@@ -211,7 +211,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwitchCRight</object-name>
-    <property>/b733/instrumentation/fuel/fuelpumps/rightCtr</property>
+    <property>b733/instrumentation/fuel/fuelpumps/rightCtr</property>
     <offset-deg>-25</offset-deg>
     <factor>40</factor>
     <center>
@@ -235,15 +235,15 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/fuelpumps/rightCtr</property>
+        <property>b733/instrumentation/fuel/fuelpumps/rightCtr</property>
       </binding>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/LowPressCR</property>
+        <property>b733/instrumentation/fuel/LowPressCR</property>
       </binding>
             <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tank[2]/pump-right</property>
+        <property>controls/fuel/tank[2]/pump-right</property>
       </binding>
     </action>
   </animation>
@@ -252,7 +252,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Crossfeed</object-name>
-    <property>/b733/instrumentation/fuel/crossfeed</property>
+    <property>b733/instrumentation/fuel/crossfeed</property>
     <factor>90</factor>
     <center>
       <x-m>-0.000355</x-m>
@@ -275,7 +275,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/b733/instrumentation/fuel/crossfeed</property>
+        <property>b733/instrumentation/fuel/crossfeed</property>
       </binding>
     </action>
   </animation>
