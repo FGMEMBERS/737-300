@@ -1,3 +1,8 @@
+0.2.1 (2019-02-07)
+-----------------------------------------------------------
+- Fix: [#58] Adding black background panel for main panels when turned off
+
+
 0.2 (2019-01-27)
 -----------------------------------------------------------
 - Fix: [#51] MCP Speedknob uses wrong mousewheel direction 
