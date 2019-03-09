@@ -521,7 +521,7 @@ name "backdoorleft"
 data 17
 backdoorleft.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 92
 17.048 0.19852 1.41791
@@ -1403,7 +1403,7 @@ name "backdoorright"
 data 18
 backdoorright.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 108
 17.7908 1.87053 -1.34818
@@ -53351,7 +53351,7 @@ name "engcore"
 data 12
 engcore.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 160
 3.43173 -0.75839 4.91276
@@ -62423,7 +62423,7 @@ name "frontdoorleft"
 data 18
 frontdoorleft.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 108
 -4.06405 0.18325 1.57578
@@ -63363,7 +63363,7 @@ name "frontdoorright"
 data 19
 frontdoorright.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 163
 -4.01541 1.47987 -1.39191
@@ -64862,7 +64862,7 @@ name "Fuselage"
 data 13
 Fuselage.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 6516
 -8.73919 0.04611 -0.00356
@@ -113452,7 +113452,7 @@ name "geardoor"
 data 13
 geardoor.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 9
 7.71391 -1.41129 2.86349
@@ -148747,7 +148747,7 @@ name "lengfanouterib"
 data 19
 lengfanouterib.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 723
 3.85361 -0.36234 5.0767
@@ -156924,7 +156924,7 @@ name "lhngdoor"
 data 13
 lhngdoor.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 48
 -6.19255 -1.22408 -0.00444
@@ -158275,7 +158275,7 @@ name "lreverserib"
 data 16
 lreverserib.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 200
 4.1415 -0.41233 5.23924
@@ -160657,7 +160657,7 @@ name "mglhtyrelh"
 data 15
 mglhtyrelh.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 802
 8.33459 -1.83336 3.12185
@@ -167235,7 +167235,7 @@ name "mglhtyrerh"
 data 15
 mglhtyrerh.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 802
 8.33459 -1.83336 2.33897
@@ -174935,7 +174935,7 @@ name "mgrhtyrelh"
 data 15
 mgrhtyrelh.mesh
 crease 40.0
-texture "737-300uvmap1.png"
+texture "733_white.png"
 texrep 1 1
 numvert 802
 8.33459 -1.83336 -2.04456
@@ -181513,7 +181513,7 @@ name "mgrhtyrerh"
 data 15
 mgrhtyrerh.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 802
 8.33459 -1.83336 -2.82744
@@ -192088,7 +192088,7 @@ name "Plane.011"
 data 14
 Plane.011.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 271
 -5.79561 1.40105 -0.944
@@ -196131,7 +196131,7 @@ name "removal"
 data 12
 removal.mesh
 crease 40.0
-texture "737-300uvmap1.png"
+texture "733_white.png"
 texrep 1 1
 numvert 32
 -6.31831 1.47549 -0.64354
@@ -198453,7 +198453,7 @@ name "rhgeardoor"
 data 15
 rhgeardoor.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 9
 7.71412 -1.30325 -2.88
@@ -201251,7 +201251,7 @@ name "rhngdoor"
 data 13
 rhngdoor.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 50
 -6.19274 -1.20516 -0.13049
@@ -205325,7 +205325,7 @@ name "rudder"
 data 11
 rudder.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 33
 23.9694 8.60246 0.02194
@@ -207917,7 +207917,7 @@ name "tailpipe"
 data 13
 tailpipe.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 200
 5.54527 -0.94805 4.87629
@@ -209247,7 +209247,7 @@ name "tyreln"
 data 11
 tyreln.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 802
 -4.41721 -1.88756 0.32613
@@ -215819,7 +215819,7 @@ name "tyrern"
 data 11
 tyrern.mesh
 crease 40.0
-texture "737-300uvmap1.png"
+texture "733_white.png"
 texrep 1 1
 numvert 802
 -4.4189 -1.88745 -0.17069
@@ -222793,7 +222793,7 @@ name "vstab"
 data 10
 vstab.mesh
 crease 40.0
-texture "texture.png"
+texture "733_white.png"
 texrep 1 1
 numvert 75
 22.8111 8.64408 -0.08486

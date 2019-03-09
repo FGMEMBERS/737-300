@@ -75,9 +75,13 @@
       </door>
     </model>
 
-    <startup>
-      <splash-texture>Aircraft/737-300/737-300.png</splash-texture>
-    </startup>
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>737-300.png</path>
+			</preview>
+		</previews>
 
     <view>
       <internal archive="y">true</internal>

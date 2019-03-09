@@ -243,7 +243,7 @@
         <z-m>0.029</z-m>
       </center>
       <axis>
-        <x>1</x>
+        <x>-1</x>
         <y>0</y>
         <z>0</z>
       </axis>
@@ -631,7 +631,42 @@
   </and>
   </condition>
   </animation>
+  
+  <!-- Showing VS sign -->
 
+  <animation>
+  <type>select</type>
+  <object-name>signp</object-name>
+  <condition>
+  <and>
+    <equals>
+      <property>autopilot/internal/VNAV-VS</property>
+      <value>true</value>
+    </equals>
+    <greater-than>
+      <property>autopilot/settings/vertical-speed-fpm</property>
+      <value>1</value>
+    </greater-than>
+  </and>
+  </condition>
+  </animation>
+  
+    <animation>
+  <type>select</type>
+  <object-name>signm</object-name>
+  <condition>
+  <and>
+    <equals>
+      <property>autopilot/internal/VNAV-VS</property>
+      <value>true</value>
+    </equals>
+    <less-than>
+      <property>autopilot/settings/vertical-speed-fpm</property>
+      <value>-1</value>
+    </less-than>
+  </and>
+  </condition>
+  </animation>
 
 <!-- VS neg Display -->
 

@@ -1941,8 +1941,6 @@
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>texture.png</texture>
-
   </animation>
 
   <!-- Condition display landing lights -->
