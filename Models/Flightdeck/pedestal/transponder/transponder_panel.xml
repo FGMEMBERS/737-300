@@ -2,261 +2,291 @@
 
 <PropertyList>
 
-<path>transponder_panel.ac</path>
+  <path>transponder_panel.ac</path>
 
-<!-- Check power/status to turn on display -->
-<animation>
-  <type>select</type>
+  <!-- Check power/status to turn on display -->
+  <animation>
+    <type>select</type>
     <object-name>Letter1</object-name>
     <object-name>Letter2</object-name>
     <object-name>Letter3</object-name>
     <object-name>Letter4</object-name>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-</animation>
-
-<!-- Show numbers on display -->
- <animation>
-  <type>textranslate</type>
-  <object-name>Letter1</object-name>
-  <property>instrumentation/transponder/inputs/digit[3]</property>
-  <bias>-1</bias>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>Letter2</object-name>
-  <property>instrumentation/transponder/inputs/digit[2]</property>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>Letter3</object-name>
-  <property>instrumentation/transponder/inputs/digit[1]</property>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-   <y>1</y>
-  </axis>
- </animation>
-
- <animation>
-  <type>textranslate</type>
-  <object-name>Letter4</object-name>
-  <property>instrumentation/transponder/inputs/digit</property>
-  <factor>0.1</factor>
-  <step>1</step>
-  <axis>
-   <y>1</y>
-  </axis>
- </animation>
-
-
-<!-- Ident button -->
-<animation>
-  <object-name>IdentKnob</object-name>
-  <type>translate</type>
-  <property>instrumentation/transponder/inputs/ident-btn</property>
-  <interpolation>
-	<entry><ind>0</ind><dep> 0</dep></entry>
-	<entry><ind>1</ind><dep>-0.0005</dep></entry>
-</interpolation>
-  <axis>
-  <z>1</z>
-  </axis>
+    <condition>
+      <or>
+        <property>controls/electric/battery-switch</property>
+        <property>controls/electric/external-power</property>
+        <property>controls/electric/apugen1</property>
+        <property>controls/electric/apugen2</property>
+        <property>engines/engine[0]/running</property>
+      </or>
+    </condition>
   </animation>
 
-<animation>
-  <object-name>IdentKnob</object-name>
-  <type>pick</type>
-   <action>
-  <button>0</button>
-  <repeatable>false</repeatable>
-    <binding>
-    <command>property-toggle</command>
-    <property>instrumentation/transponder/inputs/ident-btn</property>
-   </binding>
-  </action>
-</animation>
-
-<!-- Failure button -->
-<animation>
-  <object-name>LampOff</object-name>
-  <type>select</type>
-  <condition>
-   <equals>
-    <property>instrumentation/transponder/serviceable</property>
-    <value>1</value>
-   </equals>
-  </condition>
- </animation>
-
- <animation>
-  <object-name>LampOn</object-name>
-  <type>select</type>
-  <condition>
-   <equals>
-    <property>instrumentation/transponder/serviceable</property>
-    <value>0</value>
-   </equals>
-  </condition>
- </animation>
-
-<!-- Squawk Knob functions -->
-<animation>
-  <object-name>LeftKnobLower</object-name>
-  <type>knob</type>
-  <action>
-  <binding>
-    <command>property-adjust</command>
+  <!-- Show numbers on display -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>Letter1</object-name>
     <property>instrumentation/transponder/inputs/digit[3]</property>
-    <factor>-1</factor>
-    <min>0</min>
-    <max>8</max>
-    <wrap>true</wrap>
-  </binding>
-  </action>
-</animation>
-
-<animation>
-  <object-name>LeftKnobUpper</object-name>
-  <type>knob</type>
-  <action>
-  <binding>
-    <command>property-adjust</command>
-    <property>instrumentation/transponder/inputs/digit[2]</property>
-    <factor>-1</factor>
-    <min>0</min>
-    <max>8</max>
-    <wrap>true</wrap>
-  </binding>
-  </action>
-</animation>
-
-<animation>
-  <object-name>RightKnobLower</object-name>
-  <type>knob</type>
-  <action>
-  <binding>
-    <command>property-adjust</command>
-    <property>instrumentation/transponder/inputs/digit[1]</property>
-    <factor>-1</factor>
-    <min>0</min>
-    <max>8</max>
-    <wrap>true</wrap>
-  </binding>
-  </action>
-</animation>
-
-<animation>
-  <object-name>RightKnobUpper</object-name>
-  <type>knob</type>
-  <action>
-  <binding>
-    <command>property-adjust</command>
-    <property>instrumentation/transponder/inputs/digit</property>
-    <factor>-1</factor>
-    <min>0</min>
-    <max>8</max>
-    <wrap>true</wrap>
-  </binding>
-  </action>
-</animation>
-
-<!-- Mode Selector Knob function -->
-<animation>
-  <type>rotate</type>
-  <object-name>RotKnob</object-name>
-  <property>b733/instrumentation/transponder/transponder-mode</property>
-  <interpolation>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>-1</ind><dep>45</dep></entry>
-            <entry><ind>-2</ind><dep>90</dep></entry>
-            <entry><ind>1</ind><dep>-45</dep></entry>
-            <entry><ind>2</ind><dep>-90</dep></entry>
-    </interpolation>
-        <center>
-            <x-m>0</x-m>
-            <y-m>-0.0124738</y-m>
-            <z-m>0.00232706</z-m>
-        </center>
-    <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-    </axis>  
-</animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>RotKnob</object-name>
-  <action>
-  <button>0</button>
-  <repeatable>false</repeatable>
-  <binding>
-     <command>property-adjust</command>
-     <property>b733/instrumentation/transponder/transponder-mode</property>
-    <step>-1</step>
-    <min>-2</min>
-    <max>3</max>
-    <wrap>true</wrap>
-  </binding>
-  </action>
-</animation>
-
-<!-- ALT-RPTG switch -->
-<animation>
-  <type>rotate</type>
-  <object-name>Switch</object-name>
-  <property>b733/instrumentation/transponder/alt-rptg-mode</property>
-  <interpolation>
-            <entry><ind>0</ind><dep>-45</dep></entry>
-            <entry><ind>1</ind><dep>-90</dep></entry>
-            <entry><ind>2</ind><dep>0</dep></entry>
-    </interpolation>
-        <center>
-            <x-m>-0.0345353</x-m>
-            <y-m>0.0161009</y-m>
-            <z-m>-0.00135602</z-m>
-        </center>
-    <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-    </axis>  
-</animation>
-
-<animation>
-  <type>pick</type>
-  <object-name>Switch</object-name>
-  <action>
-  <button>0</button>
-  <repeatable>false</repeatable>
-  <binding>
-     <command>property-adjust</command>
-     <property>b733/instrumentation/transponder/alt-rptg-mode</property>
+    <bias>-1</bias>
+    <factor>0.1</factor>
     <step>1</step>
-    <min>0</min>
-    <max>3</max>
-    <wrap>true</wrap>
-  </binding>
-  </action>
-</animation>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Letter2</object-name>
+    <property>instrumentation/transponder/inputs/digit[2]</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Letter3</object-name>
+    <property>instrumentation/transponder/inputs/digit[1]</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Letter4</object-name>
+    <property>instrumentation/transponder/inputs/digit</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <y>1</y>
+    </axis>
+  </animation>
+
+
+  <!-- Ident button -->
+  <animation>
+    <object-name>IdentKnob</object-name>
+    <type>translate</type>
+    <property>instrumentation/transponder/inputs/ident-btn</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep> 0</dep>
+      </entry>
+      <entry>
+        <ind>1</ind>
+        <dep>-0.0005</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <object-name>IdentKnob</object-name>
+    <type>pick</type>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>instrumentation/transponder/inputs/ident-btn</property>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Failure button -->
+  <animation>
+    <object-name>LampOff</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+        <property>instrumentation/transponder/serviceable</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <object-name>LampOn</object-name>
+    <type>select</type>
+    <condition>
+      <equals>
+        <property>instrumentation/transponder/serviceable</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Squawk Knob functions -->
+  <animation>
+    <object-name>LeftKnobLower</object-name>
+    <type>knob</type>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/transponder/inputs/digit[3]</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>8</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <object-name>LeftKnobUpper</object-name>
+    <type>knob</type>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/transponder/inputs/digit[2]</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>8</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <object-name>RightKnobLower</object-name>
+    <type>knob</type>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/transponder/inputs/digit[1]</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>8</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <object-name>RightKnobUpper</object-name>
+    <type>knob</type>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/transponder/inputs/digit</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>8</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Mode Selector Knob function -->
+  <animation>
+    <type>rotate</type>
+    <object-name>RotKnob</object-name>
+    <property>b733/instrumentation/transponder/transponder-mode</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>-1</ind>
+        <dep>45</dep>
+      </entry>
+      <entry>
+        <ind>-2</ind>
+        <dep>90</dep>
+      </entry>
+      <entry>
+        <ind>1</ind>
+        <dep>-45</dep>
+      </entry>
+      <entry>
+        <ind>2</ind>
+        <dep>-90</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>-0.0124738</y-m>
+      <z-m>0.00232706</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>RotKnob</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>b733/instrumentation/transponder/transponder-mode</property>
+        <step>-1</step>
+        <min>-2</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- ALT-RPTG switch -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Switch</object-name>
+    <property>b733/instrumentation/transponder/alt-rptg-mode</property>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>-45</dep>
+      </entry>
+      <entry>
+        <ind>1</ind>
+        <dep>-90</dep>
+      </entry>
+      <entry>
+        <ind>2</ind>
+        <dep>0</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.0345353</x-m>
+      <y-m>0.0161009</y-m>
+      <z-m>-0.00135602</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>Switch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>b733/instrumentation/transponder/alt-rptg-mode</property>
+        <step>1</step>
+        <min>0</min>
+        <max>3</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
 </PropertyList>

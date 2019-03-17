@@ -9,14 +9,14 @@
     <min-m>0</min-m>
     <max-property>sim/rendering/static-lod/bare</max-property>
   </animation>
-	
+
 
   <animation>
     <type>material</type>
-    <object-name>fuselage</object-name> 
-    <object-name>arcond</object-name> 
-    <object-name>rodas_frente</object-name> 
-    <object-name>rodas_atras</object-name> 
+    <object-name>fuselage</object-name>
+    <object-name>arcond</object-name>
+    <object-name>rodas_frente</object-name>
+    <object-name>rodas_atras</object-name>
     <condition>
       <greater-than>
         <property>sim/time/sun-angle-rad</property>
@@ -32,10 +32,10 @@
 
   <animation>
     <type>material</type>
-    <object-name>fuselage</object-name> 
-    <object-name>arcond</object-name> 
-    <object-name>rodas_frente</object-name> 
-    <object-name>rodas_atras</object-name> 
+    <object-name>fuselage</object-name>
+    <object-name>arcond</object-name>
+    <object-name>rodas_frente</object-name>
+    <object-name>rodas_atras</object-name>
     <condition>
       <less-than-equals>
         <property>sim/time/sun-angle-rad</property>
@@ -48,20 +48,20 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-  
- <animation>
-  <type>select</type>
-    <object-name>fuselage</object-name> 
-    <object-name>arcond</object-name> 
-    <object-name>rodas_frente</object-name> 
-    <object-name>rodas_atras</object-name> 
-  <condition>
-   <and>
-    <property>controls/gear/brake-parking</property>
-    <property>controls/gear/gear-down</property>
-   </and>
-  </condition>
- </animation>
-  
+
+  <animation>
+    <type>select</type>
+    <object-name>fuselage</object-name>
+    <object-name>arcond</object-name>
+    <object-name>rodas_frente</object-name>
+    <object-name>rodas_atras</object-name>
+    <condition>
+      <and>
+        <property>controls/gear/brake-parking</property>
+        <property>controls/gear/gear-down</property>
+      </and>
+    </condition>
+  </animation>
+
 
 </PropertyList>

@@ -9,7 +9,7 @@
     <min-m>0</min-m>
     <max-property>sim/rendering/static-lod/bare</max-property>
   </animation>
-	<!--
+  <!--
   <animation> 
     <type>textranslate</type> 
     <object-name>jour</object-name> 
@@ -77,49 +77,49 @@
       <blue>  0.0 </blue>
     </emission>
   </animation>
-  
+
   <animation>
     <type>select</type>
     <object-name>lampada_on</object-name>
     <condition>
       <and>
-	      <property>sim/model/lights/strobe/state</property>
-		  <property>controls/electric/external-power</property>
-		  <or>
-			<property>controls/groundservice/cargo/active</property>
-			<property>controls/groundservice/pax/active</property>
-		  </or>
-			<property>controls/gear/brake-parking</property>
-			<property>controls/gear/gear-down</property>
+        <property>sim/model/lights/strobe/state</property>
+        <property>controls/electric/external-power</property>
+        <or>
+          <property>controls/groundservice/cargo/active</property>
+          <property>controls/groundservice/pax/active</property>
+        </or>
+        <property>controls/gear/brake-parking</property>
+        <property>controls/gear/gear-down</property>
 
-	  </and>
+      </and>
     </condition>
   </animation>
-  
+
   <animation>
     <type>select</type>
     <object-name>lampada_off</object-name>
     <condition>
       <and>
-			<equals>
-				<property>sim/model/lights/strobe/state</property>
-				<value>false</value>
-			</equals>
-			<property>controls/electric/external-power</property>
-		  <or>
-			<property>controls/groundservice/cargo/active</property>
-			<property>controls/groundservice/pax/active</property>
-		  </or>
-			<property>controls/gear/brake-parking</property>
-			<property>controls/gear/gear-down</property>
+        <equals>
+          <property>sim/model/lights/strobe/state</property>
+          <value>false</value>
+        </equals>
+        <property>controls/electric/external-power</property>
+        <or>
+          <property>controls/groundservice/cargo/active</property>
+          <property>controls/groundservice/pax/active</property>
+        </or>
+        <property>controls/gear/brake-parking</property>
+        <property>controls/gear/gear-down</property>
 
-	  </and>
+      </and>
     </condition>
   </animation>
-  
-  
- <animation>
-  <type>select</type>
+
+
+  <animation>
+    <type>select</type>
     <object-name>cabo</object-name>
     <object-name>cabo2</object-name>
     <object-name>boxmain</object-name>
@@ -130,13 +130,13 @@
     <object-name>roda_FR</object-name>
     <object-name>roda_BL</object-name>
     <object-name>roda_BR</object-name>
-  <condition>
-   <and>
-			<property>controls/gear/brake-parking</property>
-			<property>controls/gear/gear-down</property>
-   </and>
-  </condition>
- </animation>
+    <condition>
+      <and>
+        <property>controls/gear/brake-parking</property>
+        <property>controls/gear/gear-down</property>
+      </and>
+    </condition>
+  </animation>
 
 
 

@@ -19,7 +19,7 @@
     <name>Fuel Panel</name>
     <path>Aircraft/737-300/Models/Flightdeck/overhead/lower-overhead/fuel_panel/fuel_panel.xml</path>
     <offsets>
-    <x-m>-0.26</x-m>
+      <x-m>-0.26</x-m>
       <y-m>-0.11917</y-m>
     </offsets>
   </model>

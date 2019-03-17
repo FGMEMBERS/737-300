@@ -1,7 +1,7 @@
 <PropertyList>
   <sim>
     <description>Boeing 737-300</description>
-    <author>Original by David Culp (FDM), Innis Cunningham(3d), Heiko Schulz (3D and Panel), Emmanuel Baranger(3d) - Current Version by e-pilot, Skyop, Soitanen</author>
+    <author>Original by David Culp (FDM), Innis Cunningham(3d), Heiko Schulz (3D and Panel), Emmanuel Baranger(3d) - Current Version by Jarvum, e-pilot, Skyop, Soitanen</author>
     <status>Heavy Development</status>
     <rating>
       <FDM type="int">4</FDM>
@@ -49,16 +49,12 @@
     <model>
       <path>Aircraft/737-300/Models/737-300.xml</path>
       <fallback-model-index type="int">202</fallback-model-index>
-      <pushback>
-        <kp type="double">1000</kp>
-        <kd type="double">0</kd>
-        <ki type="double">0</ki>
-        <position-norm type="double">0</position-norm>
-      </pushback>
 
       <livery>
         <file type="string"></file>
       </livery>
+
+      <autopush include="autopush-config.xml"/>
 
       <Boeing-737-300>
         <removalkit>false</removalkit>
@@ -75,13 +71,13 @@
       </door>
     </model>
 
-		<previews>
-			<preview>
-				<type>exterior</type>
-				<splash type="bool">true</splash>
-				<path>737-300.png</path>
-			</preview>
-		</previews>
+    <previews>
+      <preview>
+        <type>exterior</type>
+        <splash type="bool">true</splash>
+        <path>737-300.png</path>
+      </preview>
+    </previews>
 
     <view>
       <internal archive="y">true</internal>
@@ -407,14 +403,6 @@
             </binding>
           </item>
           <item>
-            <label>Pushback</label>
-            <name>pushback</name>
-            <binding>
-              <command>dialog-show</command>
-              <dialog-name>pushback</dialog-name>
-            </binding>
-          </item>
-          <item>
             <label>Yokes On/Off</label>
             <binding>
               <command>nasal</command>
@@ -453,6 +441,16 @@
             </binding>
           </item>
           <item>
+            <label>Pushback</label>
+            <binding>
+              <command>nasal</command>
+              <script>
+                var mal = gui.Dialog.new("/sim/gui/dialogs/pushback/dialog", "Aircraft/737-300/Dialogs/autopush.xml");
+                 mal.open();
+              </script>
+            </binding>
+          </item>
+          <item>
             <label>Lights</label>
             <binding>
               <command>nasal</command>
@@ -482,16 +480,6 @@
               <script>
             var ddlg = gui.Dialog.new("/sim/gui/dialogs/doors-config/dialog", "Aircraft/737-300/Dialogs/doors-dialog.xml");
            ddlg.open();
-              </script>
-            </binding>
-          </item>
-          <item>
-            <label>Tiller steering</label>
-            <binding>
-              <command>nasal</command>
-              <script>
-              var tiller = gui.Dialog.new("/sim/gui/dialogs/b733/menu/dialog","Aircraft/737-300/Dialogs/tiller-steering.xml");
-              tiller.open();
               </script>
             </binding>
           </item>
@@ -1192,6 +1180,14 @@
 
   <fdm>
     <jsbsim>
+      <external_reactions>
+        <tractor>
+          <magnitude alias="/sim/model/autopush/force-lbf"/>
+          <x alias="/sim/model/autopush/force-x"/>
+          <y alias="/sim/model/autopush/force-y"/>
+          <z alias="/sim/model/autopush/force-z"/>
+        </tractor>
+      </external_reactions>
       <fcs>
         <flap-lrs type="double">0</flap-lrs>
         <slats-cmd type="double">0</slats-cmd>
@@ -1561,9 +1557,23 @@
 
   <nasal>
 
+
+    <autopush>
+      <file>Nasal/autopush.nas</file>
+    </autopush>
+    <autopush_driver>
+      <file>Nasal/autopush_driver.nas</file>
+    </autopush_driver>
+    <dynarr>
+      <file>Nasal/dynarr.nas</file>
+    </dynarr>
+    <autopush_route>
+      <file>Nasal/autopush_route.nas</file>
+    </autopush_route>
     <Boeing733>
       <file>Aircraft/737-300/Nasal/liveries.nas</file>
       <file>Aircraft/737-300/Nasal/autostart.nas</file>
+      <file>Aircraft/737-300/Nasal/system.nas</file>
     </Boeing733>
 
     <reversethrust>

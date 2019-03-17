@@ -4,9 +4,9 @@
 
 <PropertyList>
 
-	<path>sec-flightdeck2.ac</path>
+  <path>sec-flightdeck2.ac</path>
 
-    <animation>
+  <animation>
     <type>material</type>
     <object-name>FLAPSLEVER</object-name>
     <object-name>FLAPTEETH</object-name>
@@ -22,399 +22,414 @@
     <object-name>SPEEDBRAKE</object-name>
     <object-name>idle-cutoff-left</object-name>
     <object-name>idle-cutoff-right</object-name>
-    
+
     <emission>
-<!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
+      <!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
       <red>   0.1 </red>
       <green> 0.1 </green>
       <blue>  0.1 </blue>
     </emission>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
+    <condition>
+      <or>
+        <property>controls/electric/battery-switch</property>
+        <property>controls/electric/external-power</property>
+        <property>controls/electric/apugen1</property>
+        <property>controls/electric/apugen2</property>
+        <property>engines/engine[0]/running</property>
+      </or>
+    </condition>
   </animation>
 
-	<animation>
-		<name>Hide yokes</name>
-		<type>select</type>
+  <animation>
+    <name>Hide yokes</name>
+    <type>select</type>
     <object-name>YOKEBASES</object-name>
-		<condition>
-			<property>sim/model/yokes</property>
-		</condition>
-	</animation>
+    <condition>
+      <property>sim/model/yokes</property>
+    </condition>
+  </animation>
 
 
-<!-- CAPTAIN -->
- 
-<animation>
- <type>rotate</type>
- <object-name>YOKEBASES</object-name>
- <property>controls/flight/elevator</property>
- <factor>15</factor>
- <offset-deg>5</offset-deg>
- <center>
-  <x-m>-6.12</x-m>
-  <y-m>-0.02</y-m>
-  <z-m>0.1</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation>
-
-<animation>
- <type>rotate</type>
- <object-name>LEFTTHROTTLE</object-name>
- <property>fdm/jsbsim/fcs/throttle-pos-norm[0]</property>
- <factor>53</factor>
- <offset-deg>-22</offset-deg>
- <center>
-  <x-m>-6.32</x-m>
-  <y-m>-0.02</y-m>
-  <z-m>0.55</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation>
-	
-<animation>
- <type>rotate</type>
- <object-name>RIGHTTHROTTLE</object-name>
- <property>fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
- <factor>53</factor>
- <offset-deg>-22</offset-deg>
- <center>
-  <x-m>-6.32</x-m>
-  <z-m>0.55</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation>
-
-<animation>
- <type>rotate</type>
- <object-name>GEARLEVER</object-name>
- <property>controls/gear/gear-down</property>
- <factor>65</factor>
- <offset-deg>0</offset-deg>
- <center>
-  <x-m>-6.69</x-m>
-  <y-m>-0.01</y-m>
-  <z-m>0.82</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
+  <!-- CAPTAIN -->
 
   <animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>GEARLEVER</object-name>
-  <action>
-    <name>Gear Lever</name>
-   <button>0</button>
-   <repeatable>false</repeatable> 
-   <binding>
-    <command>property-toggle</command>
+    <type>rotate</type>
+    <object-name>YOKEBASES</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <offset-deg>5</offset-deg>
+    <center>
+      <x-m>-6.12</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>0.1</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LEFTTHROTTLE</object-name>
+    <property>fdm/jsbsim/fcs/throttle-pos-norm[0]</property>
+    <factor>53</factor>
+    <offset-deg>-22</offset-deg>
+    <center>
+      <x-m>-6.32</x-m>
+      <y-m>-0.02</y-m>
+      <z-m>0.55</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RIGHTTHROTTLE</object-name>
+    <property>fdm/jsbsim/fcs/throttle-pos-norm[1]</property>
+    <factor>53</factor>
+    <offset-deg>-22</offset-deg>
+    <center>
+      <x-m>-6.32</x-m>
+      <z-m>0.55</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>GEARLEVER</object-name>
     <property>controls/gear/gear-down</property>
-		<step>1</step>
-		<min>0></min>
-		<max>1</max>
-		<wrap>true</wrap>
-   </binding>
-  </action>
- </animation>
-	
+    <factor>65</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-6.69</x-m>
+      <y-m>-0.01</y-m>
+      <z-m>0.82</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
-<animation>
- <type>rotate</type>
- <object-name>RIGHTTRIM</object-name>
- <property>b733/helpers/trim-wheel-abs-pos</property>
- <factor>1</factor>
- <offset-deg>0</offset-deg>
- <center>
-  <x-m>-6.30773</x-m>
-  <y-m>0.14517</y-m>
-  <z-m>0.62361</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation>
+  <animation>
+    <type>pick</type>
+    <object-name>GEARLEVER</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>nasal</command>
+        <script>controls.gear()</script>
+      </binding>
+    </action>
+  </animation>
 
 
-<animation>
- <type>rotate</type>
- <object-name>LEFTTRIM</object-name>
- <property>b733/helpers/trim-wheel-abs-pos</property>
- <factor>1</factor>
- <offset-deg>0</offset-deg>
- <center>
-  <x-m>-6.30773</x-m>
-  <y-m>-0.16517</y-m>
-  <z-m>0.62361</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>-1</y>
-  <z>0</z>
- </axis>
-</animation>
 
-<animation>
-  <type>pick</type>
-  <object-name>LEFTTRIM</object-name>
-  <object-name>RIGHTTRIM</object-name>
-  <visible>true</visible>
-  <action>
-    <button>3</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>fdm/jsbsim/fcs/stabilizer/stab-target</property>
-      <step>-0.0035</step>
-      <min>0</min>
-      <max>17</max>
-    </binding>
-  </action>
-</animation>
-<animation>
-  <type>pick</type>
-  <object-name>LEFTTRIM</object-name>
-  <object-name>RIGHTTRIM</object-name>
-  <visible>true</visible>
-  <action>
-    <button>4</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>fdm/jsbsim/fcs/stabilizer/stab-target</property>
-      <step>0.0035</step>
-      <min>0</min>
-      <max>17</max>
-    </binding>
-  </action>
-</animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>RIGHTTRIM</object-name>
+    <property>b733/helpers/trim-wheel-abs-pos</property>
+    <factor>1</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-6.30773</x-m>
+      <y-m>0.14517</y-m>
+      <z-m>0.62361</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
-<animation>
- <type>rotate</type>
- <object-name>PARKINGBRAKE</object-name>
- <property>controls/gear/brake-parking</property>
- <factor>70</factor>
- <offset-deg>-70</offset-deg>
- <center>
-  <x-m>-6.27774</x-m>
-  <y-m>-0.13218</y-m>
-  <z-m>0.68368</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
 
- <animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>PARKINGBRAKE</object-name> 
-  <action>
-  <name>Parking Brake</name>
+  <animation>
+    <type>rotate</type>
+    <object-name>LEFTTRIM</object-name>
+    <property>b733/helpers/trim-wheel-abs-pos</property>
+    <factor>1</factor>
+    <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-6.30773</x-m>
+      <y-m>-0.16517</y-m>
+      <z-m>0.62361</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>LEFTTRIM</object-name>
+    <object-name>RIGHTTRIM</object-name>
+    <visible>true</visible>
+    <action>
+      <button>3</button>
       <repeatable>false</repeatable>
-  <button>0</button>
-    <binding>
-   <command>property-toggle</command>
+      <binding>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/fcs/stabilizer/stab-target</property>
+        <step>-0.0035</step>
+        <min>0</min>
+        <max>17</max>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>LEFTTRIM</object-name>
+    <object-name>RIGHTTRIM</object-name>
+    <visible>true</visible>
+    <action>
+      <button>4</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>fdm/jsbsim/fcs/stabilizer/stab-target</property>
+        <step>0.0035</step>
+        <min>0</min>
+        <max>17</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PARKINGBRAKE</object-name>
     <property>controls/gear/brake-parking</property>
-  </binding>
-        <binding>
-          <command>nasal</command>
-          <script>
+    <factor>70</factor>
+    <offset-deg>-70</offset-deg>
+    <center>
+      <x-m>-6.27774</x-m>
+      <y-m>-0.13218</y-m>
+      <z-m>0.68368</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>PARKINGBRAKE</object-name>
+    <action>
+      <name>Parking Brake</name>
+      <repeatable>false</repeatable>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
           	var setting = getprop ("/controls/gear/brake-parking");
 		        var names = ["Off", "On"];
 						if (getprop("sim/co-pilot")) {
 		          setprop ("/sim/messages/copilot", "Parking Brake is " ~ names[setting] ~ ".");
             }
-	        </script>
-        </binding>
- </action>
- </animation>
+        </script>
+      </binding>
+    </action>
+  </animation>
 
 
-<animation>
- <type>rotate</type>
- <object-name>SPEEDBRAKE</object-name>
- <property>b733/controls/flight/spoilers-lever-pos</property>
+  <animation>
+    <type>rotate</type>
+    <object-name>SPEEDBRAKE</object-name>
+    <property>b733/controls/flight/spoilers-lever-pos</property>
     <interpolation>
-	<entry><ind>	0</ind>	<dep>	-90</dep></entry>
-        <entry><ind>	1</ind>	<dep>	-86</dep></entry>
-        <entry><ind>	2</ind>	<dep>	-81</dep></entry>
-        <entry><ind>	3</ind>	<dep>	-72</dep></entry>
-        <entry><ind>	4</ind>	<dep>	-63</dep></entry>
-        <entry><ind>	5</ind>	<dep>	-51</dep></entry>
-        <entry><ind>	6</ind>	<dep>	-42</dep></entry>
+      <entry>
+        <ind>	0</ind>
+        <dep>	-90</dep>
+      </entry>
+      <entry>
+        <ind>	1</ind>
+        <dep>	-86</dep>
+      </entry>
+      <entry>
+        <ind>	2</ind>
+        <dep>	-81</dep>
+      </entry>
+      <entry>
+        <ind>	3</ind>
+        <dep>	-72</dep>
+      </entry>
+      <entry>
+        <ind>	4</ind>
+        <dep>	-63</dep>
+      </entry>
+      <entry>
+        <ind>	5</ind>
+        <dep>	-51</dep>
+      </entry>
+      <entry>
+        <ind>	6</ind>
+        <dep>	-42</dep>
+      </entry>
     </interpolation>
- <center>
-  <x-m>-6.3221</x-m>
-  <y-m>-0.11868</y-m>
-  <z-m>0.5924</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
-
-
- <animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>SPEEDBRAKE</object-name> 
-  <action>
-  <name>Speed Brake</name>
-	<repeatable>false</repeatable>
-	<button>3</button>
-	<binding>
-          <command>property-adjust</command>
-          <property>b733/controls/flight/spoilers-lever-pos</property>
-          <step type="double">-1</step>
-          <min type="double">0</min>
-          <max type="double">6</max>
-        </binding>
- </action>
- </animation>
- <animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>SPEEDBRAKE</object-name> 
-  <action>
-  <name>Speed Brake</name>
-	<repeatable>false</repeatable>
-	<button>4</button>
-	<binding>
-          <command>property-adjust</command>
-          <property>b733/controls/flight/spoilers-lever-pos</property>
-          <step type="double">1</step>
-          <min type="double">0</min>
-          <max type="double">6</max>
-        </binding>
- </action>
- </animation>
-
-<animation>
- <type>rotate</type>
- <object-name>FLAPSLEVER</object-name>
- <property>controls/flight/flaps</property>
- <factor>60</factor>
- <offset-deg>-20</offset-deg>
- <center>
-  <x-m>-6.30774</x-m>
-  <y-m>-0.10239</y-m>
-  <z-m>0.54084</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
+    <center>
+      <x-m>-6.3221</x-m>
+      <y-m>-0.11868</y-m>
+      <z-m>0.5924</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
 
   <animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>idle-cutoff-left</object-name>
-  <action>
-    <name>Idle Cutoff 1</name>
-   <button>0</button>
-   <repeatable>false</repeatable> 
-   <binding>
-    <command>property-toggle</command>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>SPEEDBRAKE</object-name>
+    <action>
+      <name>Speed Brake</name>
+      <repeatable>false</repeatable>
+      <button>3</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>b733/controls/flight/spoilers-lever-pos</property>
+        <step type="double">-1</step>
+        <min type="double">0</min>
+        <max type="double">6</max>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>SPEEDBRAKE</object-name>
+    <action>
+      <name>Speed Brake</name>
+      <repeatable>false</repeatable>
+      <button>4</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>b733/controls/flight/spoilers-lever-pos</property>
+        <step type="double">1</step>
+        <min type="double">0</min>
+        <max type="double">6</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FLAPSLEVER</object-name>
+    <property>controls/flight/flaps</property>
+    <factor>60</factor>
+    <offset-deg>-20</offset-deg>
+    <center>
+      <x-m>-6.30774</x-m>
+      <y-m>-0.10239</y-m>
+      <z-m>0.54084</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>idle-cutoff-left</object-name>
+    <action>
+      <name>Idle Cutoff 1</name>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/cutoff</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>idle-cutoff-left</object-name>
     <property>controls/engines/engine[0]/cutoff</property>
-		<step>1</step>
-		<min>0></min>
-		<max>1</max>
-		<wrap>true</wrap>
-   </binding>
-  </action>
- </animation>
-
-
-<animation>
- <type>rotate</type>
- <object-name>idle-cutoff-left</object-name>
- <property>controls/engines/engine[0]/cutoff</property>
- <factor>35</factor>
- <offset-deg>-35</offset-deg>
- <center>
-  <x-m>-6.25438</x-m>
-  <y-m>-0.0091</y-m>
-  <z-m>0.62346</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
+    <factor>35</factor>
+    <offset-deg>-35</offset-deg>
+    <center>
+      <x-m>-6.25438</x-m>
+      <y-m>-0.0091</y-m>
+      <z-m>0.62346</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
 
   <animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>idle-cutoff-right</object-name>
-  <action>
-    <name>Idle Cutoff 2</name>
-   <button>0</button>
-   <repeatable>false</repeatable> 
-   <binding>
-    <command>property-toggle</command>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>idle-cutoff-right</object-name>
+    <action>
+      <name>Idle Cutoff 2</name>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/cutoff</property>
+        <step>1</step>
+        <min>0></min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>idle-cutoff-right</object-name>
     <property>controls/engines/engine[1]/cutoff</property>
-		<step>1</step>
-		<min>0></min>
-		<max>1</max>
-		<wrap>true</wrap>
-   </binding>
-  </action>
- </animation>
-
-
-<animation>
- <type>rotate</type>
- <object-name>idle-cutoff-right</object-name>
- <property>controls/engines/engine[1]/cutoff</property>
- <factor>35</factor>
- <offset-deg>-35</offset-deg>
- <center>
-  <x-m>-6.25438</x-m>
-  <y-m>-0.0091</y-m>
-  <z-m>0.62346</z-m>
- </center>
- <axis>
-  <x>0</x>
-  <y>1</y>
-  <z>0</z>
- </axis>
-</animation>
+    <factor>35</factor>
+    <offset-deg>-35</offset-deg>
+    <center>
+      <x-m>-6.25438</x-m>
+      <y-m>-0.0091</y-m>
+      <z-m>0.62346</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
 
 </PropertyList>

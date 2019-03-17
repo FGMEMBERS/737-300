@@ -1,6 +1,6 @@
 <PropertyList>
 
-  <checklist>  
+  <checklist>
     <title>Preflight</title>
     <item>
       <name>CVR</name>
@@ -17,7 +17,7 @@
     <item>
       <name>Instrument transfer switches</name>
       <value>NORMAL</value>
-			<!--<marker>
+      <!--<marker>
 				<x-m>-0.0133</x-m>
 				<y-m>-0.2083</y-m>
 				<z-m>-0.0375</z-m>
@@ -144,7 +144,7 @@
       <value>Clear</value>
     </item>
   </checklist>
-  
+
   <checklist>
     <title>Before takeoff</title>
     <item>
@@ -156,7 +156,7 @@
       <value>___ Units</value>
     </item>
   </checklist>
-  
+
   <checklist>
     <title>After takeoff</title>
     <item>

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-    <name>autopilot</name>
-		<width>210</width>
-		<default-padding>0</default-padding>
-		<padding>0</padding>
-    <x>40</x>
-    <!--
+  <name>autopilot</name>
+  <width>210</width>
+  <default-padding>0</default-padding>
+  <padding>0</padding>
+  <x>40</x>
+  <!--
       /autopilot/settings/heading-bug-deg
       /autopilot/settings/target-agl-ft
       /autopilot/settings/target-altitude-mcp-ft
@@ -17,7 +17,7 @@
       /autopilot/settings/vertical-speed-fpm
     -->
 
-<!--    <nasal>
+  <!--    <nasal>
         <open>
       ## manage one AP property group with checkbox and radio buttons
       #
@@ -119,39 +119,39 @@
     </nasal>
 -->
 
-    <layout>vbox</layout>
+  <layout>vbox</layout>
 
-	<group>
-		<layout>hbox</layout>
-<!--    	<empty><stretch>1</stretch></empty>  -->
+  <group>
+    <layout>hbox</layout>
+    <!--    	<empty><stretch>1</stretch></empty>  -->
 
-		<text>
-			<label>Auto-Pilot                            </label>
-		</text>
+    <text>
+      <label>Auto-Pilot                            </label>
+    </text>
 
-<!--		<empty><stretch>1</stretch></empty> -->
-		
-		<button>
-			<pref-width>16</pref-width>
-			<pref-height>16</pref-height>
-			<legend>x</legend>
-			<default>1</default>
-			<keynum>27</keynum>
-			<border>2</border>
-			<binding>
-				<command>nasal</command>
-           <script>dialogs.ap_settings.toggle()</script>
-			</binding>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-		</button>
-	</group>
-	<group>
-		<layout>hbox</layout>
-		<text>
-			<label>Engage</label>
-		</text>
+    <!--		<empty><stretch>1</stretch></empty> -->
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend>x</legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+        <command>nasal</command>
+        <script>dialogs.ap_settings.toggle()</script>
+      </binding>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </button>
+  </group>
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <label>Engage</label>
+    </text>
     <text>
       <label>CMDA</label>
     </text>
@@ -159,14 +159,14 @@
       <property>/autopilot/internal/CMDA</property>
       <live>true</live>
       <binding>
-      <command>property-toggle</command>
-				<property>/autopilot/internal/CMDA</property>
-			</binding>
+        <command>property-toggle</command>
+        <property>/autopilot/internal/CMDA</property>
+      </binding>
       <binding>
-      <command>property-assign</command>
-				<property>/autopilot/internal/CMDB</property>
-				<value type="bool">0</value>
-			</binding>
+        <command>property-assign</command>
+        <property>/autopilot/internal/CMDB</property>
+        <value type="bool">0</value>
+      </binding>
     </checkbox>
 
     <text>
@@ -176,23 +176,23 @@
       <property>/autopilot/internal/CMDB</property>
       <live>true</live>
       <binding>
-      <command>property-toggle</command>
-				<property>/autopilot/internal/CMDB</property>
-			</binding>
+        <command>property-toggle</command>
+        <property>/autopilot/internal/CMDB</property>
+      </binding>
       <binding>
-      <command>property-assign</command>
-				<property>/autopilot/internal/CMDA</property>
-				<value type="bool">0</value>
-			</binding>
+        <command>property-assign</command>
+        <property>/autopilot/internal/CMDA</property>
+        <value type="bool">0</value>
+      </binding>
     </checkbox>
 
   </group>
-    <hrule/>
+  <hrule/>
 
-        <group>
-           <!-- Heading -->
-            <layout>vbox</layout>
-<!--            <group>
+  <group>
+    <!-- Heading -->
+    <layout>vbox</layout>
+    <!--            <group>
                 <layout>hbox</layout>
                 <checkbox>
                     <label>Heading</label>
@@ -204,885 +204,885 @@
                     </binding>
                 </checkbox>
             </group>  -->
-            <group>
-						  <layout>table</layout>
-                <text>
-                    <label> Level</label>
-                    <halign>right</halign>
-                    <row>0</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>0</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/LNAV-LVL</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-LVL</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV1</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV2</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-HDG</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-FMS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								<text>
-                    <label>|</label>
-                    <halign>center</halign>
-                    <row>0</row>
-                    <col>2</col>
-                </text>
-                <radio>
-                    <row>0</row>
-                    <col>3</col>
-                    <property>/autopilot/internal/LNAV-NAV1</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-LVL</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV1</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV2</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-HDG</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-FMS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								<text>
-                    <label>1-NAV-2</label>
-                    <halign>center</halign>
-                    <row>0</row>
-                    <col>4</col>
-                </text>
-                <radio>
-                    <row>0</row>
-                    <col>5</col>
-                    <property>/autopilot/internal/LNAV-NAV2</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-LVL</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV1</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV2</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-HDG</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-FMS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								
-                <text>
-                    <label>Bug</label>
-                    <halign>right</halign>
-                    <row>1</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>1</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/LNAV-HDG</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-LVL</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV1</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV2</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-HDG</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-FMS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								<button>
-                  <row>1</row>
-                  <col>2</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/heading-bug-deg</property>
-                      <step type="double">-10.0</step>
-                      <min>0</min>
-                      <max>360</max>
-                      <wrap>true</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>1</row>
-                  <col>3</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/heading-bug-deg</property>
-                      <step type="double">-1.0</step>
-                      <min>0</min>
-                      <max>360</max>
-                      <wrap>true</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <input>
-                    <row>1</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <property>/autopilot/settings/heading-bug-deg</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </input>
-								<button>
-                  <row>1</row>
-                  <col>5</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/heading-bug-deg</property>
-                      <step type="double">1.0</step>
-                      <min>0</min>
-                      <max>360</max>
-                      <wrap>true</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>1</row>
-                  <col>6</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/heading-bug-deg</property>
-                      <step type="double">10.0</step>
-                      <min>0</min>
-                      <max>360</max>
-                      <wrap>true</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <text>
-                    <label>True</label>
-                    <halign>right</halign>
-                    <row>2</row>
-                    <col>0</col>
-                    <visible>
-                        <not>
-                            <property>/autopilot/route-manager/active</property>
-                        </not>
-                    </visible>
-                </text>
-                <!-- alternate UI for above, when GPS is controlling -->
-                <text>
-                    <visible>
-                        <property>/autopilot/route-manager/active</property>
-                    </visible>
-                    <label>FMS</label>
-                    <halign>right</halign>
-                    <row>2</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>2</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/LNAV-FMS</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-LVL</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV1</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-NAV2</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-HDG</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/LNAV-FMS</property>
-                      <value type="bool">1</value>
-                    </binding>
-                </radio>
-                <input>
-                    <visible>
-                        <not>
-                            <property>/autopilot/route-manager/active</property>
-                        </not>
-                    </visible>
-                    <row>2</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <property>/autopilot/settings/true-heading-deg</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </input>
-                <!-- alternate UI for above, when GPS is controlling -->
-                <text>
-                    <visible>
-                        <property>/autopilot/route-manager/active</property>
-                    </visible>
-                    <row>2</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <label>999</label>
-                    <format>%3.0f* True</format>
-                    <property>/autopilot/settings/true-heading-deg</property>
-                    <live>true</live>										
-                </text>
-                
-            </group>
-            <hrule/>
+    <group>
+      <layout>table</layout>
+      <text>
+        <label> Level</label>
+        <halign>right</halign>
+        <row>0</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>0</row>
+        <col>1</col>
+        <property>/autopilot/internal/LNAV-LVL</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-LVL</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV1</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV2</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-HDG</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-FMS</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
+      <text>
+        <label>|</label>
+        <halign>center</halign>
+        <row>0</row>
+        <col>2</col>
+      </text>
+      <radio>
+        <row>0</row>
+        <col>3</col>
+        <property>/autopilot/internal/LNAV-NAV1</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-LVL</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV1</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV2</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-HDG</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-FMS</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
+      <text>
+        <label>1-NAV-2</label>
+        <halign>center</halign>
+        <row>0</row>
+        <col>4</col>
+      </text>
+      <radio>
+        <row>0</row>
+        <col>5</col>
+        <property>/autopilot/internal/LNAV-NAV2</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-LVL</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV1</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV2</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-HDG</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-FMS</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
 
-<!-- SPEED -->
+      <text>
+        <label>Bug</label>
+        <halign>right</halign>
+        <row>1</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>1</row>
+        <col>1</col>
+        <property>/autopilot/internal/LNAV-HDG</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-LVL</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV1</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV2</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-HDG</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-FMS</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
+      <button>
+        <row>1</row>
+        <col>2</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/heading-bug-deg</property>
+          <step type="double">-10.0</step>
+          <min>0</min>
+          <max>360</max>
+          <wrap>true</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>1</row>
+        <col>3</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/heading-bug-deg</property>
+          <step type="double">-1.0</step>
+          <min>0</min>
+          <max>360</max>
+          <wrap>true</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <input>
+        <row>1</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <property>/autopilot/settings/heading-bug-deg</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </input>
+      <button>
+        <row>1</row>
+        <col>5</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/heading-bug-deg</property>
+          <step type="double">1.0</step>
+          <min>0</min>
+          <max>360</max>
+          <wrap>true</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>1</row>
+        <col>6</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/heading-bug-deg</property>
+          <step type="double">10.0</step>
+          <min>0</min>
+          <max>360</max>
+          <wrap>true</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <text>
+        <label>True</label>
+        <halign>right</halign>
+        <row>2</row>
+        <col>0</col>
+        <visible>
+          <not>
+            <property>/autopilot/route-manager/active</property>
+          </not>
+        </visible>
+      </text>
+      <!-- alternate UI for above, when GPS is controlling -->
+      <text>
+        <visible>
+          <property>/autopilot/route-manager/active</property>
+        </visible>
+        <label>FMS</label>
+        <halign>right</halign>
+        <row>2</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>2</row>
+        <col>1</col>
+        <property>/autopilot/internal/LNAV-FMS</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-LVL</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV1</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-NAV2</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-HDG</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/LNAV-FMS</property>
+          <value type="bool">1</value>
+        </binding>
+      </radio>
+      <input>
+        <visible>
+          <not>
+            <property>/autopilot/route-manager/active</property>
+          </not>
+        </visible>
+        <row>2</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <property>/autopilot/settings/true-heading-deg</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </input>
+      <!-- alternate UI for above, when GPS is controlling -->
+      <text>
+        <visible>
+          <property>/autopilot/route-manager/active</property>
+        </visible>
+        <row>2</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <label>999</label>
+        <format>%3.0f* True</format>
+        <property>/autopilot/settings/true-heading-deg</property>
+        <live>true</live>
+      </text>
 
-            <group>
-                <layout>table</layout>
-                <checkbox>
-                    <label>A/T Arm</label>
-                    <row>0</row>
-                    <col>0</col>
-                    <halign>left</halign>
-                    <property>/autopilot/internal/SPD</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </checkbox>
-                <checkbox>
-                    <label>N1</label>
-                    <row>0</row>
-                    <col>1</col>
-                    <halign>left</halign>
-                    <property>/autopilot/internal/SPD-N1</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </checkbox>
-                <checkbox>
-                    <label>SPD</label>
-                    <row>1</row>
-                    <col>0</col>
-                    <halign>left</halign>
-                    <property>/autopilot/internal/SPD-SPEED</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </checkbox>
-                 <checkbox>
-                    <label>LVLCHG</label>
-                    <row>1</row>
-                    <col>1</col>
-                    <halign>left</halign>
-                    <property>/autopilot/internal/SPD-LVLCHG</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </checkbox>
-           </group>
-            <group>
-                <layout>table</layout>
-                <text>
-                    <label>IAS</label>
-                    <halign>right</halign>
-                    <row>0</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>0</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/SPD-IAS</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/SPD-IAS</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/SPD-MACH</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								<button>
-                  <row>0</row>
-                  <col>2</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-kt</property>
-                      <step type="double">-5.0</step>
-                      <min>0</min>
-                      <max>350</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>0</row>
-                  <col>3</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-kt</property>
-                      <step type="double">-1.0</step>
-                      <min>0</min>
-                      <max>350</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <input>
-                    <row>0</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <property>/autopilot/settings/target-speed-kt</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </input>
-								<button>
-                  <row>0</row>
-                  <col>5</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-kt</property>
-                      <step type="double">1.0</step>
-                      <min>0</min>
-                      <max>350</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>0</row>
-                  <col>6</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-kt</property>
-                      <step type="double">5.0</step>
-                      <min>0</min>
-                      <max>350</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <text>
-                    <label>Mach</label>
-                    <halign>right</halign>
-                    <row>1</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>1</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/SPD-MACH</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/SPD-IAS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/SPD-MACH</property>
-                      <value type="bool">1</value>
-                    </binding>
-                </radio>
-								<button>
-                  <row>1</row>
-                  <col>2</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-mach</property>
-                      <step type="double">-0.05</step>
-                      <min>0</min>
-                      <max>.82</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>1</row>
-                  <col>3</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-mach</property>
-                      <step type="double">-0.01</step>
-                      <min>0</min>
-                      <max>.82</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <input>
-                    <row>1</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <property>/autopilot/settings/target-speed-mach</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </input>
-								<button>
-                  <row>1</row>
-                  <col>5</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-mach</property>
-                      <step type="double">0.01</step>
-                      <min>0</min>
-                      <max>.82</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>1</row>
-                  <col>6</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-speed-mach</property>
-                      <step type="double">0.05</step>
-                      <min>0</min>
-                      <max>.82</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-            </group>
+    </group>
+    <hrule/>
 
-        <!-- End of Heading/Speed -->
-        <hrule/>
-            <!-- Altitude -->
-            <layout>vbox</layout>
-            <group>
-                <layout>hbox</layout>
-                <checkbox>
-                    <label>Altitude</label>
-                    <halign>left</halign>
-                    <property>/autopilot/internal/VNAV</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </checkbox>
-								<text>
-                    <label>    G/S</label>
-                    <halign>right</halign>
-                </text>
-                <radio>
-                    <property>/autopilot/internal/VNAV-GS</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-GS</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-VS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-ALT</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								<text>
-                    <label></label>
-                    <halign>right</halign>
-                </text>
-            </group>
-            <group>
-                <layout>table</layout>
-                <text>
-                    <label>V/S</label>
-                    <halign>right</halign>
-                    <row>0</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>0</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/VNAV-VS</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-GS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-VS</property>
-                      <value type="bool">1</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-ALT</property>
-                      <value type="bool">0</value>
-                    </binding>
-                </radio>
-								<button>
-                  <row>0</row>
-                  <col>2</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/vertical-speed-fpm</property>
-                      <step type="double">-500.0</step>
-                      <min>-3000</min>
-                      <max>3000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>0</row>
-                  <col>3</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/vertical-speed-fpm</property>
-                      <step type="double">-100.0</step>
-                      <min>-3000</min>
-                      <max>3000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <input>
-                    <row>0</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <property>/autopilot/settings/vertical-speed-fpm</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </input>
-								<button>
-                  <row>0</row>
-                  <col>5</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/vertical-speed-fpm</property>
-                      <step type="double">100.0</step>
-                      <min>-3000</min>
-                      <max>3000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>0</row>
-                  <col>6</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/vertical-speed-fpm</property>
-                      <step type="double">500.0</step>
-                      <min>-3000</min>
-                      <max>3000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <text>
-                    <label>Alt</label>
-                    <halign>right</halign>
-                    <row>3</row>
-                    <col>0</col>
-                </text>
-                <radio>
-                    <row>3</row>
-                    <col>1</col>
-                    <property>/autopilot/internal/VNAV-ALT</property>
-                    <live>true</live>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-GS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-VS</property>
-                      <value type="bool">0</value>
-                    </binding>
-                    <binding>
-                      <command>property-assign</command>
-                      <property>/autopilot/internal/VNAV-ALT</property>
-                      <value type="bool">1</value>
-                    </binding>
-                </radio>
-								<button>
-                  <row>3</row>
-                  <col>2</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-altitude-mcp-ft</property>
-                      <step type="double">-1000.0</step>
-                      <min>0</min>
-                      <max>45000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>3</row>
-                  <col>3</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&lt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-altitude-mcp-ft</property>
-                      <step type="double">-100.0</step>
-                      <min>0</min>
-                      <max>45000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-                <input>
-                    <row>3</row>
-                    <col>4</col>
-										<pref-width>55</pref-width>
-                    <property>/autopilot/settings/target-altitude-mcp-ft</property>
-                    <live>true</live>
-                    <binding>
-                        <command>dialog-apply</command>
-                    </binding>
-                </input>
-								<button>
-                  <row>3</row>
-                  <col>5</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-altitude-mcp-ft</property>
-                      <step type="double">100.0</step>
-                      <min>0</min>
-                      <max>45000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								<button>
-                  <row>3</row>
-                  <col>6</col>
-                  <pref-width>18</pref-width>
-                  <pref-height>25</pref-height>
-                  <legend>&gt;&gt;</legend>
-                  <binding>
-                      <command>property-adjust</command>
-                      <property>autopilot/settings/target-altitude-mcp-ft</property>
-                      <step type="double">1000.0</step>
-                      <min>0</min>
-                      <max>45000</max>
-                      <wrap>false</wrap>
-                  </binding>
-                  <binding>
-                      <command>dialog-update</command>
-                  </binding>
-                </button>
-								
-								
-            </group>
-<!--            <empty><stretch>1</stretch></empty> -->
-        <!-- End of Pitch/Altitude VBox -->
+    <!-- SPEED -->
+
+    <group>
+      <layout>table</layout>
+      <checkbox>
+        <label>A/T Arm</label>
+        <row>0</row>
+        <col>0</col>
+        <halign>left</halign>
+        <property>/autopilot/internal/SPD</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </checkbox>
+      <checkbox>
+        <label>N1</label>
+        <row>0</row>
+        <col>1</col>
+        <halign>left</halign>
+        <property>/autopilot/internal/SPD-N1</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </checkbox>
+      <checkbox>
+        <label>SPD</label>
+        <row>1</row>
+        <col>0</col>
+        <halign>left</halign>
+        <property>/autopilot/internal/SPD-SPEED</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </checkbox>
+      <checkbox>
+        <label>LVLCHG</label>
+        <row>1</row>
+        <col>1</col>
+        <halign>left</halign>
+        <property>/autopilot/internal/SPD-LVLCHG</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </checkbox>
+    </group>
+    <group>
+      <layout>table</layout>
+      <text>
+        <label>IAS</label>
+        <halign>right</halign>
+        <row>0</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>0</row>
+        <col>1</col>
+        <property>/autopilot/internal/SPD-IAS</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/SPD-IAS</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/SPD-MACH</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
+      <button>
+        <row>0</row>
+        <col>2</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-kt</property>
+          <step type="double">-5.0</step>
+          <min>0</min>
+          <max>350</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>0</row>
+        <col>3</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-kt</property>
+          <step type="double">-1.0</step>
+          <min>0</min>
+          <max>350</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <input>
+        <row>0</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <property>/autopilot/settings/target-speed-kt</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </input>
+      <button>
+        <row>0</row>
+        <col>5</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-kt</property>
+          <step type="double">1.0</step>
+          <min>0</min>
+          <max>350</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>0</row>
+        <col>6</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-kt</property>
+          <step type="double">5.0</step>
+          <min>0</min>
+          <max>350</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <text>
+        <label>Mach</label>
+        <halign>right</halign>
+        <row>1</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>1</row>
+        <col>1</col>
+        <property>/autopilot/internal/SPD-MACH</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/SPD-IAS</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/SPD-MACH</property>
+          <value type="bool">1</value>
+        </binding>
+      </radio>
+      <button>
+        <row>1</row>
+        <col>2</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-mach</property>
+          <step type="double">-0.05</step>
+          <min>0</min>
+          <max>.82</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>1</row>
+        <col>3</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-mach</property>
+          <step type="double">-0.01</step>
+          <min>0</min>
+          <max>.82</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <input>
+        <row>1</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <property>/autopilot/settings/target-speed-mach</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </input>
+      <button>
+        <row>1</row>
+        <col>5</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-mach</property>
+          <step type="double">0.01</step>
+          <min>0</min>
+          <max>.82</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>1</row>
+        <col>6</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-speed-mach</property>
+          <step type="double">0.05</step>
+          <min>0</min>
+          <max>.82</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+    </group>
+
+    <!-- End of Heading/Speed -->
+    <hrule/>
+    <!-- Altitude -->
+    <layout>vbox</layout>
+    <group>
+      <layout>hbox</layout>
+      <checkbox>
+        <label>Altitude</label>
+        <halign>left</halign>
+        <property>/autopilot/internal/VNAV</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </checkbox>
+      <text>
+        <label>    G/S</label>
+        <halign>right</halign>
+      </text>
+      <radio>
+        <property>/autopilot/internal/VNAV-GS</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-GS</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-VS</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-ALT</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
+      <text>
+        <label></label>
+        <halign>right</halign>
+      </text>
+    </group>
+    <group>
+      <layout>table</layout>
+      <text>
+        <label>V/S</label>
+        <halign>right</halign>
+        <row>0</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>0</row>
+        <col>1</col>
+        <property>/autopilot/internal/VNAV-VS</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-GS</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-VS</property>
+          <value type="bool">1</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-ALT</property>
+          <value type="bool">0</value>
+        </binding>
+      </radio>
+      <button>
+        <row>0</row>
+        <col>2</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/vertical-speed-fpm</property>
+          <step type="double">-500.0</step>
+          <min>-3000</min>
+          <max>3000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>0</row>
+        <col>3</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/vertical-speed-fpm</property>
+          <step type="double">-100.0</step>
+          <min>-3000</min>
+          <max>3000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <input>
+        <row>0</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <property>/autopilot/settings/vertical-speed-fpm</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </input>
+      <button>
+        <row>0</row>
+        <col>5</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/vertical-speed-fpm</property>
+          <step type="double">100.0</step>
+          <min>-3000</min>
+          <max>3000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>0</row>
+        <col>6</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/vertical-speed-fpm</property>
+          <step type="double">500.0</step>
+          <min>-3000</min>
+          <max>3000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <text>
+        <label>Alt</label>
+        <halign>right</halign>
+        <row>3</row>
+        <col>0</col>
+      </text>
+      <radio>
+        <row>3</row>
+        <col>1</col>
+        <property>/autopilot/internal/VNAV-ALT</property>
+        <live>true</live>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-GS</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-VS</property>
+          <value type="bool">0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/autopilot/internal/VNAV-ALT</property>
+          <value type="bool">1</value>
+        </binding>
+      </radio>
+      <button>
+        <row>3</row>
+        <col>2</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-altitude-mcp-ft</property>
+          <step type="double">-1000.0</step>
+          <min>0</min>
+          <max>45000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>3</row>
+        <col>3</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&lt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-altitude-mcp-ft</property>
+          <step type="double">-100.0</step>
+          <min>0</min>
+          <max>45000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <input>
+        <row>3</row>
+        <col>4</col>
+        <pref-width>55</pref-width>
+        <property>/autopilot/settings/target-altitude-mcp-ft</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+      </input>
+      <button>
+        <row>3</row>
+        <col>5</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-altitude-mcp-ft</property>
+          <step type="double">100.0</step>
+          <min>0</min>
+          <max>45000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+      <button>
+        <row>3</row>
+        <col>6</col>
+        <pref-width>18</pref-width>
+        <pref-height>25</pref-height>
+        <legend>&gt;&gt;</legend>
+        <binding>
+          <command>property-adjust</command>
+          <property>autopilot/settings/target-altitude-mcp-ft</property>
+          <step type="double">1000.0</step>
+          <min>0</min>
+          <max>45000</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>dialog-update</command>
+        </binding>
+      </button>
+
+
+    </group>
+    <!--            <empty><stretch>1</stretch></empty> -->
+    <!-- End of Pitch/Altitude VBox -->
     <hrule/>
     <group>
-        <!-- FD Mode Toggle -->
-        <layout>hbox</layout>
-        <checkbox>
-            <label>F/D Mode</label>
-            <halign>center</halign>
-            <property>/instrumentation/flightdirector/fd-on</property>
-            <live>true</live>
-            <binding>
-                <command>dialog-apply</command>
-            </binding>
-            <binding>
-                <command>property-toggle</command>
-            </binding>
-        </checkbox>
-     <button>
-			<legend>Disengage</legend>
-			<default>1</default>
-			<border>2</border>
-			<binding>
-				<command>nasal</command>
-				<script>
+      <!-- FD Mode Toggle -->
+      <layout>hbox</layout>
+      <checkbox>
+        <label>F/D Mode</label>
+        <halign>center</halign>
+        <property>/instrumentation/flightdirector/fd-on</property>
+        <live>true</live>
+        <binding>
+          <command>dialog-apply</command>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+        </binding>
+      </checkbox>
+      <button>
+        <legend>Disengage</legend>
+        <default>1</default>
+        <border>2</border>
+        <binding>
+          <command>nasal</command>
+          <script>
 				  setprop("/autopilot/internal/CMDA", 0);
 					setprop("/autopilot/internal/CMDB", 0);
-				</script>
-			</binding>
-			<binding>
-				<command>nasal</command>
-           <script>dialogs.ap_settings.toggle()</script>
-			</binding>
-		</button>
+          </script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>dialogs.ap_settings.toggle()</script>
+        </binding>
+      </button>
     </group>
-</group>
-  
+  </group>
+
 </PropertyList>

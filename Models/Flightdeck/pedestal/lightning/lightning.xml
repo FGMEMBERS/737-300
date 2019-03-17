@@ -2,81 +2,93 @@
 
 <PropertyList>
 
-<path>lightning.ac</path>
+  <path>lightning.ac</path>
 
 
-<!-- knob functions -->
-<animation>
-  <object-name>KnobFlood</object-name>
-  <type>knob</type>
-  <action>
-  <binding>
-    <command>property-adjust</command>
+  <!-- knob functions -->
+  <animation>
+    <object-name>KnobFlood</object-name>
+    <type>knob</type>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>b733/lightning/flood_lightning</property>
+        <factor>-0.1</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <object-name>KnobBright</object-name>
+    <type>knob</type>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>b733/lightning/bright_lightning</property>
+        <factor>-0.1</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- knob animation -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>KnobFlood</object-name>
     <property>b733/lightning/flood_lightning</property>
-    <factor>-0.1</factor>
-    <min>0</min>
-    <max>1</max>
-    <wrap>false</wrap>
-  </binding>
-  </action>
-</animation>
+    <interpolation>
+      <entry>
+        <ind>1</ind>
+        <dep>-90</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>130</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>-0.035</x-m>
+      <y-m>-0.00636154</y-m>
+      <z-m>0.00232706</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
 
-<animation>
-  <object-name>KnobBright</object-name>
-  <type>knob</type>
-  <action>
-  <binding>
-    <command>property-adjust</command>
+  <animation>
+    <type>rotate</type>
+    <object-name>KnobBright</object-name>
     <property>b733/lightning/bright_lightning</property>
-    <factor>-0.1</factor>
-    <min>0</min>
-    <max>1</max>
-    <wrap>false</wrap>
-  </binding>
-  </action>
-</animation>
-
-<!-- knob animation -->
-
-<animation>
-  <type>rotate</type>
-  <object-name>KnobFlood</object-name>
-  <property>b733/lightning/flood_lightning</property>
-  <interpolation>
-            <entry><ind>1</ind><dep>-90</dep></entry>
-            <entry><ind>0</ind><dep>130</dep></entry>
+    <interpolation>
+      <entry>
+        <ind>1</ind>
+        <dep>-90</dep>
+      </entry>
+      <entry>
+        <ind>0</ind>
+        <dep>130</dep>
+      </entry>
     </interpolation>
-        <center>
-            <x-m>-0.035</x-m>
-            <y-m>-0.00636154</y-m>
-            <z-m>0.00232706</z-m>
-        </center>
+    <center>
+      <x-m>0.035</x-m>
+      <y-m>-0.00636154</y-m>
+      <z-m>0.00232706</z-m>
+    </center>
     <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-    </axis>  
-</animation>
-
-<animation>
-  <type>rotate</type>
-  <object-name>KnobBright</object-name>
-  <property>b733/lightning/bright_lightning</property>
-  <interpolation>
-            <entry><ind>1</ind><dep>-90</dep></entry>
-            <entry><ind>0</ind><dep>130</dep></entry>
-    </interpolation>
-        <center>
-            <x-m>0.035</x-m>
-            <y-m>-0.00636154</y-m>
-            <z-m>0.00232706</z-m>
-        </center>
-    <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-    </axis>  
-</animation>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
 
 
 </PropertyList>

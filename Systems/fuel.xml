@@ -5,7 +5,7 @@
 -->
 <system name="Fuel">
 
-  <channel name="Fuel">
+   <channel name="Fuel">
       <!-- Grouping wing pumps -->
       <switch name="fuel/pump-left-on">
          <default value="0"/>
@@ -53,13 +53,13 @@
             fuel/pump-left-on EQ 1               
             propulsion/tank[0]/contents-lbs GT 0
             propulsion/tank[3]/contents-lbs LT 0.25
-         </test>            
+         </test>
          <test logic="AND" value="3.5">
             /controls/fuel/tank[2]/pump-left EQ 1               
             propulsion/tank[2]/contents-lbs GT 0
             propulsion/tank[3]/contents-lbs LT 0.25
          </test>
-          
+
          <test logic="AND" value="3.5">
             fuel/pump-right-on EQ 1               
             propulsion/tank[1]/contents-lbs GT 0
@@ -82,14 +82,14 @@
             propulsion/tank[0]/contents-lbs GT 0
             propulsion/tank[4]/contents-lbs LT 0.25
             /controls/fuel/crossfeed EQ 1
-         </test>            
+         </test>
          <test logic="AND" value="3.5">
             /controls/fuel/tank[2]/pump-left EQ 1               
             propulsion/tank[2]/contents-lbs GT 0
             propulsion/tank[4]/contents-lbs LT 0.25
             /controls/fuel/crossfeed EQ 1
          </test>
-          
+
          <test logic="AND" value="3.5">
             fuel/pump-right-on EQ 1               
             propulsion/tank[1]/contents-lbs GT 0
@@ -104,13 +104,13 @@
       </switch>
 
       <pure_gain name="fuel/left-pipe-feed-half">
-        <input>fuel/left-pipe-feed</input>
-        <gain>0.5</gain>
+         <input>fuel/left-pipe-feed</input>
+         <gain>0.5</gain>
       </pure_gain>
 
       <pure_gain name="fuel/right-pipe-feed-half">
-        <input>fuel/right-pipe-feed</input>
-        <gain>0.5</gain>
+         <input>fuel/right-pipe-feed</input>
+         <gain>0.5</gain>
       </pure_gain>
 
       <switch name="fuel/from-tank0-to-tank3">
@@ -435,6 +435,6 @@
          <output>propulsion/tank[2]/external-flow-rate-pps</output>
       </summer>
 
-  </channel>
+   </channel>
 
 </system>

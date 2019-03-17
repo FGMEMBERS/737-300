@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 
 <PropertyList>
- <!-- =============================================================== -->
- <!-- Roll Axis Modes                                                 -->
- <!-- =============================================================== -->
+  <!-- =============================================================== -->
+  <!-- Roll Axis Modes                                                 -->
+  <!-- =============================================================== -->
 
-<!-- HDG SEL mode -->
-   <filter>
+  <!-- HDG SEL mode -->
+  <filter>
     <name>heading bug error computer/normalizer</name>
     <debug>false</debug>
     <enable>
       <condition>
         <property>/autopilot/internal/LNAV-HDG</property>
       </condition>
-    </enable>	
+    </enable>
     <type>gain</type>
     <input>
       <property>autopilot/settings/heading-bug-deg</property>
@@ -30,15 +30,15 @@
     <gain>1.0</gain>
   </filter>
 
-<!-- GA mode -->
-   <filter>
+  <!-- GA mode -->
+  <filter>
     <name>heading bug error computer/normalizer</name>
     <debug>false</debug>
     <enable>
       <condition>
         <property>/autopilot/internal/GA-ROLL</property>
       </condition>
-    </enable>	
+    </enable>
     <type>gain</type>
     <input>
       <property>/autopilot/settings/ga-track-deg</property>
@@ -55,12 +55,12 @@
     <gain>1.0</gain>
   </filter>
 
-<!-- VOR/LOC mode -->
+  <!-- VOR/LOC mode -->
   <filter>
     <name>nav1 heading error computer/normalizer</name>
     <debug>false</debug>
     <type>gain</type>
-    <input> <!-- this is for LOCALIZER CAPTURE -->
+    <input>      <!-- this is for LOCALIZER CAPTURE -->
       <condition>
         <property>/instrumentation/nav[0]/nav-loc</property>
       </condition>
@@ -81,7 +81,7 @@
         </sum>
       </expression>
     </input>
-    <input> <!-- this is for other modes (VOR, LNAV) -->
+    <input>      <!-- this is for other modes (VOR, LNAV) -->
       <expression>
         <sum>
           <product>
@@ -100,21 +100,21 @@
       </expression>
     </input>
     <output>/autopilot/internal/target-heading-shift-nav1</output>
-      <min>-30</min>
-      <max>30</max>
+    <min>-30</min>
+    <max>30</max>
     <gain>1.0</gain>
   </filter>
 
-   <filter>
+  <filter>
     <name>heading bug error computer/normalizer</name>
     <debug>false</debug>
     <enable>
       <condition>
         <property>/autopilot/internal/LNAV-NAV</property>
       </condition>
-    </enable>	
+    </enable>
     <type>gain</type>
-    <input> <!-- this is for LOCALIZER CAPTURE -->
+    <input>      <!-- this is for LOCALIZER CAPTURE -->
       <condition>
         <property>/instrumentation/nav[0]/nav-loc</property>
       </condition>
@@ -130,7 +130,7 @@
         </sum>
       </expression>
     </input>
-    <input> <!-- this is for other modes (VOR, LNAV) -->
+    <input>      <!-- this is for other modes (VOR, LNAV) -->
       <expression>
         <sum>
           <property>/instrumentation/nav[0]/radials/target-radial-deg</property>
@@ -150,7 +150,7 @@
     <gain>1.0</gain>
   </filter>
 
-<!-- LNAV mode -->
+  <!-- LNAV mode -->
   <filter>
     <name>fms heading error computer/normalizer</name>
     <debug>false</debug>
@@ -160,7 +160,7 @@
         <property>/autopilot/internal/LNAV</property>
       </condition>
     </enable>
-    <input> <!-- this is for LNAV -->
+    <input>      <!-- this is for LNAV -->
       <expression>
         <sum>
           <product>
@@ -179,21 +179,21 @@
       </expression>
     </input>
     <output>/autopilot/internal/target-heading-shift-fms</output>
-      <min>-30</min>
-      <max>30</max>
+    <min>-30</min>
+    <max>30</max>
     <gain>1.0</gain>
   </filter>
 
 
 
-   <filter>
+  <filter>
     <name>heading bug error computer/normalizer</name>
     <debug>false</debug>
     <enable>
       <condition>
         <property>/autopilot/internal/LNAV</property>
       </condition>
-    </enable>	
+    </enable>
     <type>gain</type>
     <input>
       <condition>
@@ -233,7 +233,7 @@
     <gain>1.0</gain>
   </filter>
 
-<!-- ###### Target bank calculator -->
+  <!-- ###### Target bank calculator -->
 
   <pi-simple-controller>
     <name>Calculator for target bank in HDG mode</name>
@@ -247,7 +247,7 @@
           <property>/autopilot/internal/GA-ROLL</property>
         </or>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>autopilot/internal/fcca-heading-bug-error-deg</prop>
     </input>
@@ -258,10 +258,10 @@
       <prop>/autopilot/settings/fcca-target-bank</prop>
     </output>
     <config>
-      <Kp>-1.5</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>/autopilot/settings/maximum-bank-neg</u_min> <!-- minimum output clamp -->
-      <u_max>/autopilot/settings/maximum-bank</u_max>   <!-- maximum output clamp -->
+      <Kp>-1.5</Kp>      <!-- proportional gain -->
+      <Ki>0.0</Ki>      <!-- integral gain -->
+      <u_min>/autopilot/settings/maximum-bank-neg</u_min>      <!-- minimum output clamp -->
+      <u_max>/autopilot/settings/maximum-bank</u_max>      <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>
 
@@ -277,7 +277,7 @@
           <property>/autopilot/internal/GA-ROLL</property>
         </or>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>/orientation/roll-deg</prop>
     </input>
@@ -288,8 +288,8 @@
       <prop>/autopilot/settings/fcca-target-roll-rate</prop>
     </output>
     <config>
-      <Kp>0.5</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
+      <Kp>0.5</Kp>      <!-- proportional gain -->
+      <Ki>0.0</Ki>      <!-- integral gain -->
       <u_min>
         <condition>
           <and>
@@ -334,41 +334,43 @@
         </condition>
         <value>5.5</value>
       </u_max>
-      <u_min>-4</u_min> <!-- minimum output clamp -->
-      <u_max>4</u_max>   <!-- maximum output clamp -->
+      <u_min>-4</u_min>      <!-- minimum output clamp -->
+      <u_max>4</u_max>      <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>
 
- <!-- =============================================================== -->
- <!-- Pitch Axis Modes                                                -->
- <!-- =============================================================== -->
+  <!-- =============================================================== -->
+  <!-- Pitch Axis Modes                                                -->
+  <!-- =============================================================== -->
 
- <!-- TOGA mode -->
+  <!-- TOGA mode -->
 
- <filter>
-  <name>VS translate</name>
-  <debug>false</debug>
-  <enable>
-   <condition>
-    <not>
-      <or>
-        <and>
-          <property>/autopilot/internal/PITCH-ACTIVE</property>
-          <not><property>/autopilot/internal/TOGA</property></not>
-        </and>
-        <and>
-          <property>/autopilot/internal/TOGA</property>
-          <property>/autopilot/logic/toga-pitch</property>
-        </and>
-      </or>
-    </not>
-   </condition>
-  </enable>
-  <type>gain</type>
-  <gain>1.0</gain>
-  <input>autopilot/internal/current-vertical-speed-fpm</input>
-  <output>/autopilot/settings/fcca-vertical-speed-fpm</output>
- </filter>
+  <filter>
+    <name>VS translate</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <not>
+          <or>
+            <and>
+              <property>/autopilot/internal/PITCH-ACTIVE</property>
+              <not>
+                <property>/autopilot/internal/TOGA</property>
+              </not>
+            </and>
+            <and>
+              <property>/autopilot/internal/TOGA</property>
+              <property>/autopilot/logic/toga-pitch</property>
+            </and>
+          </or>
+        </not>
+      </condition>
+    </enable>
+    <type>gain</type>
+    <gain>1.0</gain>
+    <input>autopilot/internal/current-vertical-speed-fpm</input>
+    <output>/autopilot/settings/fcca-vertical-speed-fpm</output>
+  </filter>
 
   <pid-controller>
     <name>TOGA mode</name>
@@ -403,7 +405,7 @@
     </config>
   </pid-controller>
 
-<!-- GO-AROUND MODE -->
+  <!-- GO-AROUND MODE -->
   <pid-controller>
     <name>GA mode</name>
     <debug>false</debug>
@@ -433,7 +435,7 @@
     </config>
   </pid-controller>
 
- <!-- LVLCHG mode -->
+  <!-- LVLCHG mode -->
   <pid-controller>
     <name>LVLCHG mode</name>
     <debug>false</debug>
@@ -453,18 +455,18 @@
     </output>
     <config>
       <Kp>-180</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>/autopilot/settings/min-lvlchg-vs</u_min> <!-- minimum output clamp -->
-      <u_max>/autopilot/settings/max-lvlchg-vs</u_max>  <!-- maximum output clamp -->
+      <beta>1.0</beta>      <!-- input value weighing factor -->
+      <alpha>0.1</alpha>      <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>      <!-- input value weighing factor for -->
+      <!-- unfiltered derivative error -->
+      <Ti>10.0</Ti>      <!-- integrator time -->
+      <Td>0.00001</Td>      <!-- derivator time -->
+      <u_min>/autopilot/settings/min-lvlchg-vs</u_min>      <!-- minimum output clamp -->
+      <u_max>/autopilot/settings/max-lvlchg-vs</u_max>      <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
- <!-- ALT ACQ -->
+  <!-- ALT ACQ -->
 
   <pi-simple-controller>
     <name>Altitude Acquire</name>
@@ -473,7 +475,7 @@
       <condition>
         <property>/autopilot/internal/VNAV-ALT-ACQ</property>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>/instrumentation/altimeter[0]/indicated-altitude-ft</prop>
     </input>
@@ -484,14 +486,14 @@
       <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
     </output>
     <config>
-      <Kp>7.5</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>/autopilot/internal/min-vs-fpm</u_min> <!-- minimum output clamp -->
-      <u_max>/autopilot/internal/max-vs-fpm</u_max>   <!-- maximum output clamp -->
+      <Kp>7.5</Kp>      <!-- proportional gain -->
+      <Ki>0.0</Ki>      <!-- integral gain -->
+      <u_min>/autopilot/internal/min-vs-fpm</u_min>      <!-- minimum output clamp -->
+      <u_max>/autopilot/internal/max-vs-fpm</u_max>      <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>
 
- <!-- ALT HOLD -->
+  <!-- ALT HOLD -->
 
   <pi-simple-controller>
     <name>Altitude Hold</name>
@@ -500,7 +502,7 @@
       <condition>
         <property>/autopilot/internal/VNAV-ALT</property>
       </condition>
-    </enable>	
+    </enable>
     <input>
       <prop>/instrumentation/altimeter[0]/pressure-alt-ft</prop>
     </input>
@@ -511,90 +513,90 @@
       <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
     </output>
     <config>
-      <Kp>7.5</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>/autopilot/internal/min-vs-fpm</u_min> <!-- minimum output clamp -->
-      <u_max>/autopilot/internal/max-vs-fpm</u_max>   <!-- maximum output clamp -->
+      <Kp>7.5</Kp>      <!-- proportional gain -->
+      <Ki>0.0</Ki>      <!-- integral gain -->
+      <u_min>/autopilot/internal/min-vs-fpm</u_min>      <!-- minimum output clamp -->
+      <u_max>/autopilot/internal/max-vs-fpm</u_max>      <!-- maximum output clamp -->
     </config>
   </pi-simple-controller>
 
- <!-- GLIDESLOPE mode -->
+  <!-- GLIDESLOPE mode -->
 
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <enable>
-    <condition>
-      <property>/autopilot/internal/VNAV-GS</property>
-    </condition>
-  </enable>	
-  <input>
-    <property>/instrumentation/nav/gs-rate-of-climb-fpm</property>
-    <offset>
-      <property>autopilot/internal/nav1-gs-rate</property>
-      <scale>3000.0</scale>
-    </offset>
-  </input>
-  <output>
-    <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
-  </output>
-  <min>-1500</min>
-  <max>0</max>
-</filter>
+  <filter>
+    <type>gain</type>
+    <gain>1</gain>
+    <enable>
+      <condition>
+        <property>/autopilot/internal/VNAV-GS</property>
+      </condition>
+    </enable>
+    <input>
+      <property>/instrumentation/nav/gs-rate-of-climb-fpm</property>
+      <offset>
+        <property>autopilot/internal/nav1-gs-rate</property>
+        <scale>3000.0</scale>
+      </offset>
+    </input>
+    <output>
+      <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
+    </output>
+    <min>-1500</min>
+    <max>0</max>
+  </filter>
 
- <!-- FLARE mode -->
+  <!-- FLARE mode -->
 
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <enable>
-    <condition>
-      <property>/autopilot/internal/VNAV-FLARE</property>
-    </condition>
-  </enable>	
-  <input>
-    <expression>
-      <sum>
-        <product>
-          <sum>
-            <property>/position/altitude-agl-ft</property>
-            <value>-6.5</value>
-          </sum>
-          <value>-6</value>
-        </product>
-        <value>-200</value>
-      </sum>
-    </expression>
-  </input>
-  <output>
-    <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
-  </output>
-</filter>
+  <filter>
+    <type>gain</type>
+    <gain>1</gain>
+    <enable>
+      <condition>
+        <property>/autopilot/internal/VNAV-FLARE</property>
+      </condition>
+    </enable>
+    <input>
+      <expression>
+        <sum>
+          <product>
+            <sum>
+              <property>/position/altitude-agl-ft</property>
+              <value>-6.5</value>
+            </sum>
+            <value>-6</value>
+          </product>
+          <value>-200</value>
+        </sum>
+      </expression>
+    </input>
+    <output>
+      <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
+    </output>
+  </filter>
 
- <!-- VS mode -->
+  <!-- VS mode -->
 
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <enable>
-    <condition>
-      <property>/autopilot/internal/VNAV-VS</property>
-    </condition>
-  </enable>	
-  <input>
-    <prop>/autopilot/settings/vertical-speed-fpm</prop>
-  </input>
-  <output>
-    <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
-  </output>
-</filter>
+  <filter>
+    <type>gain</type>
+    <gain>1</gain>
+    <enable>
+      <condition>
+        <property>/autopilot/internal/VNAV-VS</property>
+      </condition>
+    </enable>
+    <input>
+      <prop>/autopilot/settings/vertical-speed-fpm</prop>
+    </input>
+    <output>
+      <prop>/autopilot/settings/fcca-vertical-speed-fpm</prop>
+    </output>
+  </filter>
 
- <!-- VS hold for any mode -->
+  <!-- VS hold for any mode -->
 
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <enable>
+  <filter>
+    <type>gain</type>
+    <gain>1</gain>
+    <enable>
       <condition>
         <property>/autopilot/internal/PITCH-ACTIVE</property>
       </condition>
@@ -604,7 +606,9 @@
         <or>
           <and>
             <property>/autopilot/internal/TOGA</property>
-            <not><property>/autopilot/logic/toga-pitch</property></not>
+            <not>
+              <property>/autopilot/logic/toga-pitch</property>
+            </not>
             <greater-than>
               <property>/instrumentation/airspeed-indicator[0]/indicated-speed-kt</property>
               <value>60</value>
@@ -620,12 +624,14 @@
         </or>
       </condition>
       <value>15</value>
-    </input>	
+    </input>
     <input>
       <condition>
         <and>
           <property>/autopilot/internal/TOGA</property>
-          <not><property>/autopilot/logic/toga-pitch</property></not>
+          <not>
+            <property>/autopilot/logic/toga-pitch</property>
+          </not>
           <less-than>
             <property>/instrumentation/airspeed-indicator[0]/indicated-speed-kt</property>
             <value>60</value>
@@ -659,13 +665,13 @@
             <value>57.2957795131</value>
           </product>
         </sum>
-      </expression> 
+      </expression>
     </input>
-  <output>
-    <prop>/autopilot/settings/fcca-target-pitch-deg</prop>
-  </output>
-  <min>-10</min>
-  <max> 20</max>
-</filter>
+    <output>
+      <prop>/autopilot/settings/fcca-target-pitch-deg</prop>
+    </output>
+    <min>-10</min>
+    <max> 20</max>
+  </filter>
 
 </PropertyList>

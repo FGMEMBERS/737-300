@@ -27,6 +27,14 @@ var elev_trim_stop = func {
   setprop("fdm/jsbsim/fcs/stabilizer/stab-target", stab_pos);
 }
 
+gear = func() {
+	if(!getprop("controls/gear/gear-down")){
+	setprop("controls/gear/gear-down", 1);
+	 }else {
+	 if(!getprop("gear/gear[0]/wow"))setprop("controls/gear/gear-down", 0);
+	}
+}
+
 var trim_handler = func{
   var old_trim = num( getprop("b733/controls/trim/stabilizer-old") );
   if ( old_trim == nil ) old_trim = 0.0;

@@ -1,3 +1,11 @@
+0.2.3 (2019-03-17)
+-----------------------------------------------------------
+- Add: [#73] Autopush functionality
+- Enhancement: [#62] Fuel pump low pressure light turns on when fuel tank is empty
+- Enhancement: [#70][#71][#72]: Updating ground services and ground service dialog
+- Enhancement: [#76] Gear is not longer retractable while on ground
+- Enhancement: Couple ground steering with rudder. Removed steering tiller dialog
+
 0.2.2 (2019-03-09)
 -----------------------------------------------------------
 - Fix: [#8]: Added +/- before vertical speed selector
