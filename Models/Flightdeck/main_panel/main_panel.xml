@@ -43,7 +43,7 @@
     <name>Co-Pilots ALT</name>
     <path>Aircraft/737-300/Models/Flightdeck/Instruments/ALT/alt-fo.xml</path>
     <offsets>
-      <x-m>-6.69189</x-m>
+      <x-m>0</x-m>
       <y-m>0.503804</y-m>
       <z-m>0.044031</z-m>
     </offsets>
