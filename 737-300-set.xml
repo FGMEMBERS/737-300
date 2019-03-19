@@ -616,6 +616,10 @@
     <max-positive-g>2.5</max-positive-g>
     <max-negative-g>-1</max-negative-g>
     <max-altitude>37050</max-altitude>
+    <mass-and-balance>
+      <maximum-takeoff-mass-lbs type="double">138500</maximum-takeoff-mass-lbs>
+      <maximum-landing-mass-lbs type="double">116600</maximum-landing-mass-lbs>
+    </mass-and-balance>
   </limits>
 
   <consumables>
