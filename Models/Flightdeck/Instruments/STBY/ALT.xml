@@ -1,42 +1,42 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-<path>ALT.ac</path>
+    <path>ALT.ac</path>
 
-   <animation>
-    <type>material</type>
-    <object-name>ALT.face</object-name>
-    <object-name>ALT.needle</object-name>
-    <object-name>alttxt</object-name>
-    <object-name>alttxt.001</object-name>
-    <object-name>alttxt.002</object-name>
-    <object-name>alttxt.003</object-name>
-    <object-name>alttxt.004</object-name>
-    <object-name>iastape</object-name>
-    <object-name>inhg.001</object-name>
-    <object-name>inhg.002</object-name>
-    <object-name>inhg.003</object-name>
-    <object-name>inhg.004</object-name>
-    <object-name>kpa.001</object-name>
-    <object-name>kpa.002</object-name>
-    <object-name>kpa.003</object-name>
-    <object-name>kpa.004</object-name>
-    <emission>
-<!--      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop> -->
-      <red>   0.7 </red>
-      <green> 0.7 </green>
-      <blue>  0.7 </blue>
-    </emission>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-  </animation>
+    <animation>
+        <type>material</type>
+        <object-name>ALT.face</object-name>
+        <object-name>ALT.needle</object-name>
+        <object-name>alttxt</object-name>
+        <object-name>alttxt.001</object-name>
+        <object-name>alttxt.002</object-name>
+        <object-name>alttxt.003</object-name>
+        <object-name>alttxt.004</object-name>
+        <object-name>iastape</object-name>
+        <object-name>inhg.001</object-name>
+        <object-name>inhg.002</object-name>
+        <object-name>inhg.003</object-name>
+        <object-name>inhg.004</object-name>
+        <object-name>kpa.001</object-name>
+        <object-name>kpa.002</object-name>
+        <object-name>kpa.003</object-name>
+        <object-name>kpa.004</object-name>
+        <emission>
+            <!--      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
+            <red>   0.7 </red>
+            <green> 0.7 </green>
+            <blue>  0.7 </blue>
+        </emission>
+        <condition>
+            <or>
+                <property>controls/electric/battery-switch</property>
+                <property>controls/electric/external-power</property>
+                <property>controls/electric/apugen1</property>
+                <property>controls/electric/apugen2</property>
+                <property>engines/engine[0]/running</property>
+            </or>
+        </condition>
+    </animation>
 
 
     <animation>
@@ -44,10 +44,22 @@
         <object-name>iastape</object-name>
         <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
         <interpolation>
-            <entry><ind>0.0</ind><dep>0.0</dep></entry>
-            <entry><ind>60.0</ind><dep>0.0244</dep></entry>
-            <entry><ind>300.0</ind><dep>0.4120</dep></entry>
-            <entry><ind>580</ind><dep>0.8697</dep></entry>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>60.0</ind>
+                <dep>0.0244</dep>
+            </entry>
+            <entry>
+                <ind>300.0</ind>
+                <dep>0.4120</dep>
+            </entry>
+            <entry>
+                <ind>580</ind>
+                <dep>0.8697</dep>
+            </entry>
         </interpolation>
         <axis>
             <x>0</x>

@@ -2,12 +2,12 @@
 
 <PropertyList>
 
- <path>safety-cones.ac</path>
+    <path>safety-cones.ac</path>
 
- <animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>2000</max-m>
- </animation>
+    <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>2000</max-m>
+    </animation>
 
 </PropertyList>

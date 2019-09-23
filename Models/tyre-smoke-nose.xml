@@ -15,16 +15,16 @@
 		</offsets>
 
 		<condition>
-		<and> 
-		<greater-than>
-				<property>orientation/pitch-deg</property>
-				<value>-0.5</value>
-		            </greater-than>
-                               <equals>
-				 <property>sim/multiplay/generic/int[0]</property>
-				<value>1</value>
-		</equals>
-		</and>
+			<and>
+				<greater-than>
+					<property>orientation/pitch-deg</property>
+					<value>-0.5</value>
+				</greater-than>
+				<equals>
+					<property>sim/multiplay/generic/int[0]</property>
+					<value>1</value>
+				</equals>
+			</and>
 		</condition>
 
 		<!--<condition>

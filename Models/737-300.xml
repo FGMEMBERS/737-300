@@ -3,13 +3,14 @@
 <PropertyList>
 
   <path>737-300.ac</path>
-  
-
 
   <nasal>
-    <load>
+    <load><![CDATA[
       var livery_update = aircraft.livery_update.new("Aircraft/737-300/Models/Liveries", 10);
-    </load>
+      var r = cmdarg();
+      r.getNode ("gear/gear[0]/steering-norm", 1).alias (r.getNode ("sim/multiplay/generic/float[0]"));
+      r.getNode ("engines/engine/reverser-pos-norm", 1).alias (r.getNode ("sim/multiplay/generic/float[1]"));
+    ]]>    </load>
     <unload>
       livery_update.stop();
     </unload>
@@ -18,11 +19,6 @@
   <model>
     <name>flightdeck</name>
     <path>Aircraft/737-300/Models/Flightdeck/flightdeck.xml</path>
-    <offsets>
-      <x-m>0.3</x-m>
-      <z-m>1.957</z-m>
-      <pitch-deg>-15</pitch-deg>
-    </offsets>
   </model>
 
   <offsets>
@@ -34,55 +30,50 @@
   <model>
     <name>Secondary flightdeck model</name>
     <path>Aircraft/737-300/Models/Flightdeck/secondary/sec-flightdeck.xml</path>
-    <offsets>
-      <x-m>0.01</x-m>
-      <y-m>0</y-m>
-      <z-m>0</z-m>
-    </offsets>
-  </model>	
+  </model>
 
-	<model>
+  <model>
     <name>Passenger Seating</name>
-    <path>Aircraft/737-300/Models/Seating/passenger-seating.xml</path>
-  </model>	
+    <path>Aircraft/737-300/Models/Seating/passenger_seating.xml</path>
+  </model>
 
-	<model>
+  <model>
     <name>Cockpit Bulkhead</name>
-    <path>Aircraft/737-300/Models/CockpitBulkhead/cockpit-bulkhead.xml</path>
-  </model>	
+    <path>Aircraft/737-300/Models/CockpitBulkhead/cockpit_bulkhead.xml</path>
+  </model>
 
-	<model>
+  <model>
     <name>Overhead Bins</name>
-    <path>Aircraft/737-300/Models/Overhead/overhead.xml</path>
-  </model>	
+    <path>Aircraft/737-300/Models/CabinOverhead/cabin_overhead.xml</path>
+  </model>
 
   <model>
     <name>Pushback</name>
-    <path>Models\Airport\Pushback\Goldhofert.xml</path>
+    <path>Autopush/Goldhofert.xml</path>
     <offsets>
-      <x-m>-5.684</x-m>
-      <y-m>0</y-m>
-      <z-m>-2.460</z-m>
+      <x-m>-5.31492</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-2.55</z-m>
     </offsets>
   </model>
 
   <!-- Services by PR-GEO -->
 
   <model>
-   <path>Aircraft/737-300/Models/Services/Services.xml</path>
-     <offsets>
-  	<x-m>0</x-m>
-  	<y-m>0</y-m>
-  	<z-m>0</z-m>
-     </offsets>
-  </model> 
+    <path>Aircraft/737-300/Models/Services/Services.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
 
- 
+
   <animation>
     <type>spin</type>
-<!--    <object-name>Cone</object-name> -->
+    <!--    <object-name>Cone</object-name> -->
     <object-name>Blades</object-name>
-    <property>/engines/engine[0]/n1</property>
+    <property>engines/engine[0]/n1</property>
     <factor>51.75</factor>
     <center>
       <x-m>2.363</x-m>
@@ -98,23 +89,23 @@
 
   <animation>
     <type>spin</type>
-<!--    <object-name>Cone.001</object-name> -->
+    <!--    <object-name>Cone.001</object-name> -->
     <object-name>Blades.001</object-name>
-    <property>/engines/engine[1]/n1</property>
+    <property>engines/engine[1]/n1</property>
     <factor>51.75</factor>
     <center>
       <x-m>2.363</x-m>
       <y-m>4.925</y-m>
       <z-m>-1.324</z-m>
-    </center> 
+    </center>
     <axis>
       <x>-1.0</x>
       <y>0</y>
       <z>0</z>
     </axis>
   </animation>
-	
-	<animation>
+
+  <animation>
     <type>translate</type>
     <object-name>lreverserob</object-name>
     <object-name>lreverserib</object-name>
@@ -149,8 +140,8 @@
     <object-name>rhsteercyl</object-name>
     <object-name>lhsteercyl</object-name>
     <object-name>collar</object-name>
-    <property>/fdm/jsbsim/fcs/steer-pos-deg</property>
-    <factor>-1</factor>
+    <property>gear/gear[0]/steering-norm</property>
+    <factor>-78</factor>
     <offset-deg>0</offset-deg>
     <axis>
       <x1-m>-4.652</x1-m>
@@ -165,8 +156,8 @@
   <!--<animation>
   <type>rotate</type>
   <path>taxilight.xml</path>
-   <property>controls/flight/rudder</property>
-  <factor>-45</factor>
+   <property>surface-positions/rudder-pos-norm</property>
+  <factor>45</factor>
   <offset-deg>0</offset-deg>   
 		<axis>
 			<x1-m>-4.652</x1-m>
@@ -223,8 +214,8 @@
       <z>1</z>
     </axis>
   </animation>
-  
-  
+
+
 
 
   <animation>
@@ -241,7 +232,7 @@
     <object-name>tyreln</object-name>
     <object-name>Cube</object-name>
     <object-name>tlighthalo</object-name>
-    <property>/fdm/jsbsim/gear/gear-nose-pos-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -273,7 +264,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhngdoor</object-name>
-    <property>/fdm/jsbsim/gear/gear-nose-pos-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -305,7 +296,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lhngdoor</object-name>
-    <property>/fdm/jsbsim/gear/gear-nose-pos-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -348,7 +339,7 @@
     <object-name>mglhtyrelh</object-name>
     <object-name>lhgdmid</object-name>
     <object-name>geardoor</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -383,7 +374,7 @@
     <type>rotate</type>
     <object-name>sidestrutl</object-name>
     <object-name>sidestrutu</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -417,7 +408,7 @@
   <animation>
     <type>rotate</type>
     <object-name>sidestrutu</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -451,7 +442,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lhmgdouter</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <factor>110</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -480,7 +471,7 @@
     <object-name>mgrhtyrelh</object-name>
     <object-name>rhgdmid</object-name>
     <object-name>rhgeardoor</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -515,7 +506,7 @@
     <type>rotate</type>
     <object-name>rhsidestrutl</object-name>
     <object-name>rhsidestrutu</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -549,7 +540,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhsidestrutu</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -583,7 +574,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhmgdouter</object-name>
-    <property>/fdm/jsbsim/gear/gear-left-pos-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <factor>-110</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -602,7 +593,7 @@
     <type>rotate</type>
     <object-name>lhaileron</object-name>
     <object-name>ailerontablh</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor>18</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -620,7 +611,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ailerontablh</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor>-5</factor>
     <offset-deg>0</offset-deg>
     <center>
@@ -639,8 +630,8 @@
     <type>rotate</type>
     <object-name>rhaileron</object-name>
     <object-name>ailerontabrh</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>-18</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>18</factor>
     <offset-deg>0</offset-deg>
     <center>
       <x-m>11.547</x-m>
@@ -657,8 +648,8 @@
   <animation>
     <type>rotate</type>
     <object-name>ailerontabrh</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>5</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>-5</factor>
     <offset-deg>0</offset-deg>
     <center>
       <x-m>11.567</x-m>
@@ -671,63 +662,63 @@
       <z>0.1</z>
     </axis>
   </animation>
-  
-    	<animation>
-		<type>spin</type>
-		<object-name>tyreln</object-name>
-		<object-name>tyrern</object-name>
-		<property>gear/gear[0]/rollspeed-ms</property>
-		<factor>10</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>-4.6504</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.1221</z-m>
-		</center>
-	</animation>
-	
-	  	<animation>
-		<type>spin</type>
-		<object-name>mglhtyrelh</object-name>
-		<object-name>mglhtyrerh</object-name>
-		<property>gear/gear[1]/rollspeed-ms</property>
-		<factor>10</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>7.9712</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.1989</z-m>
-		</center>
-	</animation>
-	
-		  	<animation>
-		<type>spin</type>
-		<object-name>mgrhtyrelh</object-name>
-		<object-name>mgrhtyrerh</object-name>
-		<property>gear/gear[2]/rollspeed-ms</property>
-		<factor>10</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>7.9712</x-m>
-			<y-m>0</y-m>
-			<z-m>-2.1989</z-m>
-		</center>
-	</animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>tyreln</object-name>
+    <object-name>tyrern</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor>10</factor>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>-4.6504</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.1221</z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>mglhtyrelh</object-name>
+    <object-name>mglhtyrerh</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor>10</factor>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>7.9712</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.1989</z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>mgrhtyrelh</object-name>
+    <object-name>mgrhtyrerh</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor>10</factor>
+    <axis>
+      <x>0</x>
+      <y>-1</y>
+      <z>0</z>
+    </axis>
+    <center>
+      <x-m>7.9712</x-m>
+      <y-m>0</y-m>
+      <z-m>-2.1989</z-m>
+    </center>
+  </animation>
 
 
-<!-- #################################################################################################### -->
+  <!-- #################################################################################################### -->
 
   <!--left stab trim-->
 
@@ -737,7 +728,7 @@
     <object-name>lehstab</object-name>
     <object-name>lhelevator</object-name>
     <object-name>lhelevatortab</object-name>
-    <property>/fdm/jsbsim/fcs/stabilizer-pos-unit</property>
+    <property>fdm/jsbsim/fcs/stabilizer-pos-unit</property>
     <factor>-1</factor>
     <offset-deg>3</offset-deg>
 
@@ -756,7 +747,7 @@
     <type>rotate</type>
     <object-name>lhelevator</object-name>
     <object-name>lhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>15</factor>
     <offset-deg>0</offset-deg>
 
@@ -773,7 +764,7 @@
   <animation>
     <type>rotate</type>
     <object-name>lhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>-15</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -786,7 +777,7 @@
     </axis>
   </animation>
 
-<!-- xxxxxxxxxxxxxxxxx -->
+  <!-- xxxxxxxxxxxxxxxxx -->
 
   <!--right stab trim-->
   <animation>
@@ -795,7 +786,7 @@
     <object-name>lehstab.001</object-name>
     <object-name>rhelevator</object-name>
     <object-name>rhelevatortab</object-name>
-    <property>/fdm/jsbsim/fcs/stabilizer-pos-unit</property>
+    <property>fdm/jsbsim/fcs/stabilizer-pos-unit</property>
     <factor>-1</factor>
     <offset-deg>3</offset-deg>
     <axis>
@@ -812,7 +803,7 @@
     <type>rotate</type>
     <object-name>rhelevator</object-name>
     <object-name>rhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>15</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -828,7 +819,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rhelevatortab</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <factor>-15</factor>
     <offset-deg>0</offset-deg>
     <axis>
@@ -841,13 +832,13 @@
     </axis>
   </animation>
 
-<!-- ###################################################################################### -->	
-	
+  <!-- ###################################################################################### -->
+
   <animation>
     <type>rotate</type>
     <object-name>rudder</object-name>
-    <property>fdm/jsbsim/fcs/rudder-pos-norm</property>
-    <factor>-25</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor>25</factor>
     <offset-deg>0</offset-deg>
     <center>
       <x-m>21.422</x-m>
@@ -1950,8 +1941,30 @@
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>texture.png</texture>
+  </animation>
 
+  <!-- Condition display landing lights -->
+
+  <animation>
+    <type>select</type>
+    <object-name>Llightl</object-name>
+    <condition>
+      <equals>
+        <property>controls/lighting/landing-lights-fixed-left</property>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Llightr</object-name>
+    <condition>
+      <equals>
+        <property>controls/lighting/landing-lights-fixed-right</property>
+        <value>true</value>
+      </equals>
+    </condition>
   </animation>
 
   <!--eyebrow variant animation-->
@@ -1976,7 +1989,7 @@
 
   <!-- Doors -->
 
-	<animation>
+  <animation>
     <name>PassLF</name>
     <object-name>frontdoorleft</object-name>
     <object-name>frontdoorleft2</object-name>
@@ -1987,9 +2000,18 @@
     <object-name>PassLF</object-name>
     <property>controls/switches/passengerdoor1</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 185 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> 185 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x1-m> -4.09159 </x1-m>
@@ -2006,9 +2028,18 @@
     <object-name>PassLF</object-name>
     <property>controls/switches/passengerdoor1</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep> 0.08 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> 0.08 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x> 0 </x>
@@ -2017,7 +2048,7 @@
     </axis>
   </animation>
 
-	  <animation>
+  <animation>
     <name>PassRF</name>
     <object-name>frontdoorright</object-name>
     <object-name>frontdoorright2</object-name>
@@ -2028,9 +2059,18 @@
     <object-name>PassRF</object-name>
     <property>controls/switches/passengerdoor2</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -182 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> -182 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x1-m> -4.40533 </x1-m>
@@ -2047,9 +2087,18 @@
     <object-name>PassRF</object-name>
     <property>controls/switches/passengerdoor2</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep> 0.08 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> 0.08 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x> 0 </x>
@@ -2069,9 +2118,18 @@
     <object-name>PassLR</object-name>
     <property>controls/switches/passengerdoor3</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 182 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> 182 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x1-m> 17.0312 </x1-m>
@@ -2088,9 +2146,18 @@
     <object-name>PassLR</object-name>
     <property>controls/switches/passengerdoor3</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep> 0.08 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> 0.08 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x> 0 </x>
@@ -2110,9 +2177,18 @@
     <object-name>PassRR</object-name>
     <property>controls/switches/passengerdoor4</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep>    0 </dep></entry>
-      <entry><ind> 0.2 </ind><dep>    0 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> -188 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> -188 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x1-m> 17.0312 </x1-m>
@@ -2129,9 +2205,18 @@
     <object-name>PassRR</object-name>
     <property>controls/switches/passengerdoor4</property>
     <interpolation>
-      <entry><ind> 0.0 </ind><dep> 0.00 </dep></entry>
-      <entry><ind> 0.2 </ind><dep> 0.08 </dep></entry>
-      <entry><ind> 1.0 </ind><dep> 0.08 </dep></entry>
+      <entry>
+        <ind> 0.0 </ind>
+        <dep> 0.00 </dep>
+      </entry>
+      <entry>
+        <ind> 0.2 </ind>
+        <dep> 0.08 </dep>
+      </entry>
+      <entry>
+        <ind> 1.0 </ind>
+        <dep> 0.08 </dep>
+      </entry>
     </interpolation>
     <axis>
       <x> 0 </x>
@@ -2140,17 +2225,17 @@
     </axis>
   </animation>
 
-	<animation>
+  <animation>
     <type>select</type>
     <object-name>navlight_left</object-name>
     <object-name>navlight_back</object-name>
     <object-name>navlight_right</object-name>
-      <condition>
-			  <property>controls/lighting/nav-lights</property>
-      </condition>
-	</animation>
+    <condition>
+      <property>controls/lighting/nav-lights</property>
+    </condition>
+  </animation>
 
-	
+
   <!-- ENGINE CONTRAILS NEW -->
   <model>
     <path>Aircraft/737-300/Models/Effects/contrail-new.xml</path>
@@ -2172,16 +2257,16 @@
     </offsets>
   </model>
 
- <model>
-  <name>Landing-Lights</name>
-  <path>Aircraft/737-300/Models/Lights/landing-light/landing-light.xml</path>
-  <offsets>
-    <x-m>-5.10</x-m>
-    <y-m>0.0</y-m>
-    <z-m>0</z-m>
-    <pitch-deg>1.0</pitch-deg>
-  </offsets>
-</model>
+  <model>
+    <name>Landing-Lights</name>
+    <path>Aircraft/737-300/Models/Lights/landing-light/landing-light.xml</path>
+    <offsets>
+      <x-m>-5.10</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0</z-m>
+      <pitch-deg>1.0</pitch-deg>
+    </offsets>
+  </model>
 
 </PropertyList>
 

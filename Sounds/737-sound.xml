@@ -1,327 +1,288 @@
 <?xml version="1.0"?>
- 
+
 <PropertyList>
 
- <fx>
+  <fx>
 
-   <leftstartup>
-	 <name>leftenginestart</name>
-	 <path>/Aircraft/737-300/Sounds/engine-start.wav</path>
-	 <mode>once</mode>
-	 <condition>
-       <property>/controls/engines/engine[0]/starter</property>
-	 </condition>
-	 <volume>
-	   <factor>1</factor>
-	 </volume>
-   </leftstartup>
-	 
-   <rightstartup>
-	 <name>rightenginestart</name>
-	 <path>/Aircraft/737-300/Sounds/engine-start.wav</path>
-	 <mode>once</mode>
-	 <condition>
-       <property>/controls/engines/engine[1]/starter</property>
-	 </condition>
-	 <volume>
-	   <factor>1</factor>
-	 </volume>
-   </rightstartup>
+    <leftstartup>
+      <name>leftenginestart</name>
+      <path>/Aircraft/737-300/Sounds/engine-start.wav</path>
+      <mode>once</mode>
+      <condition>
+        <property>/controls/engines/engine[0]/starter</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </leftstartup>
 
-	 	 
-  <engine>
-   <name>leftengine</name>
-   <path>Sounds/jet.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[0]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>0</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/engines/engine[0]/thrust_lb</property>
-    <type>ln</type>
-    <factor>0.10</factor>
-    <offset>0.05</offset>
-   </volume>
-<position>
-<x>4.5</x>
-<y>4.7</y>
-<z>1.2</z>
-</position>
-			<orientation>
-				<x> 0 </x>
-				<y> 1 </y>
-				<z> 0 </z>
-				<inner-angle>180</inner-angle>
-				<outer-angle>360</outer-angle>
-				<outer-gain>0.1</outer-gain>
+    <rightstartup>
+      <name>rightenginestart</name>
+      <path>/Aircraft/737-300/Sounds/engine-start.wav</path>
+      <mode>once</mode>
+      <condition>
+        <property>/controls/engines/engine[1]/starter</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </rightstartup>
+
+
+    <engine>
+      <name>leftengine</name>
+      <path>Sounds/jet.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/thrust_lb</property>
+        <type>ln</type>
+        <factor>0.10</factor>
+        <offset>0.05</offset>
+      </volume>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <orientation>
+        <x> 0 </x>
+        <y> 1 </y>
+        <z> 0 </z>
+        <inner-angle>180</inner-angle>
+        <outer-angle>360</outer-angle>
+        <outer-gain>0.1</outer-gain>
         <reference-dist>20</reference-dist>
-			</orientation>
-  </engine>
-  
-  <engine>
-   <name>leftengine</name>
-   <path>/Aircraft/737-300/Sounds/thrust.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[0]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>0</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/engines/engine[0]/thrust_lb</property>
-    <type>ln</type>
-    <factor>0.40</factor>
-    <offset>0.05</offset>
-   </volume>
-<position>
-<x>7.35</x>
-<y>4.7</y>
-<z>1.2</z>
-</position>
-			<orientation>
-				<x> 1 </x>
-				<y> 0 </y>
-				<z> 0 </z>
-				<inner-angle>90</inner-angle>
-				<outer-angle>180</outer-angle>
-				<outer-gain>0.75</outer-gain>
+      </orientation>
+    </engine>
+
+    <engine>
+      <name>leftengine</name>
+      <path>/Aircraft/737-300/Sounds/thrust.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/thrust_lb</property>
+        <type>ln</type>
+        <factor>0.40</factor>
+        <offset>0.05</offset>
+      </volume>
+      <position>
+        <x>7.35</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <orientation>
+        <x> 1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+        <inner-angle>90</inner-angle>
+        <outer-angle>180</outer-angle>
+        <outer-gain>0.75</outer-gain>
         <reference-dist>20</reference-dist>
-			</orientation>
-  </engine>
-  
-  <engine>
-   <name>rightengine</name>
-   <path>Sounds/jet.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[1]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>0</value>
-       </equals>
-     </and>   
-   </condition>
-   <volume>
-    <property>/engines/engine[1]/thrust_lb</property>
-    <type>ln</type>
-    <factor>0.10</factor>
-    <offset>0.05</offset>
-   </volume>
-<position>
-<x>4.5</x>
-<y>-4.7</y>
-<z>1.2</z>
-</position>
-			<orientation>
-				<x> 0 </x>
-				<y> 1 </y>
-				<z> 0 </z>
-				<inner-angle>180</inner-angle>
-				<outer-angle>360</outer-angle>
-				<outer-gain>0.1</outer-gain>
+      </orientation>
+    </engine>
+
+    <engine>
+      <name>rightengine</name>
+      <path>Sounds/jet.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/thrust_lb</property>
+        <type>ln</type>
+        <factor>0.10</factor>
+        <offset>0.05</offset>
+      </volume>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <orientation>
+        <x> 0 </x>
+        <y> 1 </y>
+        <z> 0 </z>
+        <inner-angle>180</inner-angle>
+        <outer-angle>360</outer-angle>
+        <outer-gain>0.1</outer-gain>
         <reference-dist>20</reference-dist>
-			</orientation>
-  </engine>
-  
-  <engine>
-   <name>rightengine</name>
-   <path>/Aircraft/737-300/Sounds/thrust.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[1]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>0</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/engines/engine[1]/thrust_lb[0]</property>
-    <type>ln</type>
-    <factor>0.40</factor>
-    <offset>0.05</offset>
-   </volume>
-<position>
-<x>7.35</x>
-<y>-4.7</y>
-<z>1.2</z>
-</position>
-			<orientation>
-				<x> 1 </x>
-				<y> 0 </y>
-				<z> 0 </z>
-				<inner-angle>90</inner-angle>
-				<outer-angle>180</outer-angle>
-				<outer-gain>0.75</outer-gain>
-				<reference-dist>20</reference-dist>
-			</orientation>
-  </engine>
+      </orientation>
+    </engine>
 
-  <engine>
-   <name>leftwhine</name>
-   <path>Sounds/whine.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[0]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>0</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/engines/engine[0]/thrust_lb[0]</property>
-    <type>ln</type>
-    <factor>0.05</factor>
-    <offset>0.1</offset>
-   </volume>
-   <pitch>
-    <property>/engines/engine[0]/thrust_lb[0]</property>
-    <type>log</type>
-    <factor>0.10</factor>
-    <offset>0.10</offset>
-   </pitch>
-	 <position>
-	   <x>4.5</x>
-	   <y>4.7</y>
-		 <z>1.2</z>
-	 </position>
-		<orientation>
-			<x> -1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>90</inner-angle>
-			<outer-angle>180</outer-angle>
-			<outer-gain>0.1</outer-gain>
-		  <reference-dist>10</reference-dist>
-		</orientation>
-  </engine>
-  
-  <engine>
-   <name>rightwhine</name>
-   <path>Sounds/whine.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[1]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>0</value>
-       </equals>
-     </and>   
-   </condition>
-   <volume>
-    <property>/engines/engine[1]/thrust_lb[0]</property>
-    <type>ln</type>
-    <factor>0.05</factor>
-    <offset>0.1</offset>
-   </volume> 
-   <pitch>
-    <property>/engines/engine[1]/thrust_lb[0]</property>
-    <type>log</type>
-    <factor>0.10</factor>
-    <offset>0.10</offset>
-   </pitch> 
-	 <position>
-	   <x>4.5</x>
-		 <y>-4.7</y>
-		 <z>1.2</z>
-	 </position>
-		<orientation>
-			<x> -1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>90</inner-angle>
-			<outer-angle>180</outer-angle>
-			<outer-gain>0.1</outer-gain>
-			<reference-dist>10</reference-dist>
-		</orientation>
-  </engine>
-
-
-<!-- Soundpack 1 -->
-
-<engine>
-   <name>leftengine-idle-1-int</name>
-   <path>Aircraft/737-300/Sounds/Engine/Int-Idle-1.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[0]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>1</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/b733/sound/Int-Idle-1-volume[0]</property>
-    <offset>0.43</offset>
-   </volume>
-   <pitch>
-    <property>/b733/sound/Int-Idle-1-pitch[0]</property>
-    <offset>0</offset>
-    <min>0.809</min>
-    <max>1.17</max>
-   </pitch>
-<position>
-<x>4.5</x>
-<y>4.7</y>
-<z>1.2</z>
-</position>
-			<!--<orientation>
-				<x> 0 </x>
-				<y> 1 </y>
-				<z> 0 </z>
-				<inner-angle>180</inner-angle>
-				<outer-angle>360</outer-angle>
-				<outer-gain>0.1</outer-gain>
+    <engine>
+      <name>rightengine</name>
+      <path>/Aircraft/737-300/Sounds/thrust.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/thrust_lb[0]</property>
+        <type>ln</type>
+        <factor>0.40</factor>
+        <offset>0.05</offset>
+      </volume>
+      <position>
+        <x>7.35</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <orientation>
+        <x> 1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+        <inner-angle>90</inner-angle>
+        <outer-angle>180</outer-angle>
+        <outer-gain>0.75</outer-gain>
         <reference-dist>20</reference-dist>
-			</orientation>-->
-  </engine>
+      </orientation>
+    </engine>
 
-<engine>
-   <name>leftengine-idle-12-int</name>
-   <path>Aircraft/737-300/Sounds/Engine/Int-Idle-12.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[0]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>1</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/b733/sound/Int-Idle-12-volume[0]</property>
-    <offset>0.43</offset>
-   </volume>
-   <pitch>
-    <property>/b733/sound/Int-Idle-12-pitch[0]</property>
-    <offset>0</offset>
-    <min>0.978723</min>
-    <max>1.212766</max>
-   </pitch>
-<position>
-<x>4.5</x>
-<y>4.7</y>
-<z>1.2</z>
-</position>
-			<!--<orientation>
+    <engine>
+      <name>leftwhine</name>
+      <path>Sounds/whine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[0]/thrust_lb[0]</property>
+        <type>ln</type>
+        <factor>0.05</factor>
+        <offset>0.1</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/thrust_lb[0]</property>
+        <type>log</type>
+        <factor>0.10</factor>
+        <offset>0.10</offset>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <orientation>
+        <x> -1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+        <inner-angle>90</inner-angle>
+        <outer-angle>180</outer-angle>
+        <outer-gain>0.1</outer-gain>
+        <reference-dist>10</reference-dist>
+      </orientation>
+    </engine>
+
+    <engine>
+      <name>rightwhine</name>
+      <path>Sounds/whine.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>0</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/engines/engine[1]/thrust_lb[0]</property>
+        <type>ln</type>
+        <factor>0.05</factor>
+        <offset>0.1</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/thrust_lb[0]</property>
+        <type>log</type>
+        <factor>0.10</factor>
+        <offset>0.10</offset>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <orientation>
+        <x> -1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+        <inner-angle>90</inner-angle>
+        <outer-angle>180</outer-angle>
+        <outer-gain>0.1</outer-gain>
+        <reference-dist>10</reference-dist>
+      </orientation>
+    </engine>
+
+
+    <!-- Soundpack 1 -->
+
+    <engine>
+      <name>leftengine-idle-1-int</name>
+      <path>Aircraft/737-300/Sounds/Engine/Int-Idle-1.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>1</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/Int-Idle-1-volume[0]</property>
+        <offset>0.43</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/Int-Idle-1-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.809</min>
+        <max>1.17</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
 				<x> 0 </x>
 				<y> 1 </y>
 				<z> 0 </z>
@@ -330,37 +291,37 @@
 				<outer-gain>0.1</outer-gain>
         <reference-dist>20</reference-dist>
 			</orientation>-->
-  </engine>
+    </engine>
 
-<engine>
-   <name>leftengine-spool-int</name>
-   <path>Aircraft/737-300/Sounds/Engine/Int-Spool-1.wav</path>
-   <mode>looped</mode>
-   <condition>
-     <and>
-       <property>/engines/engine[0]/running</property>
-       <equals>
-         <property>/b733/sound/sound-pack</property>
-         <value>1</value>
-       </equals>
-     </and>
-   </condition>
-   <volume>
-    <property>/b733/sound/Int-Spool-1-volume[0]</property>
-    <offset>0.43</offset>
-   </volume>
-   <pitch>
-    <property>/b733/sound/Int-Spool-1-pitch[0]</property>
-    <offset>0</offset>
-    <min>0.404255</min>
-    <max>1.574468</max>
-   </pitch>
-<position>
-<x>4.5</x>
-<y>4.7</y>
-<z>1.2</z>
-</position>
-			<!--<orientation>
+    <engine>
+      <name>leftengine-idle-12-int</name>
+      <path>Aircraft/737-300/Sounds/Engine/Int-Idle-12.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>1</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/Int-Idle-12-volume[0]</property>
+        <offset>0.43</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/Int-Idle-12-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.978723</min>
+        <max>1.212766</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
 				<x> 0 </x>
 				<y> 1 </y>
 				<z> 0 </z>
@@ -369,37 +330,76 @@
 				<outer-gain>0.1</outer-gain>
         <reference-dist>20</reference-dist>
 			</orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-fan-int</name>
-    <path>Aircraft/737-300/Sounds/Engine/Int-Fan-1.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>1</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/Int-Fan-1-volume[0]</property>
-      <offset>0.43</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/Int-Fan-1-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.769</min>
-      <max>1.276596</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-spool-int</name>
+      <path>Aircraft/737-300/Sounds/Engine/Int-Spool-1.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>1</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/Int-Spool-1-volume[0]</property>
+        <offset>0.43</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/Int-Spool-1-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.404255</min>
+        <max>1.574468</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
+				<x> 0 </x>
+				<y> 1 </y>
+				<z> 0 </z>
+				<inner-angle>180</inner-angle>
+				<outer-angle>360</outer-angle>
+				<outer-gain>0.1</outer-gain>
+        <reference-dist>20</reference-dist>
+			</orientation>-->
+    </engine>
+
+    <engine>
+      <name>leftengine-fan-int</name>
+      <path>Aircraft/737-300/Sounds/Engine/Int-Fan-1.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>1</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/Int-Fan-1-volume[0]</property>
+        <offset>0.43</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/Int-Fan-1-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.769</min>
+        <max>1.276596</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -408,41 +408,41 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-<!-- Soundpack 2 -->
+    <!-- Soundpack 2 -->
 
-<!-- left engine-->
+    <!-- left engine-->
 
-  <engine>
-    <name>leftengine-ban11</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban11.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban11-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban11-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.65</min>
-      <max>1.1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban11</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban11.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban11-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban11-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.65</min>
+        <max>1.1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -451,37 +451,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban12</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban12.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban12-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban12-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.75</min>
-      <max>1.1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban12</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban12.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban12-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban12-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.75</min>
+        <max>1.1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -490,37 +490,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban13</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban13.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban13-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban13-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.769</min>
-      <max>0.979</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban13</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban13.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban13-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban13-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.769</min>
+        <max>0.979</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -529,37 +529,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban14</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban14.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban14-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban14-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.846</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban14</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban14.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban14-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban14-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.846</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -568,37 +568,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban21</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban21.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban21-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban21-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.83</min>
-      <max>0.936</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban21</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban21.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban21-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban21-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.83</min>
+        <max>0.936</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -607,37 +607,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban22</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban22.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban22-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban22-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.83</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban22</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban22.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban22-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban22-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.83</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -646,37 +646,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban23</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban23.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban23-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban23-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.85</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban23</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban23.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban23-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban23-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.85</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -685,37 +685,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-ban24</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban24.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban24-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban24-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.85</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-ban24</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban24.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban24-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban24-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.85</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -724,37 +724,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban11</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban11.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban11-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban11-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.907</min>
-      <max>1.234</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban11</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban11.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban11-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban11-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.907</min>
+        <max>1.234</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -763,37 +763,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban12</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban12.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban12-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban12-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.61</min>
-      <max>1.745</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban12</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban12.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban12-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban12-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.61</min>
+        <max>1.745</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -802,37 +802,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban13</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban13.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban13-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban13-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.567</min>
-      <max>1.476</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban13</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban13.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban13-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban13-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.567</min>
+        <max>1.476</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -841,37 +841,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban14</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban14.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban14-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban14-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.82234</min>
-      <max>1.000213</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban14</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban14.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban14-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban14-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.82234</min>
+        <max>1.000213</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -880,37 +880,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban21</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban21.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban21-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban21-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.645745</min>
-      <max>1.217</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban21</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban21.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban21-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban21-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.645745</min>
+        <max>1.217</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -919,37 +919,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban22</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban22.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban22-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban22-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.574</min>
-      <max>1.366</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban22</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban22.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban22-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban22-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.574</min>
+        <max>1.366</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -958,37 +958,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban23</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban23.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban23-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban23-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.588</min>
-      <max>1.104</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban23</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban23.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban23-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban23-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.588</min>
+        <max>1.104</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -997,37 +997,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>leftengine-xban24</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban24.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[0]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban24-volume[0]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban24-pitch[0]</property>
-      <offset>0</offset>
-      <min>0.688298</min>
-      <max>0.95</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>leftengine-xban24</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban24.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[0]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban24-volume[0]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban24-pitch[0]</property>
+        <offset>0</offset>
+        <min>0.688298</min>
+        <max>0.95</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1036,39 +1036,39 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-<!-- right engine -->
+    <!-- right engine -->
 
-  <engine>
-    <name>rightengine-ban11</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban11.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban11-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban11-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.65</min>
-      <max>1.1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban11</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban11.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban11-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban11-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.65</min>
+        <max>1.1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1077,37 +1077,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban12</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban12.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban12-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban12-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.75</min>
-      <max>1.1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban12</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban12.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban12-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban12-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.75</min>
+        <max>1.1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1116,37 +1116,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban13</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban13.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban13-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban13-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.769</min>
-      <max>0.979</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban13</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban13.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban13-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban13-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.769</min>
+        <max>0.979</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1155,37 +1155,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban14</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban14.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban14-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban14-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.846</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban14</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban14.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban14-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban14-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.846</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1194,37 +1194,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban21</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban21.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban21-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban21-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.83</min>
-      <max>0.936</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban21</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban21.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban21-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban21-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.83</min>
+        <max>0.936</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1233,37 +1233,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban22</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban22.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban22-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban22-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.83</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban22</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban22.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban22-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban22-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.83</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1272,37 +1272,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban23</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban23.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban23-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban23-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.85</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban23</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban23.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban23-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban23-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.85</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1311,37 +1311,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-ban24</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/ban24.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-ban24-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-ban24-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.85</min>
-      <max>1</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-ban24</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/ban24.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-ban24-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-ban24-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.85</min>
+        <max>1</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1350,37 +1350,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban11</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban11.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban11-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban11-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.907</min>
-      <max>1.234</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban11</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban11.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban11-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban11-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.907</min>
+        <max>1.234</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1389,37 +1389,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban12</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban12.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban12-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban12-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.61</min>
-      <max>1.745</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban12</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban12.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban12-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban12-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.61</min>
+        <max>1.745</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1428,37 +1428,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban13</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban13.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban13-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban13-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.567</min>
-      <max>1.476</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban13</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban13.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban13-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban13-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.567</min>
+        <max>1.476</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1467,37 +1467,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban14</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban14.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban14-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban14-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.82234</min>
-      <max>1.000213</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban14</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban14.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban14-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban14-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.82234</min>
+        <max>1.000213</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1506,37 +1506,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban21</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban21.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban21-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban21-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.645745</min>
-      <max>1.217</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban21</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban21.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban21-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban21-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.645745</min>
+        <max>1.217</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1545,37 +1545,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban22</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban22.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban22-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban22-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.574</min>
-      <max>1.366</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban22</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban22.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban22-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban22-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.574</min>
+        <max>1.366</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1584,37 +1584,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban23</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban23.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban23-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban23-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.588</min>
-      <max>1.104</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban23</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban23.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban23-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban23-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.588</min>
+        <max>1.104</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1623,37 +1623,37 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
-  <engine>
-    <name>rightengine-xban24</name>
-    <path>Aircraft/737-300/Sounds/Engine_sp_2/xban24.wav</path>
-    <mode>looped</mode>
-    <condition>
-      <and>
-        <property>/engines/engine[1]/running</property>
-        <equals>
-          <property>/b733/sound/sound-pack</property>
-          <value>2</value>
-        </equals>
-      </and>
-    </condition>
-    <volume>
-      <property>/b733/sound/sp2-xban24-volume[1]</property>
-      <offset>0.0</offset>
-    </volume>
-    <pitch>
-      <property>/b733/sound/sp2-xban24-pitch[1]</property>
-      <offset>0</offset>
-      <min>0.688298</min>
-      <max>0.95</max>
-    </pitch>
-    <position>
-      <x>4.5</x>
-      <y>-4.7</y>
-      <z>1.2</z>
-    </position>
-    <!--<orientation>
+    <engine>
+      <name>rightengine-xban24</name>
+      <path>Aircraft/737-300/Sounds/Engine_sp_2/xban24.wav</path>
+      <mode>looped</mode>
+      <condition>
+        <and>
+          <property>/engines/engine[1]/running</property>
+          <equals>
+            <property>/b733/sound/sound-pack</property>
+            <value>2</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <property>/b733/sound/sp2-xban24-volume[1]</property>
+        <offset>0.0</offset>
+      </volume>
+      <pitch>
+        <property>/b733/sound/sp2-xban24-pitch[1]</property>
+        <offset>0</offset>
+        <min>0.688298</min>
+        <max>0.95</max>
+      </pitch>
+      <position>
+        <x>4.5</x>
+        <y>-4.7</y>
+        <z>1.2</z>
+      </position>
+      <!--<orientation>
       <x> 0 </x>
       <y> 1 </y>
       <z> 0 </z>
@@ -1662,71 +1662,71 @@
       <outer-gain>0.1</outer-gain>
       <reference-dist>20</reference-dist>
     </orientation>-->
-  </engine>
+    </engine>
 
 
 
-<!-- ############################################## -->
+    <!-- ############################################## -->
 
-  <rumble>
-   <name>rumble</name>
-   <mode>looped</mode>
-   <path>Aircraft/737-300/Sounds/roll.wav</path>
-   <condition>
-	   <and>
-	     <greater-than>
-	       <property>/velocities/groundspeed-kt</property>
-				 <value>9</value>
-	     </greater-than>
-       <or>
-         <property>/gear/gear[0]/wow</property>
-         <property>/gear/gear[1]/wow</property>
-         <property>/gear/gear[2]/wow</property>
-       </or>
-		 </and>
-   </condition>
-   <volume>
-    <property>/velocities/airspeed-kt</property>
-    <type>log</type>
-    <factor>0.5</factor>
-   </volume>
-  </rumble>
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Aircraft/737-300/Sounds/roll.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>/velocities/groundspeed-kt</property>
+            <value>9</value>
+          </greater-than>
+          <or>
+            <property>/gear/gear[0]/wow</property>
+            <property>/gear/gear[1]/wow</property>
+            <property>/gear/gear[2]/wow</property>
+          </or>
+        </and>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.5</factor>
+      </volume>
+    </rumble>
 
-<gear>
-  <name>gear up</name>
-  <path>Aircraft/737-300/Sounds/gear-up.wav</path>
-  <condition>
-    <less-than>
-      <property>gear/gear[0]/position-norm</property>
-      <value>0.99</value>
-    </less-than>
-  </condition>
-  <mode>once</mode>
-  <position>
-    <x>2</x>
-    <y>0</y>
-    <z>-2.5</z>
-  </position>
-</gear> 
+    <gear>
+      <name>gear up</name>
+      <path>Aircraft/737-300/Sounds/gear-up.wav</path>
+      <condition>
+        <less-than>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0.99</value>
+        </less-than>
+      </condition>
+      <mode>once</mode>
+      <position>
+        <x>2</x>
+        <y>0</y>
+        <z>-2.5</z>
+      </position>
+    </gear>
 
-<gear>
-  <name>gear down</name>
-  <path>Aircraft/737-300/Sounds/gear-down.wav</path>
-  <condition>
-    <greater-than>
-      <property>gear/gear[1]/position-norm</property>
-      <value>0.01</value>
-    </greater-than>
-  </condition>
-  <mode>once</mode>
-  <position>
-    <x>2</x>
-    <y>0</y>
-    <z>-2.5</z>
-  </position>
-</gear> 
+    <gear>
+      <name>gear down</name>
+      <path>Aircraft/737-300/Sounds/gear-down.wav</path>
+      <condition>
+        <greater-than>
+          <property>gear/gear[1]/position-norm</property>
+          <value>0.01</value>
+        </greater-than>
+      </condition>
+      <mode>once</mode>
+      <position>
+        <x>2</x>
+        <y>0</y>
+        <z>-2.5</z>
+      </position>
+    </gear>
 
-  <!--<wind>
+    <!--<wind>
    <name>wind-gear</name>
    <mode>looped</mode>
    <path>Aircraft/737-300/Sounds/gear_wind.wav</path>
@@ -1758,214 +1758,214 @@
   </wind>-->
 
 
-  <squeal>
-   <name>squeal</name>
-   <path>Sounds/squeal.wav</path>
-   <condition>
-    <or>
-     <property>/gear/gear[0]/wow</property>
-     <property>/gear/gear[1]/wow</property>
-     <property>/gear/gear[2]/wow</property>
-    </or>
-   </condition>
-   <volume>
-    <property>/velocities/speed-down-fps</property>
-    <factor>0.05</factor>
-   </volume>
-   <volume>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.01</factor>
-   </volume>
-   <volume>
-    <internal>dt_stop</internal>
-    <factor>0.05</factor>
-    <max>1.0</max>
-   </volume>
-   <pitch>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.0025</factor>
-    <offset>1.2</offset>
-   </pitch>
-  </squeal>
- 
-  <flap>
-   <name>flaps</name>
-   <mode>in-transit</mode>
-   <path>Sounds/flaps.wav</path>
-   <property>/surface-positions/flap-pos-norm</property>
-   <volume>
-    <factor>0.45</factor>
-   </volume>
-  </flap>
+    <squeal>
+      <name>squeal</name>
+      <path>Sounds/squeal.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.05</factor>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.2</offset>
+      </pitch>
+    </squeal>
 
-  <wind>
-   <name>wind</name>
-   <mode>looped</mode>
-   <path>Sounds/wind-8khz.wav</path>
-   <property>/velocities/airspeed-kt</property>
-   <volume>
-    <property>/position/altitude-ft</property>
-    <factor>-0.000010</factor>
-    <offset>1.0</offset>
-    <min>0.1</min>
-    <max>1.0</max>
-   </volume>
-   <volume>
-     <property>/velocities/airspeed-kt</property>
-     <factor>0.0010</factor>
-     <min>0.03</min>
-     <max>0.25</max>
-   </volume>
-   <pitch>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.01</factor>
-    <offset>1.25</offset>
-   </pitch>
-  </wind>
- 
-  <stall>
-   <name>stall</name>
-	 <mode>looped</mode>
-   <path>Aircraft/737-300/Sounds/stall.wav</path>
-   <condition>
-     <and>
-       <greater-than>
-         <property>/fdm/jsbsim/aero/alpha-deg</property>
-	       <value>12.0</value>
-	     </greater-than>
-	     <equals>
-	       <property>/b733/sensors/air-ground</property>
-	       <value>air</value>
-	     </equals>
-	   </and>
-	 </condition>
-   <volume>
-	   <factor>1</factor>
-   </volume>
-  </stall>
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Sounds/flaps.wav</path>
+      <property>/surface-positions/flap-pos-norm</property>
+      <volume>
+        <factor>0.45</factor>
+      </volume>
+    </flap>
 
-  <overspeed>
-   <name>overspeed</name>
-	 <mode>looped</mode>
-   <path>Aircraft/737-300/Sounds/overspeed.wav</path>
-  <condition>
-  <or>
-    <greater-than>
-      <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-	    <value>340</value>
-	  </greater-than>
-	  <greater-than>
-	    <property>/instrumentation/airspeed-indicator/indicated-mach</property>
-	    <value>0.82</value>
-	  </greater-than>
-	</or>
-	</condition>
-  <volume>
-    <factor>1</factor>
-  </volume>
-  </overspeed>
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind-8khz.wav</path>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.000010</factor>
+        <offset>1.0</offset>
+        <min>0.1</min>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0010</factor>
+        <min>0.03</min>
+        <max>0.25</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>1.25</offset>
+      </pitch>
+    </wind>
 
-  <trimming>
-    <name>trimming</name>
-    <mode>once</mode>
-    <path>Aircraft/737-300/Sounds/trim.wav</path>
-    <condition>
+    <stall>
+      <name>stall</name>
+      <mode>looped</mode>
+      <path>Aircraft/737-300/Sounds/stall.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>/fdm/jsbsim/aero/alpha-deg</property>
+            <value>12.0</value>
+          </greater-than>
+          <equals>
+            <property>/b733/sensors/air-ground</property>
+            <value>air</value>
+          </equals>
+        </and>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </stall>
+
+    <overspeed>
+      <name>overspeed</name>
+      <mode>looped</mode>
+      <path>Aircraft/737-300/Sounds/overspeed.wav</path>
+      <condition>
+        <or>
+          <greater-than>
+            <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+            <value>340</value>
+          </greater-than>
+          <greater-than>
+            <property>/instrumentation/airspeed-indicator/indicated-mach</property>
+            <value>0.82</value>
+          </greater-than>
+        </or>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </overspeed>
+
+    <trimming>
+      <name>trimming</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/trim.wav</path>
+      <condition>
         <property>/b733/sound/stab-trim</property>
-    </condition>
-    <volume>
-      <factor>1</factor>
-    </volume>
-  </trimming>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </trimming>
 
-  <alt-acq>
-    <name>alt-acq</name>
-    <mode>once</mode>
-    <path>Aircraft/737-300/Sounds/alt-acq.wav</path>
-    <condition>
-      <property>/b733/sound/alt-acq</property>
-    </condition>
-    <volume>
-      <factor>1</factor>
-    </volume>
-  </alt-acq>
+    <alt-acq>
+      <name>alt-acq</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/alt-acq.wav</path>
+      <condition>
+        <property>/b733/sound/alt-acq</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </alt-acq>
 
-  <spoiler-auto>
-    <name>Spoilers-auto</name>
-    <mode>once</mode>
-    <path>Aircraft/737-300/Sounds/spoiler-auto.wav</path>
-    <condition>
-      <property>/b733/sound/spoiler-auto</property>
-    </condition>
-    <volume>
-      <factor>1</factor>
-    </volume>
-  </spoiler-auto>
+    <spoiler-auto>
+      <name>Spoilers-auto</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/spoiler-auto.wav</path>
+      <condition>
+        <property>/b733/sound/spoiler-auto</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </spoiler-auto>
 
-  <ap-disconnect>
-    <name>AP Disconnect</name>
-    <mode>looped</mode>
-    <path>Aircraft/737-300/Sounds/Apdisco.wav</path>
-    <condition>
-      <property>/b733/sound/apdisco</property>
-    </condition>
-    <volume>
-      <factor>1</factor>
-    </volume>
-  </ap-disconnect>
-	
-	
-	<seatbelt-on>
-		<name>seatbelt-sign-on</name>
-		<mode>once</mode>
-		<path>Aircraft/737-300/Sounds/seatbelt.wav</path>
-		<condition>
-			  <property>/controls/switches/seatbelt-sign</property>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</seatbelt-on>
+    <ap-disconnect>
+      <name>AP Disconnect</name>
+      <mode>looped</mode>
+      <path>Aircraft/737-300/Sounds/Apdisco.wav</path>
+      <condition>
+        <property>/b733/sound/apdisco</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </ap-disconnect>
 
-	<seatbelt-off>
-		<name>seatbelt-sign-off</name>
-		<mode>once</mode>
-		<path>Aircraft/737-300/Sounds/seatbelt.wav</path>
-		<condition>
-			  <not>
-			    <property>/controls/switches/seatbelt-sign</property>
-			  </not>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</seatbelt-off>
 
- 	<nosmoke-on>
-		<name>nosmoking-sign-on</name>
-		<mode>once</mode>
-		<path>Aircraft/737-300/Sounds/seatbelt.wav</path>
-		<condition>
-			  <property>/controls/switches/nosmoking-sign</property>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</nosmoke-on>
-	
- 	<nosmoke-off>
-		<name>nosmoking-sign-off</name>
-		<mode>once</mode>
-		<path>Aircraft/737-300/Sounds/seatbelt.wav</path>
-		<condition>
-			  <not>
-			    <property>/controls/switches/nosmoking-sign</property>
-			  </not>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</nosmoke-off>
+    <seatbelt-on>
+      <name>seatbelt-sign-on</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/seatbelt.wav</path>
+      <condition>
+        <property>/controls/switches/seatbelt-sign</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </seatbelt-on>
 
-</fx>
- 
+    <seatbelt-off>
+      <name>seatbelt-sign-off</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/seatbelt.wav</path>
+      <condition>
+        <not>
+          <property>/controls/switches/seatbelt-sign</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </seatbelt-off>
+
+    <nosmoke-on>
+      <name>nosmoking-sign-on</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/seatbelt.wav</path>
+      <condition>
+        <property>/controls/switches/nosmoking-sign</property>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </nosmoke-on>
+
+    <nosmoke-off>
+      <name>nosmoking-sign-off</name>
+      <mode>once</mode>
+      <path>Aircraft/737-300/Sounds/seatbelt.wav</path>
+      <condition>
+        <not>
+          <property>/controls/switches/nosmoking-sign</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </nosmoke-off>
+
+  </fx>
+
 </PropertyList>

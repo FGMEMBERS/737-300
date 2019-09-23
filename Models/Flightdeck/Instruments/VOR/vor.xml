@@ -13,58 +13,58 @@
 
 	<!-- ANIMATIONS -->
 	<!-- Lighting -->
-  <animation>
-    <type>material</type>
-    <object-name>Needle1ADF</object-name>
-    <object-name>Needle1VOR</object-name>
-    <object-name>Needle2ADF</object-name>
-    <object-name>Needle2VOR</object-name>
-    <object-name>dme1-1</object-name>
-    <object-name>dme1-2</object-name>
-    <object-name>dme1-3</object-name>
-    <object-name>dme2-1</object-name>
-    <object-name>dme2-2</object-name>
-    <object-name>dme2-3</object-name>
-    <object-name>dme2-4</object-name>
-    <object-name>Face</object-name>
-    <object-name>face</object-name>
-    <object-name>InsideFrame</object-name>
-    
-    <emission>
-      <red>   0.5 </red>
-      <green> 0.5 </green>
-      <blue>  0.5 </blue>
-    </emission>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-  </animation>
+	<animation>
+		<type>material</type>
+		<object-name>Needle1ADF</object-name>
+		<object-name>Needle1VOR</object-name>
+		<object-name>Needle2ADF</object-name>
+		<object-name>Needle2VOR</object-name>
+		<object-name>dme1-1</object-name>
+		<object-name>dme1-2</object-name>
+		<object-name>dme1-3</object-name>
+		<object-name>dme2-1</object-name>
+		<object-name>dme2-2</object-name>
+		<object-name>dme2-3</object-name>
+		<object-name>dme2-4</object-name>
+		<object-name>Face</object-name>
+		<object-name>face</object-name>
+		<object-name>InsideFrame</object-name>
 
-  <animation>
-    <type>select</type>
-    <object-name>dme1-1</object-name>
-    <object-name>dme1-2</object-name>
-    <object-name>dme1-3</object-name>
-    <object-name>dme2-1</object-name>
-    <object-name>dme2-2</object-name>
-    <object-name>dme2-3</object-name>
-    <object-name>dme2-4</object-name>
- 		  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-      </condition>
-  </animation>
+		<emission>
+			<red>   0.5 </red>
+			<green> 0.5 </green>
+			<blue>  0.5 </blue>
+		</emission>
+		<condition>
+			<or>
+				<property>controls/electric/battery-switch</property>
+				<property>controls/electric/external-power</property>
+				<property>controls/electric/apugen1</property>
+				<property>controls/electric/apugen2</property>
+				<property>engines/engine[0]/running</property>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>dme1-1</object-name>
+		<object-name>dme1-2</object-name>
+		<object-name>dme1-3</object-name>
+		<object-name>dme2-1</object-name>
+		<object-name>dme2-2</object-name>
+		<object-name>dme2-3</object-name>
+		<object-name>dme2-4</object-name>
+		<condition>
+			<or>
+				<property>controls/electric/battery-switch</property>
+				<property>controls/electric/external-power</property>
+				<property>controls/electric/apugen1</property>
+				<property>controls/electric/apugen2</property>
+				<property>engines/engine[0]/running</property>
+			</or>
+		</condition>
+	</animation>
 
 	<!-- Face and needles -->
 	<animation>
@@ -97,16 +97,16 @@
 			</equals>
 		</condition>
 	</animation>
-  <animation>
-	        <type>rotate</type>
-	        <object-name>Needle1VOR</object-name>
-	        <property>orientation/heading-deg</property>
-	        <axis>
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle1VOR</object-name>
+		<property>orientation/heading-deg</property>
+		<axis>
 			<x>1.0</x>
 			<y>0</y>
 			<z>0.0</z>
-        	</axis>
- 		<center>
+		</axis>
+		<center>
 			<x-m>0.00381</x-m>
 			<y-m>0.00135</y-m>
 			<z-m>-0.01201</z-m>
@@ -115,7 +115,7 @@
 	</animation>
 	<animation>
 		<name>VOR1 rotate</name>
-		<type>rotate</type>   
+		<type>rotate</type>
 		<object-name>Needle1VOR</object-name>
 		<property>instrumentation/nav[0]/heading-deg</property>
 		<axis>
@@ -142,7 +142,7 @@
 	</animation>
 	<animation>
 		<name>ADF1 rotate</name>
-		<type>rotate</type>   
+		<type>rotate</type>
 		<object-name>Needle1ADF</object-name>
 		<property>instrumentation/adf[0]/indicated-bearing-deg</property>
 		<axis>
@@ -168,24 +168,24 @@
 			</equals>
 		</condition>
 	</animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>Needle2VOR</object-name>
-    <property>orientation/heading-deg</property>
-      <axis>
-        <x>1.0</x>
-        <y>0</y>
-        <z>0.0</z>
-      </axis>
- 		<center>
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle2VOR</object-name>
+		<property>orientation/heading-deg</property>
+		<axis>
+			<x>1.0</x>
+			<y>0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
 			<x-m>0.00381</x-m>
 			<y-m>0.00135</y-m>
 			<z-m>-0.01201</z-m>
 		</center>
-  </animation>
- 	<animation>
+	</animation>
+	<animation>
 		<name>VOR2 rotate</name>
-		<type>rotate</type>   
+		<type>rotate</type>
 		<object-name>Needle2VOR</object-name>
 		<property>instrumentation/nav[1]/heading-deg</property>
 		<axis>
@@ -212,7 +212,7 @@
 	</animation>
 	<animation>
 		<name>ADF2 rotate</name>
-		<type>rotate</type>   
+		<type>rotate</type>
 		<object-name>Needle2ADF</object-name>
 		<property>instrumentation/adf[1]/indicated-bearing-deg</property>
 		<axis>
@@ -294,93 +294,93 @@
 		</center>
 	</animation>
 
-<!-- Textranslates for DME Readout -->  
-  
- <animation>
-  <type>textranslate</type>
-  <object-name>dme1-1</object-name>
-  <property>instrumentation/dme/indicated-distance-nm</property>
-  <factor>0.10</factor>
-  <step>1.0</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
- <animation>
-  <type>textranslate</type>
-  <object-name>dme1-2</object-name>
-  <property>instrumentation/dme/indicated-distance-nm</property>
-  <factor>.01</factor>
-  <step>10</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
- <animation>
-  <type>textranslate</type>
-  <object-name>dme1-3</object-name>
-  <property>instrumentation/dme/indicated-distance-nm</property>
-  <factor>.001</factor>
-  <step>100</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
-  
- <animation>
-  <type>textranslate</type>
-  <object-name>dme2-1</object-name>
-  <property>instrumentation/dme[1]/indicated-distance-nm</property>
-  <factor>1</factor>
-  <step>.1</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
- <animation>
-  <type>textranslate</type>
-  <object-name>dme2-2</object-name>
-  <property>instrumentation/dme[1]/indicated-distance-nm</property>
-  <factor>0.10</factor>
-  <step>1.0</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
- <animation>
-  <type>textranslate</type>
-  <object-name>dme2-3</object-name>
-  <property>instrumentation/dme[1]/indicated-distance-nm</property>
-  <factor>.01</factor>
-  <step>10</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
- <animation>
-  <type>textranslate</type>
-  <object-name>dme2-4</object-name>
-  <property>instrumentation/dme[1]/indicated-distance-nm</property>
-  <factor>.001</factor>
-  <step>100</step>
-  <axis>
-   <x>0</x>
-   <y>1</y>
-   <z>0</z>
-  </axis>
- </animation>
-  
-  
+	<!-- Textranslates for DME Readout -->
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme1-1</object-name>
+		<property>instrumentation/dme/indicated-distance-nm</property>
+		<factor>0.10</factor>
+		<step>1.0</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme1-2</object-name>
+		<property>instrumentation/dme/indicated-distance-nm</property>
+		<factor>.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme1-3</object-name>
+		<property>instrumentation/dme/indicated-distance-nm</property>
+		<factor>.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme2-1</object-name>
+		<property>instrumentation/dme[1]/indicated-distance-nm</property>
+		<factor>1</factor>
+		<step>.1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme2-2</object-name>
+		<property>instrumentation/dme[1]/indicated-distance-nm</property>
+		<factor>0.10</factor>
+		<step>1.0</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme2-3</object-name>
+		<property>instrumentation/dme[1]/indicated-distance-nm</property>
+		<factor>.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>dme2-4</object-name>
+		<property>instrumentation/dme[1]/indicated-distance-nm</property>
+		<factor>.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
 </PropertyList>

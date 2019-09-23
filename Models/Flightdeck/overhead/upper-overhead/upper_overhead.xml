@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <model>
+    <name>Panel</name>
+    <path>Aircraft/737-300/Models/Flightdeck/overhead/upper-overhead/panel/upper_overhead_panel.xml</path>
+  </model>
+
+</PropertyList>

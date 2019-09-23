@@ -25,7 +25,7 @@ if (getprop("sim/co-pilot")) {
    vref30 = math.round(getprop("/instrumentation/fmc/v-ref-30"), 1);
    vref40 = math.round(getprop("/instrumentation/fmc/v-ref-40"), 1);
 
-	if (grossweight > 114000) {
+	if (grossweight > getprop ("/limits/mass-and-balance/maximum-landing-mass-lbs")) {
 		setprop("/sim/messages/copilot", "Gross Weight "~grossweight~" lb, "~grossweight_kg~" kg. EXCEED MAXIMUM LANDING WEIGHT!!!");
 	} else {
 	setprop("/sim/messages/copilot", "Gross Weight "~grossweight~" lb, "~grossweight_kg~" kg. Vref15 "~vref15~"; Vref30 "~vref30~"; Vref40 "~vref40~" kts");

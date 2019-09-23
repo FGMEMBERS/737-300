@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <model>
+    <name>Panel</name>
+    <path>Aircraft/737-300/Models/Flightdeck/overhead/lower-overhead/panel/lower_overhead_panel.xml</path>
+  </model>
+
+  <model>
+    <name>Panel</name>
+    <path>Aircraft/737-300/Models/Flightdeck/overhead/lower-overhead/forward_lower_panel/lower_overhead_panel.xml</path>
+    <offsets>
+      <y-m>-0.2894</y-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Fuel Panel</name>
+    <path>Aircraft/737-300/Models/Flightdeck/overhead/lower-overhead/fuel_panel/fuel_panel.xml</path>
+    <offsets>
+      <x-m>-0.26</x-m>
+      <y-m>-0.11917</y-m>
+    </offsets>
+  </model>
+
+</PropertyList>

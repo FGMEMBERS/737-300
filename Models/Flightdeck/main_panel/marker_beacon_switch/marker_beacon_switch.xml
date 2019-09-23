@@ -1,0 +1,38 @@
+<PropertyList>
+
+    <path>marker_beacon_switch.ac</path>
+
+    <!-- Intensity switch -->
+    <animation>
+        <type>rotate</type>
+        <object-name>Switch</object-name>
+        <property>b733/flightdeck/main_panel/marker_beacon_switch/intensity</property>
+        <offset-deg>-25</offset-deg>
+        <factor>40</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0.003746</y-m>
+            <z-m>-0.000463</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Switch</object-name>
+        <visible>true</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-toggle</command>
+                <property>b733/flightdeck/main_panel/marker_beacon_switch/intensity</property>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

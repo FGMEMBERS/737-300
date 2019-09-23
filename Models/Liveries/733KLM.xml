@@ -7,10 +7,10 @@
         <name type="string">KLM </name>
         <texture>Liveries/733KLM.png</texture>
       </livery>
-<Boeing-737-300>
-<removalkit>true</removalkit>
-<eyebrowwindow>false</eyebrowwindow>
-</Boeing-737-300>
+      <Boeing-737-300>
+        <removalkit>true</removalkit>
+        <eyebrowwindow>false</eyebrowwindow>
+      </Boeing-737-300>
     </model>
   </sim>
 </PropertyList>

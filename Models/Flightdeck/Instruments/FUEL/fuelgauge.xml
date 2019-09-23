@@ -3,75 +3,102 @@
 
 	<path>fuelgauge.ac</path>
 
-<!-- Lighting!  -->
+	<!-- Lighting!  -->
 
- <animation>
-  <type>material</type>
-    <object-name>face</object-name> 
-    <object-name>disk</object-name>
-    <object-name>rect</object-name>
-    <object-name>digits</object-name>
-    
-  <emission>
-    <red>0.5</red>
-    <green>0.5</green>
-    <blue>0.5</blue>
-<!--	<factor-prop>controls/lighting/instruments-norm</factor-prop> -->
-  </emission>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-  
-</animation>
- <animation>
-  <type>material</type>
-    <object-name>body</object-name>
-  <emission>
-    <red>0.1</red>
-    <green>0.1</green>
-    <blue>0.1</blue>
-<!--	<factor-prop>controls/lighting/dome-norm</factor-prop> -->
-  </emission>
-</animation>
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>disk</object-name>
+		<object-name>rect</object-name>
+		<object-name>digits</object-name>
 
- <animation>
-  <type>select</type>
-    <object-name>digit1</object-name>
-    <object-name>digit2</object-name>
-    <object-name>digit3</object-name>
-    <object-name>digit4</object-name>
-  <condition>
-    <or>
-      <property>controls/electric/battery-switch</property>
-      <property>controls/electric/external-power</property>
-      <property>controls/electric/apugen1</property>
-      <property>controls/electric/apugen2</property>
-      <property>engines/engine[0]/running</property>
-    </or>
-  </condition>
-</animation>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<!--	<factor-prop>controls/lighting/instruments-norm</factor-prop> -->
+		</emission>
+		<condition>
+			<or>
+				<property>controls/electric/battery-switch</property>
+				<property>controls/electric/external-power</property>
+				<property>controls/electric/apugen1</property>
+				<property>controls/electric/apugen2</property>
+				<property>engines/engine[0]/running</property>
+			</or>
+		</condition>
+
+	</animation>
+	<animation>
+		<type>material</type>
+		<object-name>body</object-name>
+		<emission>
+			<red>0.1</red>
+			<green>0.1</green>
+			<blue>0.1</blue>
+			<!--	<factor-prop>controls/lighting/dome-norm</factor-prop> -->
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>digit1</object-name>
+		<object-name>digit2</object-name>
+		<object-name>digit3</object-name>
+		<object-name>digit4</object-name>
+		<condition>
+			<or>
+				<property>controls/electric/battery-switch</property>
+				<property>controls/electric/external-power</property>
+				<property>controls/electric/apugen1</property>
+				<property>controls/electric/apugen2</property>
+				<property>engines/engine[0]/running</property>
+			</or>
+		</condition>
+	</animation>
 
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
 		<property>consumables/fuel/tank[2]/level-lbs</property>
 		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>2000</ind><dep>17.5</dep></entry>
-			<entry><ind>4000</ind><dep>45.0</dep></entry>
-			<entry><ind>6000</ind><dep>72.5</dep></entry>
-			<entry><ind>8000</ind><dep>100.0</dep></entry>
-			<entry><ind>10000</ind><dep>127.5</dep></entry>
-			<entry><ind>12000</ind><dep>155.0</dep></entry>
-			<entry><ind>14000</ind><dep>182.5</dep></entry>
-			<entry><ind>16000</ind><dep>210.0</dep></entry>
-		</interpolation> 
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>2000</ind>
+				<dep>17.5</dep>
+			</entry>
+			<entry>
+				<ind>4000</ind>
+				<dep>45.0</dep>
+			</entry>
+			<entry>
+				<ind>6000</ind>
+				<dep>72.5</dep>
+			</entry>
+			<entry>
+				<ind>8000</ind>
+				<dep>100.0</dep>
+			</entry>
+			<entry>
+				<ind>10000</ind>
+				<dep>127.5</dep>
+			</entry>
+			<entry>
+				<ind>12000</ind>
+				<dep>155.0</dep>
+			</entry>
+			<entry>
+				<ind>14000</ind>
+				<dep>182.5</dep>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep>210.0</dep>
+			</entry>
+		</interpolation>
 
 		<center>
 			<x-m>0</x-m>
@@ -136,7 +163,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<!-- LoD -->
 	<animation>
 		<type>range</type>
